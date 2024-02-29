@@ -1,0 +1,79 @@
+[cols="1,1,2,2"]
+|===
+|Path|Type|Description|Constraints
+
+|content
+|Object
+|List of multiple shipments
+a|
+
+|content.[] +
+.reference
+|String
+|Shipment reference
+a|Not Null and not empty. +
+ The size must be between 1 and 32. +
+
+
+|content.[] +
+.carrier
+|String
+|Carrier
+a|Fixed length of 3. +
+ Not Null and not empty. +
+
+
+|content.[] +
+.costcenter
+|String
+|Costcenter. Only returned when the backend parameter extended is set to true, contact your consultant for more details
+a|Maximum size of 32. +
+
+
+|content.[] +
+.shipmentStatus
+|String
+|Latest shipment status code
+a|Has to match pattern: (NONE\| +
+NEW\| +
+LABL\| +
+MANI\| +
+ERR\| +
+DEL\| +
+REFU\| +
+BOOK\| +
+ONHOLD\| +
+DONE\| +
+TRNS) +
+ Maximum size of 8. +
+
+
+|content.[] +
+.trackAndTraceUrl
+|String
+|Track and trace url
+a|Maximum size of 2048. +
+
+
+|content.[] +
+.airwaybill
+|String
+|Airwaybill
+a|Maximum size of 32. +
+
+
+|contentType
+|String
+|Definition of the content statically always Statuses
+a|Has to match pattern: (Statuses) +
+ Maximum size of 32. +
+
+
+|numberOfItems
+|Integer
+|Number of items in this response
+a|Maximum value is 32767. +
+ Minimum value is 0. +
+
+
+|===

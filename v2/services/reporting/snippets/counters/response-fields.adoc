@@ -1,0 +1,41 @@
+[cols="1,1,2,2"]
+|===
+|Path|Type|Description|Constraints
+
+|[] +
+.date
+|String
+|The date when the shipment was created in the system.
+a|
+
+|[] +
+.account
+|String
+|The booking account or the main account when consolidateAccounts is set to true.
+a|
+
+|[] +
+.carrier
+|String
+|The booked carrier or empty when consolidateCarriers is set to true.
+a|
+
+|[] +
+.shipments
+|Integer
+|The number of shipments booked on that date.
+a|
+
+|[] +
+.parcels
+|Integer
+|The number of parcel shipments created on that date.
+a|
+
+|[] +
+.pallets
+|Integer
+|The number of pallet shipments created on that date.
+a|
+
+|===

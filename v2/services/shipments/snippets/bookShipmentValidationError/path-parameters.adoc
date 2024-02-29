@@ -1,0 +1,11 @@
+.+/v2/shipments/{account}/{action}+
+|===
+|Parameter|Description
+
+|`+account+`
+|The account to which the shipment belongs.
+
+|`+action+`
+|Action to be performed; possible values are BOOK or PRINT. With PRINT, the shipment is booked first and then printed .
+
+|===

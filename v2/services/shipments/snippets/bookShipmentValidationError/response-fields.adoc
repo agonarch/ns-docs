@@ -1,0 +1,70 @@
+[cols="1,1,2,2"]
+|===
+|Path|Type|Description|Constraints
+
+|status
+|HttpStatus
+|The status of the error, e.g. BAD_REQUEST or INTERNAL_SERVER_ERROR.
+a|
+
+|timestamp
+|String
+|The actual timestamp when the error was raised.
+a|
+
+|code
+|String
+|The Transsmart internal error code, e.g. TS50001
+a|
+
+|message
+|String
+|The message given either by the carrier or by Transsmart
+a|
+
+|details
+|List
+|The details given either by the carrier or by Transsmart
+a|
+
+|details.[] +
+.reference
+|String
+|The reference of the booking.
+a|
+
+|details.[] +
+.validationErrors
+|List
+|List of validation errors.
+a|
+
+|details.[] +
+.validationErrors.[] +
+.object
+|String
+|The object that contains the field that has an error.
+a|
+
+|details.[] +
+.validationErrors.[] +
+.field
+|String
+|The field that has an error.
+a|
+
+|details.[] +
+.validationErrors.[] +
+.rejectedValue
+|Object
+|The value that is rejected.
+a|
+
+|details.[] +
+.validationErrors.[] +
+.message
+|String
+|The reasone why the value is rejected.
+a|
+
+|===

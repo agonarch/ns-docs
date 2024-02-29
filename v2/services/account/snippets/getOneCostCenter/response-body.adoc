@@ -1,0 +1,4 @@
+[source,json,options="nowrap"]
+----
+{"code":"SPARE","description":"Spare Parts department","isDefault":false}
+----

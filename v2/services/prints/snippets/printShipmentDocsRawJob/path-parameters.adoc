@@ -1,0 +1,11 @@
+.+/v2/prints/{account}/{reference}+
+|===
+|Parameter|Description
+
+|`+account+`
+|Account on which the shipment has been booked.
+
+|`+reference+`
+|Reference of shipment to be printed
+
+|===

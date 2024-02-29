@@ -1,0 +1,16 @@
+[source,http,options="nowrap"]
+----
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 363
+
+{
+  "description" : "CONFIRMED",
+  "currency" : "EUR",
+  "company" : "COVER_GENIUS",
+  "premium" : 1.0,
+  "insuredValue" : 100.0,
+  "claimLink" : "https://helpcenter.nshift.com/hc/en-us/articles/9709932714524-FAQ-what-is-the-claims-flow-with-Cover-Genius-",
+  "policyLink" : "https://www.xcover.com/en/coi/9KFBD-X27JS-INS?security_token=GZ3dr-gfltN-EAbAr-6tHNd"
+}
+----

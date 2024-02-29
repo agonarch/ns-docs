@@ -1,0 +1,188 @@
+|===
+|Path|Type|Description|Constraints
+
+|[].reference
+|String
+|Shipment reference
+|The size must be between 1 and 32. +
+
+
+|[].airwaybillNumber
+|String
+|Shipment airwaybill number
+|Maximum size of 32. +
+
+
+|[].shipmentDocs
+|List
+|Shipment level documents
+|
+
+|[].shipmentDocs[].docType
+|String
+|Document type
+|Maximum size of 12. +
+
+
+|[].shipmentDocs[].fileFormat
+|String
+|Document format ZPL or PDF
+|Maximum size of 8. +
+
+
+|[].shipmentDocs[].encodingFormat
+|String
+|Data encoding format
+|Maximum size of 8. +
+
+
+|[].shipmentDocs[].data
+|String
+|Document data base64 encoded
+|Maximum size of 16777215. +
+
+
+|[].shipmentDocs[].printerType
+|String
+|Type of printer
+|Maximum size of 64. +
+
+
+|[].shipmentDocs[].printerName
+|String
+|Printer name
+|Maximum size of 256. +
+
+
+|[].shipmentDocs[].sequence
+|String
+|Package sequence
+|Maximum size of 200000. +
+
+
+|[].shipmentDocs[].height
+|Integer wrapped in String
+|Height in milimeters, not used
+|Maximum value is 999,999,999 +
+ Minimum value is 0 +
+
+
+|[].shipmentDocs[].width
+|Integer wrapped in String
+|Width in milimeters, not used
+|Maximum value is 999,999,999 +
+ Minimum value is 0 +
+
+
+|[].shipmentDocs[].templateID
+|String
+|Document Template ID
+|Maximum size of 12. +
+
+
+|[].errors
+|List
+|Errors that may have happend during the printjob.
+|
+
+|[].errors[].errorCode
+|String
+|Error code
+|
+
+|[].errors[].errorTitle
+|String
+|Error title
+|
+
+|[].errors[].errorDescription
+|String
+|More detailed description of the actual error.
+|
+
+|[].packageDocs
+|List
+|Shipment package level documents
+|
+
+|[].packageDocs[].docType
+|String
+|Document type
+|Maximum size of 12. +
+
+
+|[].packageDocs[].fileFormat
+|String
+|Document format ZPL or PDF
+|Maximum size of 8. +
+
+
+|[].packageDocs[].encodingFormat
+|String
+|Data encoding format
+|Maximum size of 8. +
+
+
+|[].packageDocs[].data
+|String
+|Document data base64 encoded
+|Maximum size of 16777215. +
+
+
+|[].packageDocs[].printerType
+|String
+|Type of printer
+|Maximum size of 64. +
+
+
+|[].packageDocs[].printerName
+|String
+|Printer name
+|Maximum size of 256. +
+
+
+|[].packageDocs[].sequence
+|String
+|Package sequence
+|Maximum size of 200000. +
+
+
+|[].packageDocs[].airwaybillNumber
+|String
+|Package airwaybill
+|Maximum size of 32. +
+
+
+|[].packageDocs[].lineNo
+|Integer
+|Package line number
+|Maximum value is 200000. +
+
+
+|[].packageDocs[].shipmentLineId
+|String
+|Shipment line identifier
+|Maximum size of 32. +
+
+
+|[].packageDocs[].height
+|Integer wrapped in String
+|Height in milimeters, not used
+|Maximum value is 999,999,999 +
+ Minimum value is 0 +
+
+
+|[].packageDocs[].width
+|Integer wrapped in String
+|Width in milimeters, not used
+|Maximum value is 999,999,999 +
+ Minimum value is 0 +
+
+
+|[].packageDocs[].templateID
+|String
+|Document Template ID
+|Maximum size of 12. +
+
+
+|===

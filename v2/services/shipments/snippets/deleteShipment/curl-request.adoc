@@ -1,0 +1,4 @@
+[source,bash]
+----
+$ curl 'https://test-api.transsmart.com/v2/shipments/DEVDOCS/Transsmart_1706872407979' -i -X DELETE
+----

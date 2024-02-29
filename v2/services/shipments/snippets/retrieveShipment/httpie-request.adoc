@@ -1,0 +1,5 @@
+[source,bash]
+----
+$ http GET 'https://test-api.transsmart.com/v2/shipments/DEVDOCS/Transsmart_1706872428760' \
+    'Content-Type:application/json;charset=UTF-8'
+----

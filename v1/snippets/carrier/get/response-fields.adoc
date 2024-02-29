@@ -1,0 +1,20 @@
+|===
+|Path|Type|Description
+
+|`Id`
+|`Number`
+|Carrier Id
+
+|`Name`
+|`String`
+|Carrier name
+
+|`Code`
+|`String`
+|Carrier code
+
+|`LocationSelect`
+|`String`
+|Location select
+
+|===

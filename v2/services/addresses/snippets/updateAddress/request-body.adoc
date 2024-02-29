@@ -1,0 +1,48 @@
+[source,json,options="nowrap"]
+----
+{
+  "id" : "DEVDOCS31744076",
+  "name" : "Anouk en Marcel 2",
+  "addressLine1" : "Zoete Inval",
+  "addressLine2" : "Test",
+  "addressLine3" : "Test",
+  "houseNumber" : "1",
+  "zipCode" : "4815 HK",
+  "city" : "Breda",
+  "province" : "NB",
+  "country" : "NL",
+  "language" : "NL",
+  "contact" : {
+    "name" : "Anoiuk",
+    "phone" : "1260303",
+    "fax" : "1260303",
+    "email" : "test@transsmart.com"
+  },
+  "accountNumber" : "1260303",
+  "customerNumber" : "1260304",
+  "costCenter" : "Test",
+  "vatNumber" : "Test",
+  "type" : "RECV",
+  "instructions" : "Test",
+  "billingAddress" : {
+    "name" : "Transsmart",
+    "addressLine1" : "Ellen Pankhurststraat",
+    "addressLine2" : "2nd floor",
+    "addressLine3" : "Test",
+    "houseNumber" : "1c",
+    "zipCode" : "5032MD",
+    "city" : "Tilburg",
+    "province" : "NB",
+    "country" : "NL",
+    "contact" : {
+      "name" : "Support",
+      "phone" : "+31(0)88 126 03 03",
+      "fax" : "+31(0)88 126 03 03",
+      "email" : "support@transsmart.com"
+    },
+    "accountNumber" : "54321",
+    "customerNumber" : "1260306",
+    "vatNumber" : "Test"
+  }
+}
+----

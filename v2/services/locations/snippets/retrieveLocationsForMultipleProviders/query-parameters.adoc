@@ -1,0 +1,37 @@
+|===
+|Parameter|Description
+
+|`+street+`
+|The street of the reference address
+
+|`+houseNumber+`
+|The housenumber of the reference address
+
+|`+houseNumberExt+`
+|The housenumber extension of the reference address
+
+|`+zipCode+`
+|The zip code of the reference address
+
+|`+city+`
+|The city of the reference address
+
+|`+countryFrom+`
+|The country code of the reference address
+
+|`+countryTo+`
+|The country code where the shipment will be delivered
+
+|`+ownLocationOnly+`
+|Only the accounts 'own locations' are to be returned. Defaults to false
+
+|`+email+`
+|The email of the receiver. Pay attention: this value is required when working with GLS, for supporting second delivery attempts. Defaults to noreply@transsmart.com if not provided
+
+|`+limit+`
+|The max amount of results (per carrier). Defaults to 20.
+
+|`+provider+`
+|The carrier code to request the available locations. Multiple carriers can be specified.
+
+|===

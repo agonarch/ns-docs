@@ -1,0 +1,30 @@
+== Description: API Version One (V1)
+
+=== Authenticating
+
+=== Model
+
+[[overview-headers]]
+=== Headers
+
+=== Retrieve a carrier
+A `GET` request will retrieve details of a specified carrier.
+
+==== Response structure
+include::snippets/carrier/get/response-fields.adoc[]
+
+==== Example requests
+Curl example:
+include::snippets/carrier/get/curl-request.adoc[]
+
+Http example:
+include::snippets/carrier/get/http-request.adoc[]
+
+==== Path variables
+include::snippets/carrier/get/path-parameters.adoc[]
+
+==== Request parameters
+include::snippets/carrier/get/request-parameters.adoc[]
+
+==== Example response
+include::snippets/carrier/get/http-response.adoc[]

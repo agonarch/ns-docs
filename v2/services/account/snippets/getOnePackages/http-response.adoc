@@ -1,0 +1,8 @@
+[source,http,options="nowrap"]
+----
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 173
+
+{"code":"BOK","description":"Standard box 10 x 10 x 10","isDefault":false,"type":"BOX","linearUom":"CM","massUom":"KG","length":"10","width":"10","height":"10","weight":"1"}
+----

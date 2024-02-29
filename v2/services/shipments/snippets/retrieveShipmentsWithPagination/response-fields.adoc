@@ -1,0 +1,58 @@
+[cols="1,1,2,2"]
+|===
+|Path|Type|Description|Constraints
+
+|content
+|Object
+|The content of this page.
+a|
+
+|content.[] +
+.reference
+|String
+|Shipment reference, the remaining shipment structure is the same as retrieving one shipment, for description see that section.
+a|Not Null and not empty. +
+ The size must be between 1 and 32. +
+
+
+|contentType
+|String
+|
+a|
+
+|pageSize
+|Integer
+|The amount of items per page.
+a|
+
+|currentPage
+|Integer
+|The current page.
+a|
+
+|totalPages
+|Integer
+|Total amount of pages.
+a|
+
+|totalItems
+|Integer
+|Total amount of items.
+a|
+
+|numberOfItems
+|Integer
+|Number of items in this page.
+a|
+
+|isLastPage
+|Boolean
+|Indicates if this is the last page.
+a|
+
+|isFirstPage
+|Boolean
+|Indicates if this is the first page.
+a|
+
+|===

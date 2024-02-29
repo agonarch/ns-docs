@@ -1,0 +1,4 @@
+[source,bash]
+----
+$ http DELETE 'https://accept-api.transsmart.com/v2/addresses/DEVDOCS/DEVDOCS31744076'
+----

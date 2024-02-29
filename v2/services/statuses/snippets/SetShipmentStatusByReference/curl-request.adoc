@@ -1,0 +1,16 @@
+[source,bash]
+----
+$ curl 'https://test-api.transsmart.com/v2/statuses/DEVDOCS/shipments/Transsmart_1681382055020' -i -X PUT \
+    -H 'Content-Type: application/json;charset=UTF-8' \
+    -d '{
+  "referenceType" : null,
+  "reference" : null,
+  "awb" : null,
+  "shipmentStatusCode" : "LABL",
+  "colloStatusCode" : null,
+  "deliveryDate" : null,
+  "deliveryTime" : null,
+  "acceptedBy" : null,
+  "addReferences" : null
+}'
+----

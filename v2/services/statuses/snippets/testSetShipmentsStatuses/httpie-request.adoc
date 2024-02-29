@@ -1,0 +1,15 @@
+[source,bash]
+----
+$ echo '[ {
+  "referenceType" : null,
+  "reference" : "Transsmart_1681382055020",
+  "awb" : null,
+  "shipmentStatusCode" : "LABL",
+  "colloStatusCode" : null,
+  "deliveryDate" : null,
+  "deliveryTime" : null,
+  "acceptedBy" : null,
+  "addReferences" : null
+} ]' | http PUT 'https://test-api.transsmart.com/v2/statuses/DEVDOCS/shipments' \
+    'Content-Type:application/json;charset=UTF-8'
+----

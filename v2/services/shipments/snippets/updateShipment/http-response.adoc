@@ -1,0 +1,47 @@
+[source,http,options="nowrap"]
+----
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 1103
+
+[ {
+  "reference" : "Transsmart_1706872431487",
+  "awb" : "05228021374328",
+  "carrier" : "DPD",
+  "executingCarrier" : "DPD",
+  "pieces" : 2,
+  "weight" : 40.0,
+  "service" : "NON-DOCS",
+  "serviceLevelTime" : "",
+  "serviceLevelOther" : "",
+  "incoterms" : "",
+  "price" : 15.0,
+  "salesPrice" : 0,
+  "salesPriceCurrency" : "",
+  "currency" : "EUR",
+  "pickupDate" : "20171121",
+  "trackingUrl" : "https://tracking.dpd.de/parcelstatus?query=MPS0522802137432820240202&locale=nl_NL&Tracking=Track",
+  "shipmentStatus" : {
+    "statusCode" : "NEW",
+    "plannedDeliveryDate" : "20240205",
+    "plannedDeliveryTime" : "170000"
+  },
+  "packages" : [ {
+    "sequence" : "1",
+    "lineNo" : 1,
+    "shipmentLineId" : "example-shippmentLineId",
+    "awb" : "05228021374328",
+    "genericStatusCode" : "NEW",
+    "carrierStatusCode" : "",
+    "carrierStatusDescription" : ""
+  }, {
+    "sequence" : "2",
+    "lineNo" : 1,
+    "shipmentLineId" : "example-shippmentLineId",
+    "awb" : "05228021374329",
+    "genericStatusCode" : "NEW",
+    "carrierStatusCode" : "",
+    "carrierStatusDescription" : ""
+  } ]
+} ]
+----

@@ -1,0 +1,2061 @@
+[cols="2,1,2,2,1"]
+|===
+|Path|Type|Description|Constraints|Default
+
+|reference
+|String
+|Shipment reference.
+|Not Null and not empty. +
+ The size must be between 1 and 32. +
+
+|
+
+|carrier
+|String
+|The carrier.
+|Fixed length of 3. +
+ Not Null and not empty. +
+
+|
+
+|costCenter
+|String
+|The cost center.
+|Maximum size of 32. +
+
+|
+
+|mailType
+|Integer
+|The mail type.
+|Maximum value is 127. +
+
+|
+
+|language
+|String
+|The language.
+|Maximum size of 2. +
+
+|
+
+|description
+|String
+|The description.
+|Maximum size of 128. +
+
+|
+
+|instruction
+|String
+|The instruction.
+|Maximum size of 256. +
+
+|
+
+|value
+|Decimal
+|The shipment monetary value. (Precision of 2)
+|Maximum value is 999,999,999.99 +
+ Minimum value is -999,999,999.99 +
+
+|0.00
+
+|valueCurrency
+|String
+|The shipment monetary value currency.
+|Maximum size of 3. +
+
+|
+
+|spotPrice
+|Decimal
+|The spot price. (Precision of 2)
+|Maximum value is 999,999,999.99 +
+ Minimum value is -999,999,999.99 +
+
+|0.00
+
+|spotPriceCurrency
+|String
+|The spot price currency.
+|Maximum size of 3. +
+
+|EUR
+
+|pickupDate
+|String
+|The pickup date.
+|Format yyyy-MM-dd. +
+
+|Depends on routing rules.
+
+|pickupTime
+|String
+|The earliest pickup time.
+|Format HH:mm. +
+
+|Depends on routing rules.
+
+|pickupTimeTo
+|String
+|The latest shipment pickup time.
+|Format HH:mm. +
+
+|Depends on routing rules.
+
+|requestedDeliveryDate
+|String
+|The requested delivery date.
+|Format yyyy-MM-dd. +
+
+|Depends on routing rules.
+
+|requestedDeliveryTime
+|String
+|The requested earliest delivery time
+|Format HH:mm. +
+
+|Depends on routing rules.
+
+|requestedDeliveryTimeTo
+|String
+|The requested lates delivery time.
+|Format HH:mm. +
+
+|Depends on routing rules.
+
+|service
+|String
+|The service: example NON-DOCS/DOCS >> may indicate if a shipment goes out of the EU
+|Maximum size of 16. +
+
+|
+
+|insurance
+|Boolean
+|Should this shipment be insured or is it insured
+|
+|false
+
+|serviceLevelTime
+|String
+|The requested service level time.
+|Maximum size of 32. +
+ Not Null and not empty. +
+
+|
+
+|serviceLevelOther
+|String
+|The service level other.
+|Maximum size of 256. +
+
+|
+
+|incoterms
+|String
+|The inco terms.
+|Maximum size of 16. +
+
+|
+
+|inbound
+|Integer
+|Is this an outbound or inbound shipment (outbound= 0, inbound= 1).
+|Maximum value is 1. +
+ Minimum value is 0. +
+
+|0
+
+|loadmeters
+|Decimal
+|The load meters of the shipment. (Precision of 2)
+|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+|
+
+|numberOfPackages
+|Integer
+|
+|Maximum value is 32767. +
+
+|0
+
+|deliveryNoteInformation
+|Object
+|The number of packages/collin in the shipment.
+|
+|
+
+|paymentTerms
+|String
+|The payment terms.
+|Maximum size of 32. +
+
+|
+
+|deliveryNoteInformation +
+.deliveryNoteId
+|String
+|The identification for the delivery note.
+|Maximum size of 64. +
+
+|
+
+|deliveryNoteInformation +
+.currency
+|String
+|The currency of the price.
+|Maximum size of 3. +
+
+|
+
+|deliveryNoteInformation +
+.price
+|Decimal
+|Total price of the all deliverynote lines. (Precision of 2)
+|Maximum value is 999,999,999.99 +
+ Minimum value is -999,999,999.99 +
+
+|0.00
+
+|deliveryNoteInformation +
+.deliveryNoteLines
+|List
+|The deliverynote lines.
+|
+|
+
+|deliveryNoteInformation +
+.deliveryNoteLines.[] +
+.deliveryNoteId
+|String
+|The deliverynote id.
+|Maximum size of 64. +
+
+|
+
+|deliveryNoteInformation +
+.deliveryNoteLines.[] +
+.lineNumber
+|Integer
+|The sequential line number.
+|Maximum value is 200000. +
+
+|
+
+|deliveryNoteInformation +
+.deliveryNoteLines.[] +
+.quantity
+|Integer
+|The quantity of products in the shipment.
+|Maximum value is 200000. +
+
+|
+
+|deliveryNoteInformation +
+.deliveryNoteLines.[] +
+.quantityUom
+|String
+|The quantity unit of measure (e.g. PCS,BOX etc).
+|Maximum size of 32. +
+
+|
+
+|deliveryNoteInformation +
+.deliveryNoteLines.[] +
+.quantityOrder
+|Integer
+|The quantity that is ordered.
+|Maximum value is 200000. +
+
+|
+
+|deliveryNoteInformation +
+.deliveryNoteLines.[] +
+.quantityBackorder
+|Integer
+|The quantity that is in back order.
+|Maximum value is 200000. +
+
+|
+
+|deliveryNoteInformation +
+.deliveryNoteLines.[] +
+.articleId
+|String
+|The article id.
+|Maximum size of 64. +
+
+|
+
+|deliveryNoteInformation +
+.deliveryNoteLines.[] +
+.articleName
+|String
+|The article name.
+|Maximum size of 128. +
+
+|
+
+|deliveryNoteInformation +
+.deliveryNoteLines.[] +
+.description
+|String
+|The description of the article.
+|Maximum size of 256. +
+
+|
+
+|deliveryNoteInformation +
+.deliveryNoteLines.[] +
+.hsCode
+|String
+|The HS Code.
+|Maximum size of 25. +
+
+|
+
+|deliveryNoteInformation +
+.deliveryNoteLines.[] +
+.countryOrigin
+|String
+|The country of origin.
+|Maximum size of 3. +
+
+|
+
+|deliveryNoteInformation +
+.deliveryNoteLines.[] +
+.price
+|Decimal
+|The price per article. (Precision of 2)
+|Maximum value is 999,999,999.99 +
+ Minimum value is -999,999,999.99 +
+
+|0.00
+
+|deliveryNoteInformation +
+.deliveryNoteLines.[] +
+.currency
+|String
+|The currency of the price.
+|Maximum size of 3. +
+
+|EUR
+
+|deliveryNoteInformation +
+.deliveryNoteLines.[] +
+.serialNumber
+|String
+|The serialnumber of the article.
+|Maximum size of 64. +
+
+|
+
+|deliveryNoteInformation +
+.deliveryNoteLines.[] +
+.reasonOfExport
+|String
+|The reason of export. The following values are advised to use: Gift, Intercompany data, Sale, Sample, Repair, Return, Other.
+|Maximum size of 64. +
+
+|
+
+|deliveryNoteInformation +
+.deliveryNoteLines.[] +
+.proformaInvoiceDate
+|String
+|The date for on the proforma invoice.
+|Format yyyyMMdd. +
+
+|
+
+|deliveryNoteInformation +
+.deliveryNoteLines.[] +
+.proformaInvoiceNumber
+|String
+|The number for on the proforma invoice.
+|Maximum size of 64. +
+
+|
+
+|deliveryNoteInformation +
+.deliveryNoteLines.[] +
+.proformaInvoiceLineNumber
+|String
+|The line number for on the proforma invoice.
+|Maximum size of 15. +
+
+|
+
+|deliveryNoteInformation +
+.deliveryNoteLines.[] +
+.quantityM2
+|Decimal
+|The quantity in cubic meters. (Precision of 2)
+|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+|
+
+|deliveryNoteInformation +
+.deliveryNoteLines.[] +
+.customerOrder
+|String
+|The customer order.
+|Maximum size of 64. +
+
+|
+
+|deliveryNoteInformation +
+.deliveryNoteLines.[] +
+.articleEanCode
+|String
+|The article's ean code.
+|Maximum size of 64. +
+
+|
+
+|deliveryNoteInformation +
+.deliveryNoteLines.[] +
+.quality
+|String
+|The quality of the article.
+|Maximum size of 64. +
+
+|
+
+|deliveryNoteInformation +
+.deliveryNoteLines.[] +
+.composition
+|String
+|The composition.
+|Maximum size of 128. +
+
+|
+
+|deliveryNoteInformation +
+.deliveryNoteLines.[] +
+.assemblyInstructions
+|String
+|The assembly instructions.
+|Maximum size of 65535. +
+
+|
+
+|deliveryNoteInformation +
+.deliveryNoteLines.[] +
+.grossWeight
+|Decimal
+|The gross weight per article. (Precision of 2)
+|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+|
+
+|deliveryNoteInformation +
+.deliveryNoteLines.[] +
+.nettWeight
+|Decimal
+|The net weight per article. (Precision of 2)
+|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+|
+
+|deliveryNoteInformation +
+.deliveryNoteLines.[] +
+.weightUom
+|String
+|The weight unit of measure (e.g. KG, LB, OZ).
+|Maximum size of 3. +
+
+|
+
+|deliveryNoteInformation +
+.deliveryNoteLines.[] +
+.hsCodeDescription
+|String
+|The HS Code description.
+|Maximum size of 128. +
+
+|
+
+|deliveryNoteInformation +
+.deliveryNoteLines.[] +
+.nettPrice
+|Decimal
+|The net price per article. (Precision of 2)
+|Maximum value is 999,999,999.99 +
+ Minimum value is -999,999,999.99 +
+
+|0.00
+
+|deliveryNoteInformation +
+.deliveryNoteLines.[] +
+.proformaInvoiceFreightCharges
+|Decimal
+|The freight charges for on the proforma invoice. (Precision of 2)
+|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+|
+
+|deliveryNoteInformation +
+.deliveryNoteLines.[] +
+.proformaInvoiceInsuranceCharges
+|Decimal
+|The insurance charges for on the proforma invoice. (Precision of 2)
+|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+|
+
+|deliveryNoteInformation +
+.deliveryNoteLines.[] +
+.proformaInvoiceDiscounts
+|Decimal
+|Thediscount for on the proforma invoice. (Precision of 2)
+|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+|
+
+|deliveryNoteInformation +
+.deliveryNoteLines.[] +
+.proformaInvoiceOtherCharges
+|Decimal
+|The other charges for on the proforma invoice. (Precision of 2)
+|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+|
+
+|measurements +
+.length
+|Decimal
+|The length of the object (package, dangerous good).
+Is ignored when used on shipment level.
+Max 2 decimals.
+|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+|
+
+|measurements +
+.width
+|Decimal
+|The width of the object (package, dangerous good).
+Is ignored when used on shipment level.
+Max 2 decimals.
+|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+|
+
+|measurements +
+.height
+|Decimal
+|The height of the object (package, dangerous good).
+Is ignored when used on shipment level.
+Max 2 decimals.
+|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+|
+
+|measurements +
+.weight
+|Decimal
+|The weight of the object (shipment, package, dangerous good).
+Max 2 decimals.
+|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+|
+
+|measurements +
+.linearUom
+|String
+|The linear unit of measure (e.g. CM, FT, IN, YD).
+|Maximum size of 3. +
+
+|
+
+|measurements +
+.massUom
+|String
+|The mass unit of measure (e.g. KG, LB, OZ).
+|Maximum size of 3. +
+
+|
+
+|additionalReferences
+|List
+|The additional references.
+|
+|
+
+|additionalReferences.[] +
+.type
+|String
+|The type of the additional reference. Preferred value: ADRCONTENT_ID AGENTREFERENCE CONSOLIDATION_REF CUSTOMER CUSTOMERORDER DELIVERYID DELIVERYNOTE DRIVER_ID ENGINEER INVOICE LOCATION ORDER OTHER PROJECT ROUTE_ID SERVICEPOINT YOUR_REFERENCE
+|Mandatory. +
+ Maximum size of 64. +
+
+|
+
+|additionalReferences.[] +
+.value
+|String
+|The additional reference.
+|Maximum size of 1024. +
+
+|
+
+|monetaryDetails
+|List
+|The monetary details.
+|
+|
+
+|[] +
+.packages.[] +
+.monetaryDetails.[] +
+.type
+|String
+|The type of the value.
+|Has to match pattern: (GOODS\| +
+CUSTOMS\| +
+INSURANCE\| +
+COD\| +
+FREIGHT\| +
+TAXES\| +
+DUTIES\| +
+SPOTPRICE) +
+
+|
+
+|[] +
+.packages.[] +
+.monetaryDetails.[] +
+.value
+|Decimal
+|The value.
+|
+|
+
+|[] +
+.packages.[] +
+.monetaryDetails.[] +
+.currency
+|String
+|The currency of the value.
+|Maximum size of 3. +
+
+|
+
+|addresses
+|List
+|The addresses, the address indicates the type.
+|
+|
+
+|addresses.[] +
+.type
+|String
+|The type of the address.
+|Has to match pattern: (SEND\| +
+RECV\| +
+INVC\| +
+3PTY\| +
+SNDO\| +
+RCVO\| +
+IVCO\| +
+3PTO\| +
+IMPO\| +
+EXPO\| +
+BRKR) +
+ Maximum size of 4. +
+ Not Null and not empty. +
+
+|
+
+|addresses.[] +
+.name
+|String
+|The name.
+|Maximum size of 64. +
+ Not Null and not empty. +
+
+|
+
+|addresses.[] +
+.addressLine1
+|String
+|The first address line.
+|Maximum size of 64. +
+ Not Null and not empty. +
+
+|
+
+|addresses.[] +
+.addressLine2
+|String
+|The second address line.
+|Maximum size of 64. +
+
+|
+
+|addresses.[] +
+.addressLine3
+|String
+|The third address line.
+|Maximum size of 64. +
+
+|
+
+|addresses.[] +
+.houseNo
+|String
+|The house number.
+|Maximum size of 16. +
+
+|
+
+|addresses.[] +
+.city
+|String
+|The city.
+|Maximum size of 64. +
+ Not Null and not empty. +
+
+|
+
+|addresses.[] +
+.zipCode
+|String
+|The zip code.
+|Maximum size of 16. +
+ Not Null and not empty. +
+
+|
+
+|addresses.[] +
+.state
+|String
+|The state.
+|Maximum size of 16. +
+
+|
+
+|addresses.[] +
+.country
+|String
+|The country code.
+|Maximum size of 3. +
+ Not Null and not empty. +
+
+|
+
+|addresses.[] +
+.building
+|String
+|The building name.
+|Maximum size of 64. +
+
+|
+
+|addresses.[] +
+.floor
+|String
+|The floor level.
+|Maximum size of 16. +
+
+|
+
+|addresses.[] +
+.department
+|String
+|The department.
+|Maximum size of 64. +
+
+|
+
+|addresses.[] +
+.doorcode
+|String
+|The doorcode.
+|Maximum size of 10. +
+
+|
+
+|addresses.[] +
+.contact
+|String
+|The contact information.
+|Maximum size of 64. +
+
+|
+
+|addresses.[] +
+.telNo
+|String
+|The phone number.
+|Maximum size of 32. +
+
+|
+
+|addresses.[] +
+.faxNo
+|String
+|The fax number.
+|Maximum size of 32. +
+
+|
+
+|addresses.[] +
+.email
+|String
+|The email address.
+|Maximum size of 256. +
+
+|
+
+|addresses.[] +
+.accountNumber
+|String
+|The account number. 
+|Maximum size of 32. +
+
+|
+
+|addresses.[] +
+.customerNumber
+|String
+|The customer number.
+|Maximum size of 32. +
+
+|
+
+|addresses.[] +
+.vatNumber
+|String
+|The vat number.
+|Maximum size of 32. +
+
+|
+
+|addresses.[] +
+.residential
+|Boolean wrapped in Integer
+|Indicator for residential addresses.
+|Maximum value is 1. +
+ Minimum value is 0. +
+
+|
+
+|addresses.[] +
+.contactDateOfBirth
+|String
+|Date of birth.
+|Has to match pattern: \d{4}-\d{2}-\d{2}\| +
+^$ +
+
+|
+
+|addresses.[] +
+.contactIdType
+|String
+|The document type whereby the contact will be identified.
+|Maximum size of 64. +
+
+|
+
+|addresses.[] +
+.contactIdNumber
+|String
+|The unique number of the identification document.
+|Maximum size of 64. +
+
+|
+
+|addresses.[] +
+.contactIdExpirationDate
+|String
+|The expiration date of the identification document.
+|Has to match pattern: \d{4}-\d{2}-\d{2}\| +
+^$\| +
+BpI.* +
+
+|
+
+|addresses.[] +
+.eoriNumber
+|String
+|The Economic Operators Registration and Identification number.
+|Has to match pattern: [A-Z]{2}[\w]{1,15}\| +
+^$ +
+
+|
+
+|[] +
+.customerDocuments
+|List
+|The customer documents.
+|
+|
+
+|[] +
+.customerDocuments.[] +
+.templateName
+|String
+|Attached document template.
+|Maximum size of 64. +
+
+|
+
+|[] +
+.customerDocuments.[] +
+.format
+|String
+|Attached document format, e.g. PDF, PNG, GIF, CSV, etc.
+|Maximum size of 8. +
+
+|
+
+|[] +
+.customerDocuments.[] +
+.content
+|String
+|Attached document base64 string.
+|Maximum size of 524288. +
+
+|
+
+|packages
+|List
+|The packages/collo.
+|
+|
+
+|packages.[] +
+.lineNo
+|Integer
+|The line number for this package.
+|Maximum value is 2147483647. +
+
+|
+
+|packages.[] +
+.shipmentLineId
+|String
+|The shipment line number for this package. In this field the SSCC code can be mapped.
+|Maximum size of 32. +
+
+|
+
+|packages.[] +
+.packageType
+|String
+|The package type.
+|Maximum size of 16. +
+
+|
+
+|packages.[] +
+.description
+|String
+|The description of the goods.
+|Maximum size of 128. +
+
+|
+
+|packages.[] +
+.quantity
+|Integer
+|The quantity.
+|Mandatory. +
+ Maximum value is 127. +
+ Minimum value is 0. +
+
+|
+
+|packages.[] +
+.stackable
+|Boolean
+|Is the package is stackable?
+|
+|
+
+|packages.[] +
+.stackHeight
+|Integer
+|The stack height.
+|Maximum value is 32767. +
+
+|1
+
+|packages.[] +
+.additionalReferences
+|List
+|The additional reference.
+|
+|
+
+|packages.[] +
+.additionalReferences.[] +
+.type
+|String
+|The type of the additional reference. Preferred value: ADRCONTENT_ID AGENTREFERENCE CONSOLIDATION_REF CUSTOMER CUSTOMERORDER DELIVERYID DELIVERYNOTE DRIVER_ID ENGINEER INVOICE LOCATION ORDER OTHER PROJECT ROUTE_ID SERVICEPOINT YOUR_REFERENCE
+|Mandatory. +
+ Maximum size of 64. +
+
+|
+
+|packages.[] +
+.additionalReferences.[] +
+.value
+|String
+|The additional reference.
+|Maximum size of 1024. +
+
+|
+
+|packages.[] +
+.monetaryDetails
+|List
+|The monetary details.
+|
+|
+
+|[] +
+.packages.[] +
+.monetaryDetails.[] +
+.type
+|String
+|The type of the value.
+|Has to match pattern: (GOODS\| +
+CUSTOMS\| +
+INSURANCE\| +
+COD\| +
+FREIGHT\| +
+TAXES\| +
+DUTIES\| +
+SPOTPRICE) +
+
+|
+
+|[] +
+.packages.[] +
+.monetaryDetails.[] +
+.value
+|Decimal
+|The value.
+|
+|
+
+|[] +
+.packages.[] +
+.monetaryDetails.[] +
+.currency
+|String
+|The currency of the value.
+|Maximum size of 3. +
+
+|
+
+|packages.[] +
+.deliveryNoteInfo
+|Object
+|Delivery note information on collo level, please note to use either shipment level or package level (preferably package level), mixing both could end up in unwanted results to the carrier.
+|
+|
+
+|packages.[] +
+.deliveryNoteInfo +
+.deliveryNoteId
+|String
+|The identification for the delivery note.
+|Maximum size of 64. +
+
+|
+
+|packages.[] +
+.deliveryNoteInfo +
+.currency
+|String
+|The currency of the price.
+|Maximum size of 3. +
+
+|
+
+|packages.[] +
+.deliveryNoteInfo +
+.price
+|Decimal
+|Total price of the all deliverynote lines. (Precision of 2)
+|Maximum value is 999,999,999.99 +
+ Minimum value is -999,999,999.99 +
+
+|0.00
+
+|packages.[] +
+.deliveryNoteInfo +
+.deliveryNoteLines
+|List
+|The deliverynote lines.
+|
+|
+
+|packages.[] +
+.deliveryNoteInfo +
+.deliveryNoteLines.[] +
+.deliveryNoteId
+|String
+|The deliverynote id.
+|Maximum size of 64. +
+
+|
+
+|packages.[] +
+.deliveryNoteInfo +
+.deliveryNoteLines.[] +
+.lineNumber
+|Integer
+|The sequential line number.
+|Maximum value is 200000. +
+
+|
+
+|packages.[] +
+.deliveryNoteInfo +
+.deliveryNoteLines.[] +
+.quantity
+|Integer
+|The quantity of products in the shipment.
+|Maximum value is 200000. +
+
+|
+
+|packages.[] +
+.deliveryNoteInfo +
+.deliveryNoteLines.[] +
+.quantityUom
+|String
+|The quantity unit of measure (e.g. PCS,BOX etc).
+|Maximum size of 32. +
+
+|
+
+|packages.[] +
+.deliveryNoteInfo +
+.deliveryNoteLines.[] +
+.quantityOrder
+|Integer
+|The quantity that is ordered.
+|Maximum value is 200000. +
+
+|
+
+|packages.[] +
+.deliveryNoteInfo +
+.deliveryNoteLines.[] +
+.quantityBackorder
+|Integer
+|The quantity that is in back order.
+|Maximum value is 200000. +
+
+|
+
+|packages.[] +
+.deliveryNoteInfo +
+.deliveryNoteLines.[] +
+.articleId
+|String
+|The article id.
+|Maximum size of 64. +
+
+|
+
+|packages.[] +
+.deliveryNoteInfo +
+.deliveryNoteLines.[] +
+.articleName
+|String
+|The article name.
+|Maximum size of 128. +
+
+|
+
+|packages.[] +
+.deliveryNoteInfo +
+.deliveryNoteLines.[] +
+.description
+|String
+|The description of the article.
+|Maximum size of 256. +
+
+|
+
+|packages.[] +
+.deliveryNoteInfo +
+.deliveryNoteLines.[] +
+.hsCode
+|String
+|The HS Code.
+|Maximum size of 25. +
+
+|
+
+|packages.[] +
+.deliveryNoteInfo +
+.deliveryNoteLines.[] +
+.countryOrigin
+|String
+|The country of origin.
+|Maximum size of 3. +
+
+|
+
+|packages.[] +
+.deliveryNoteInfo +
+.deliveryNoteLines.[] +
+.price
+|Decimal
+|The price per article. (Precision of 2)
+|Maximum value is 999,999,999.99 +
+ Minimum value is -999,999,999.99 +
+
+|0.00
+
+|packages.[] +
+.deliveryNoteInfo +
+.deliveryNoteLines.[] +
+.currency
+|String
+|The currency of the price.
+|Maximum size of 3. +
+
+|EUR
+
+|packages.[] +
+.deliveryNoteInfo +
+.deliveryNoteLines.[] +
+.serialNumber
+|String
+|The serialnumber of the article.
+|Maximum size of 64. +
+
+|
+
+|packages.[] +
+.deliveryNoteInfo +
+.deliveryNoteLines.[] +
+.reasonOfExport
+|String
+|The reason of export. The following values are advised to use: Gift, Intercompany data, Sale, Sample, Repair, Return, Other.
+|Maximum size of 64. +
+
+|
+
+|packages.[] +
+.deliveryNoteInfo +
+.deliveryNoteLines.[] +
+.proformaInvoiceDate
+|String
+|The date for on the proforma invoice.
+|Format yyyyMMdd. +
+
+|
+
+|packages.[] +
+.deliveryNoteInfo +
+.deliveryNoteLines.[] +
+.proformaInvoiceNumber
+|String
+|The number for on the proforma invoice.
+|Maximum size of 64. +
+
+|
+
+|packages.[] +
+.deliveryNoteInfo +
+.deliveryNoteLines.[] +
+.proformaInvoiceLineNumber
+|String
+|The line number for on the proforma invoice.
+|Maximum size of 15. +
+
+|
+
+|packages.[] +
+.deliveryNoteInfo +
+.deliveryNoteLines.[] +
+.quantityM2
+|Decimal
+|The quantity in cubic meters. (Precision of 2)
+|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+|
+
+|packages.[] +
+.deliveryNoteInfo +
+.deliveryNoteLines.[] +
+.customerOrder
+|String
+|The customer order.
+|Maximum size of 64. +
+
+|
+
+|packages.[] +
+.deliveryNoteInfo +
+.deliveryNoteLines.[] +
+.articleEanCode
+|String
+|The article's ean code.
+|Maximum size of 64. +
+
+|
+
+|packages.[] +
+.deliveryNoteInfo +
+.deliveryNoteLines.[] +
+.quality
+|String
+|The quality of the article.
+|Maximum size of 64. +
+
+|
+
+|packages.[] +
+.deliveryNoteInfo +
+.deliveryNoteLines.[] +
+.composition
+|String
+|The composition.
+|Maximum size of 128. +
+
+|
+
+|packages.[] +
+.deliveryNoteInfo +
+.deliveryNoteLines.[] +
+.assemblyInstructions
+|String
+|The assembly instructions.
+|Maximum size of 65535. +
+
+|
+
+|packages.[] +
+.deliveryNoteInfo +
+.deliveryNoteLines.[] +
+.grossWeight
+|Decimal
+|The gross weight per article. (Precision of 2)
+|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+|
+
+|packages.[] +
+.deliveryNoteInfo +
+.deliveryNoteLines.[] +
+.nettWeight
+|Decimal
+|The net weight per article. (Precision of 2)
+|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+|
+
+|packages.[] +
+.deliveryNoteInfo +
+.deliveryNoteLines.[] +
+.weightUom
+|String
+|The weight unit of measure (e.g. KG, LB, OZ).
+|Maximum size of 3. +
+
+|
+
+|packages.[] +
+.deliveryNoteInfo +
+.deliveryNoteLines.[] +
+.hsCodeDescription
+|String
+|The HS Code description.
+|Maximum size of 128. +
+
+|
+
+|packages.[] +
+.deliveryNoteInfo +
+.deliveryNoteLines.[] +
+.nettPrice
+|Decimal
+|The net price per article. (Precision of 2)
+|Maximum value is 999,999,999.99 +
+ Minimum value is -999,999,999.99 +
+
+|0.00
+
+|packages.[] +
+.deliveryNoteInfo +
+.deliveryNoteLines.[] +
+.proformaInvoiceFreightCharges
+|Decimal
+|The freight charges for on the proforma invoice. (Precision of 2)
+|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+|
+
+|packages.[] +
+.deliveryNoteInfo +
+.deliveryNoteLines.[] +
+.proformaInvoiceInsuranceCharges
+|Decimal
+|The insurance charges for on the proforma invoice. (Precision of 2)
+|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+|
+
+|packages.[] +
+.deliveryNoteInfo +
+.deliveryNoteLines.[] +
+.proformaInvoiceDiscounts
+|Decimal
+|Thediscount for on the proforma invoice. (Precision of 2)
+|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+|
+
+|packages.[] +
+.deliveryNoteInfo +
+.deliveryNoteLines.[] +
+.proformaInvoiceOtherCharges
+|Decimal
+|The other charges for on the proforma invoice. (Precision of 2)
+|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation
+|Object
+|The dangerousgoods information.
+|
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoodsGds
+|List
+|Dangerous goods gds, this object is currently obsolete.
+|
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods
+|List
+|The dangerous goods lines
+|
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.idCode
+|String
+|The Id code.
+|Maximum size of 64. +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.unCode
+|String
+|The Un code.
+|Maximum size of 64. +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.unSubCode
+|String
+|The Un subcode.
+|Maximum size of 64. +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.packingGroup
+|String
+|The packing group.
+|Maximum size of 64. +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.packingType
+|String
+|The package type.
+|Maximum size of 64. +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.packingClassification
+|String
+|The packing classification.
+|Maximum size of 64. +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.packingInstruction
+|String
+|The packing instruction.
+|Maximum size of 64. +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.quantity
+|Integer
+|The quantity.
+|Maximum value is 32767. +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.description
+|String
+|The description.
+|Maximum size of 128. +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.markingIdentifier
+|String
+|The marking identifier.
+|Maximum size of 64. +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.limitedQuantity
+|Integer
+|The limited quantity.
+|Maximum value is 127. +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.instruction
+|String
+|Instruction.
+|Maximum size of 128. +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.limitedQuantityPoints
+|Integer
+|The limited quantity point.
+|Maximum value is 9999. +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.tunnelCode
+|String
+|The tunnelcode.
+|Maximum size of 16. +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.overpackID
+|String
+|The overpackID
+|Maximum size of 24. +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.isHazardousSubstance
+|Boolean
+|Hazardous substance indicator.
+|
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.internationalTechnicalName
+|String
+|The international technical name.
+|Maximum size of 256. +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.localTechnicalName
+|String
+|The local technical name
+|Maximum size of 256. +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.properInternationalShippingName
+|String
+|The proper international shipping name
+|Maximum size of 256. +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.properLocalShippingName
+|String
+|The proper local shipping name
+|Maximum size of 256. +
+
+|
+
+|[] +
+.packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.classificationCode
+|String
+|The classification code.
+|Maximum size of 12. +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.regulation +
+.level
+|String
+|The regulation level.
+|Maximum size of 2. +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.regulation +
+.type
+|String
+|The regulation type.
+|Maximum size of 5. +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.hazardClass +
+.primary
+|String
+|The primary hazard class.
+|Maximum size of 3. +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.hazardClass +
+.secondary
+|String
+|The secondary hazard class.
+|Maximum size of 3. +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.hazardClass +
+.tertiary
+|String
+|The tertiary hazard class.
+|Maximum size of 3. +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.temperature +
+.flashPoint
+|Decimal
+|The flash point.
+|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.temperature +
+.controlTemperature
+|Decimal
+|The control temperature.
+|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.temperature +
+.emergencyTemperature
+|Decimal
+|The emergency temperature.
+|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.temperature +
+.temperatureUom
+|String
+|The temperature units-of-measure.
+|Maximum size of 1. +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.measurements
+|Object
+|The measurements.
+|
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.measurements +
+.length
+|Decimal
+|The length of the object (package, dangerous good).
+Is ignored when used on shipment level.
+Max 2 decimals.
+|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.measurements +
+.width
+|Decimal
+|The width of the object (package, dangerous good).
+Is ignored when used on shipment level.
+Max 2 decimals.
+|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.measurements +
+.height
+|Decimal
+|The height of the object (package, dangerous good).
+Is ignored when used on shipment level.
+Max 2 decimals.
+|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.measurements +
+.weight
+|Decimal
+|The weight of the object (shipment, package, dangerous good).
+Max 2 decimals.
+|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.measurements +
+.linearUom
+|String
+|The linear unit of measure (e.g. CM, FT, IN, YD).
+|Maximum size of 3. +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.measurements +
+.massUom
+|String
+|The mass unit of measure (e.g. KG, LB, OZ).
+|Maximum size of 3. +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.measurements +
+.netExplosiveMassUom
+|String
+|The net explosive mass units-of-measure.
+|Maximum size of 2. +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.measurements +
+.netExplosiveMass
+|Decimal
+|The net explosive mass.
+|Maximum value is 1,000,000,000 +
+ Minimum value is 0 +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.netWeight
+|Decimal
+|The nett weight. (Precision of 2)
+|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.grossWeight
+|Decimal
+|The gross weight.
+|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.volume
+|Decimal
+|The volume. (Precision of 2)
+|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.volumeUom
+|String
+|The volume units-of-measure.
+|Maximum size of 8. +
+
+|
+
+|packages.[] +
+.dangerousGoodsInformation +
+.dangerousGoods.[] +
+.authorizationCode
+|String
+|The authorization code.
+|Maximum size of 24. +
+
+|
+
+|packages.[] +
+.measurements +
+.length
+|Decimal
+|The length of the object (package, dangerous good).
+Is ignored when used on shipment level.
+Max 2 decimals.
+|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+|
+
+|packages.[] +
+.measurements +
+.width
+|Decimal
+|The width of the object (package, dangerous good).
+Is ignored when used on shipment level.
+Max 2 decimals.
+|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+|
+
+|packages.[] +
+.measurements +
+.height
+|Decimal
+|The height of the object (package, dangerous good).
+Is ignored when used on shipment level.
+Max 2 decimals.
+|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+|
+
+|packages.[] +
+.measurements +
+.weight
+|Decimal
+|The weight of the object (shipment, package, dangerous good).
+Max 2 decimals.
+|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+|
+
+|packages.[] +
+.measurements +
+.calculatedWeight
+|Decimal
+|
+|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+|
+
+|[] +
+.packages.[] +
+.customerDocuments
+|List
+|The customer documents.
+|
+|
+
+|[] +
+.packages.[] +
+.customerDocuments.[] +
+.templateName
+|String
+|Attached document template.
+|Maximum size of 64. +
+
+|
+
+|[] +
+.packages.[] +
+.customerDocuments.[] +
+.format
+|String
+|Attached document format, e.g. PDF, PNG, GIF, CSV, etc.
+|Maximum size of 8. +
+
+|
+
+|[] +
+.packages.[] +
+.customerDocuments.[] +
+.content
+|String
+|Attached document base64 string.
+|Maximum size of 524288. +
+
+|
+
+|measurements +
+.linearUom
+|String
+|The linear unit of measure (e.g. CM, FT, IN, YD).
+|Maximum size of 3. +
+
+|
+
+|measurements +
+.massUom
+|String
+|The mass unit of measure (e.g. KG, LB, OZ).
+|Maximum size of 3. +
+
+|
+
+|===

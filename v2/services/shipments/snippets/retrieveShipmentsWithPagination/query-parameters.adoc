@@ -1,0 +1,40 @@
+|===
+|Parameter|Description
+
+|`+reference+`
+|The reference wildcard. Optional
+
+|`+referenceType+`
+|If the reference type is specified the additional reference of the shipment is searched. Optional 
+
+|`+carrierCode+`
+|Effective when extended is set to true, filters response by specified carriers . Optional 
+
+|`+accountCode+`
+|Effective when extended is set to true, filters response by specified sub-account codes. Optional 
+
+|`+costCenter+`
+|Effective when extended is set to true, filters response by specified costceters. Optional 
+
+|`+createdFrom+`
+|Effective when extended is set to true, lower range of the date and time of creation for the shipments to be retrieved. Optional 
+
+|`+createdTo+`
+|Effective when extended is set to true, upper range of the date and time of creation for the shipments to be retrieved. Optional 
+
+|`+extended+`
+|Flag to turn on the extended shipment retrieval. Optional 
+
+|`+pickUpDateFrom+`
+|The pickup date from. Optional 
+
+|`+pickUpDateTo+`
+|The pickup date to. Optional 
+
+|`+page+`
+|The desired page.
+
+|`+size+`
+|The amount of items per page.
+
+|===

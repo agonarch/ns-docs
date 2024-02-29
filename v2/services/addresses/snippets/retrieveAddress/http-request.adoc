@@ -1,0 +1,7 @@
+[source,http,options="nowrap"]
+----
+GET /v2/addresses/DEVDOCS/DEVDOCS31744076 HTTP/1.1
+Content-Type: application/hal+json
+Host: accept-api.transsmart.com
+
+----

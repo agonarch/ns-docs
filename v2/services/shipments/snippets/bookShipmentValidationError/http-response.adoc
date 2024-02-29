@@ -1,0 +1,27 @@
+[source,http,options="nowrap"]
+----
+HTTP/1.1 400 Bad Request
+Content-Type: application/json
+Content-Length: 632
+
+{
+  "status" : "BAD_REQUEST",
+  "timestamp" : "2024-02-02T12:14:30.860278732",
+  "code" : "TS10002",
+  "message" : "Invalid input shipment data",
+  "details" : [ {
+    "reference" : "this_reference_is_toolong_so_an_error_will_be_reported",
+    "validationErrors" : [ {
+      "object" : "Shipment",
+      "field" : "reference",
+      "rejectedValue" : "this_reference_is_toolong_so_an_error_will_be_reported",
+      "message" : "size must be between 1 and 32"
+    }, {
+      "object" : "Shipment",
+      "field" : "carrier",
+      "rejectedValue" : "too_long_carrier",
+      "message" : "Carrier must be 3 characters"
+    } ]
+  } ]
+}
+----

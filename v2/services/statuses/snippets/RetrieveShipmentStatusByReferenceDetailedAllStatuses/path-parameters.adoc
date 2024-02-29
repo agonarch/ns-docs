@@ -1,0 +1,11 @@
+.+/v2/statuses/{account}/shipments/{reference}+
+|===
+|Parameter|Description
+
+|`+account+`
+|Account code
+
+|`+reference+`
+|Shipment reference
+
+|===

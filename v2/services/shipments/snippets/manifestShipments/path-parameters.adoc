@@ -1,0 +1,8 @@
+.+/v2/shipments/{account}/manifest+
+|===
+|Parameter|Description
+
+|`+account+`
+|The account to which the shipment(s) belong(s).
+
+|===

@@ -1,0 +1,10 @@
+[source,json,options="nowrap"]
+----
+{
+  "status" : "NOT_FOUND",
+  "timestamp" : "2024-02-02T12:13:48.670240583",
+  "description" : "Shipment: {too.much.characters.there.cannot.be.a.reference.this.long} does not exist for account {DEVDOCS}",
+  "code" : "TS10004",
+  "message" : "Failed to retrieve shipment."
+}
+----

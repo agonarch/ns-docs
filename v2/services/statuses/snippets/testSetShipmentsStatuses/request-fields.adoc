@@ -1,0 +1,111 @@
+|===
+|Path|Type|Description|Constraints
+
+|[] +
+.reference
+|String
+|Shipment reference
+|Not Null and not empty. +
+ The size must be between 1 and 32. +
+
+
+|[] +
+.referenceType
+|String
+|The reference type.
+|Maximum size of 32. +
+
+
+|[] +
+.shipmentStatusCode
+|String
+|The status of the shipment.
+|Has to match pattern: (NONE\| +
+ERR\| +
+REFU\| +
+NEW\| +
+BOOK\| +
+ONHOLD\| +
+LABL\| +
+MANI\| +
+ACCEP\| +
+TRNS\| +
+DELAY\| +
+DONE\| +
+APOD\| +
+DEL) +
+ Maximum size of 8. +
+
+
+|[] +
+.colloStatusCode
+|String
+|The status of the collo.
+|Has to match pattern: (NONE\| +
+ERR\| +
+REFU\| +
+NEW\| +
+BOOK\| +
+ONHOLD\| +
+LABL\| +
+MANI\| +
+ACCEP\| +
+TRNS\| +
+DELAY\| +
+DONE\| +
+APOD\| +
+DEL) +
+ Maximum size of 8. +
+
+
+|[] +
+.deliveryDate
+|String
+|The delivery date.
+|Format yyyy-MM-dd. +
+
+
+|[] +
+.deliveryTime
+|String
+|The delivery time.
+|Format HH:mm. +
+
+
+|[] +
+.acceptedBy
+|String
+|Name of who signed of on receipt of the goods
+|Maximum size of 64. +
+
+
+|[] +
+.awb
+|String
+|The airway bill number.
+|Maximum size of 32. +
+
+
+|[] +
+.addReferences
+|List
+|No decription found
+|
+
+|[] +
+.addReferences.[] +
+.type
+|String
+|Type of the additional reference
+|Maximum size of 64. +
+
+
+|[] +
+.addReferences.[] +
+.value
+|String
+|The reference value
+|Maximum size of 1024. +
+
+
+|===

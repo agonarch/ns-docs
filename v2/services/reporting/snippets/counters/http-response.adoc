@@ -1,0 +1,8 @@
+[source,http,options="nowrap"]
+----
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 97
+
+[{"date":"2018-11-29","account":"DEVDOCS","carrier":"EEX","shipments":1,"parcels":1,"pallets":0}]
+----

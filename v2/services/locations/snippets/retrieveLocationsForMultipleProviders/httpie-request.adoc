@@ -1,0 +1,4 @@
+[source,bash]
+----
+$ http GET 'https://test-api.transsmart.com/v2/locations/DEVDOCS?street=Oude+tramweg&houseNumber=17&houseNumberExt=E&zipCode=2328&city=Meerseldreef&countryFrom=NL&countryTo=BE&ownLocationOnly=false&email=developer%40documentation.nl&provider=GLS&provider=DHL&provider=UPS&limit=2'
+----

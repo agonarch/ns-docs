@@ -1,0 +1,72 @@
+[cols="1,1,2,2"]
+|===
+|Path|Type|Description|Constraints
+
+|code
+|String
+|The package identifier.
+a|
+
+|description
+|String
+|Description of the package.
+a|
+
+|isDefault
+|Boolean
+|Is this the default package to use.
+a|
+
+|type
+|String
+|Type of the package.
+a|
+
+|linearUom
+|String
+|The linear unit of measure (e.g. CM, FT, IN, YD).
+a|Has to match pattern: (CM\| +
+FT\| +
+IN\| +
+YD\| +
+) +
+
+
+|massUom
+|String
+|The mass unit of measure (e.g. KG, LB, OZ).
+a|Has to match pattern: (KG\| +
+LB\| +
+OZ\| +
+) +
+
+
+|length
+|Decimal wrapped in String
+|The length of the package. (Precision of 2).
+a|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+
+|width
+|Decimal wrapped in String
+|The width of the package. (Precision of 2).
+a|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+
+|height
+|Decimal wrapped in String
+|The height of the package. (Precision of 2).
+a|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+
+|weight
+|Decimal wrapped in String
+|The weight of the package. (Precision of 2).
+a|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+
+|===

@@ -1,0 +1,4 @@
+[source,bash]
+----
+$ http GET 'https://test-api.transsmart.com/v2/statuses/DEVDOCS/shipments/Transsmart_1681382068193?isDetailed=false&currentStatusOnly=false&withPod=false'
+----

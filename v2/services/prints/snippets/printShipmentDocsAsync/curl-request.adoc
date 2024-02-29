@@ -1,0 +1,4 @@
+[source,bash]
+----
+$ curl 'https://test-api.transsmart.com/v2/prints/DEVDOCS/async?reference=Transsmart_1687866674312' -i -X GET
+----

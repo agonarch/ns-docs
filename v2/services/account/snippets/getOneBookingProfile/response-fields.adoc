@@ -1,0 +1,47 @@
+[cols="1,1,2,2"]
+|===
+|Path|Type|Description|Constraints
+
+|code
+|String
+|The booking profile identifier.
+a|
+
+|description
+|String
+|Description of the booking profile.
+a|
+
+|carrier
+|String
+|The carrier.
+a|
+
+|serviceLevelTime
+|String
+|The service level time.
+a|Not Null and not empty. +
+
+
+|serviceLevelOther
+|String
+|The service level other.
+a|
+
+|incoterms
+|String
+|The incoterm.
+a|
+
+|costCenter
+|String
+|The costcenter.
+a|
+
+|mailType
+|Integer wrapped in String
+|The mail type.
+a|Maximum value is 127. +
+
+
+|===

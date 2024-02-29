@@ -1,0 +1,6 @@
+[source,http,options="nowrap"]
+----
+GET /v2/shipments/DEVDOCS/manifest/list?date=2024-02-02&carrier=DPD&costCenter=&slt=CLASSIC&slo=&receiverCountry=NL&reference=example-engineer-additional-value-shipment-level&referenceType=ENGINEER HTTP/1.1
+Host: test-api.transsmart.com
+
+----

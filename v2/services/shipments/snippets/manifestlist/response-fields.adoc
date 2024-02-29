@@ -1,0 +1,184 @@
+[cols="1,1,2,2"]
+|===
+|Path|Type|Description|Constraints
+
+|contentType
+|String
+|
+a|
+
+|isLastPage
+|Boolean
+|Indicates if this is the last page.
+a|
+
+|isFirstPage
+|Boolean
+|Indicates if this is the first page.
+a|
+
+|totalItems
+|Integer
+|Total amount of items.
+a|
+
+|totalPages
+|Integer
+|Total amount of pages.
+a|
+
+|pageSize
+|Integer
+|The amount of items per page.
+a|
+
+|currentPage
+|Integer
+|The current page.
+a|
+
+|numberOfItems
+|Integer
+|Number of items in this page.
+a|
+
+|content
+|Object
+|The content of this page.
+a|
+
+|content +
+.manifests.[] +
+.costCenter
+|String
+|The costCenter of the shipment.
+a|Maximum size of 32. +
+
+
+|content +
+.manifests.[] +
+.instruction
+|String
+|The instruction of the shipment.
+a|Maximum size of 32. +
+ Not Null and not empty. +
+
+
+|content +
+.manifests.[] +
+.packageTypes
+|String
+|The package types of the shipment.
+a|Maximum size of 32. +
+ Not Null and not empty. +
+
+
+|content +
+.manifests.[] +
+.reference
+|String
+|The reference of the shipment.
+a|Not Null and not empty. +
+ The size must be between 1 and 32. +
+
+
+|content +
+.manifests.[] +
+.status
+|String
+|The status of the shipment.
+a|Has to match pattern: (NONE\| +
+ERR\| +
+REFU\| +
+NEW\| +
+BOOK\| +
+ONHOLD\| +
+LABL\| +
+MANI\| +
+ACCEP\| +
+TRNS\| +
+DELAY\| +
+DONE\| +
+APOD\| +
+DEL) +
+ Maximum size of 8. +
+
+
+|content +
+.manifests.[] +
+.airwaybill
+|String
+|The airwaybill of the shipment.
+a|Maximum size of 256. +
+
+
+|content +
+.manifests.[] +
+.name
+|String
+|The name of the address where the shipment is send to.
+a|Maximum size of 64. +
+ Not Null and not empty. +
+
+
+|content +
+.manifests.[] +
+.zipCode
+|String
+|The zipCode of the address where the shipment is send to.
+a|Maximum size of 16. +
+ Not Null and not empty. +
+
+
+|content +
+.manifests.[] +
+.city
+|String
+|The city where the shipment is send to.
+a|Maximum size of 64. +
+ Not Null and not empty. +
+
+
+|content +
+.manifests.[] +
+.serviceLevels
+|String
+|The serviceLevels of the shipment, this is a _ concatenation of the service level time and  service level other (example: EUROPLUS_COD )
+a|Maximum size of 32. +
+ Not Null and not empty. +
+
+
+|content +
+.manifests.[] +
+.packages
+|Integer
+|The amount of packages.
+a|Maximum value is 32767. +
+
+
+|content +
+.manifests.[] +
+.weight
+|Decimal
+|The weight of the shipment. 
+a|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+
+|content +
+.manifests.[] +
+.value
+|Decimal
+|The value of the shipment.
+a|Maximum value is 999,999,999.99 +
+ Minimum value is -999,999,999.99 +
+
+
+|content +
+.costCenters +
+.[]
+|Field [] not found
+|Field [] not found
+a|
+
+|===

@@ -1,0 +1,10 @@
+|===
+|Parameter|Description
+
+|`+size+`
+|Maximum number of addresses in the results.
+
+|`+page+`
+|Requested results page.
+
+|===

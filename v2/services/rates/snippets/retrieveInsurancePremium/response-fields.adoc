@@ -1,0 +1,49 @@
+[cols="2,1,2,2"]
+|===
+|Path|Type|Description|Constraints
+
+|company
+|String
+|The insurance company.
+a|Maximum size of 128. +
+
+
+|currency
+|String
+|The currency.
+a|Maximum size of 3. +
+
+
+|claimLink
+|String
+|The link to claim a insurance.
+a|Maximum size of 256. +
+
+
+|policyLink
+|String
+|The link to the policy applicable for the insurance.
+a|Maximum size of 256. +
+
+
+|description
+|String
+|The description for this rate.
+a|Maximum size of 128. +
+
+
+|insuredValue
+|Decimal
+|The insured value.
+a|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+
+|premium
+|Decimal
+|The price.
+a|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+
+|===

@@ -1,0 +1,37 @@
+[source,bash]
+----
+$ curl 'https://test-api.transsmart.com/v2/shipments/DEVDOCS/BOOK/DPD1' -i -X POST \
+    -H 'Content-Type: application/json;charset=UTF-8' \
+    -d '{
+  "reference" : "Transsmart_1706872483046",
+  "carrier" : "",
+  "inbound" : 0,
+  "additionalReferences" : [ ],
+  "addresses" : [ {
+    "type" : "RECV",
+    "name" : "Transsmart",
+    "addressLine1" : "Ellen Pankhurststraat",
+    "houseNo" : "1c",
+    "addressLine2" : "2nd floor",
+    "addressLine3" : "att. Support",
+    "city" : "Tilburg",
+    "zipCode" : "5032MD",
+    "state" : "",
+    "country" : "NL",
+    "contact" : "Support",
+    "telNo" : "0031881260300",
+    "faxNo" : "0031881260301",
+    "email" : "example@domain.com",
+    "accountNumber" : "example-accountNumber",
+    "customerNumber" : "example-customerNumber",
+    "vatNumber" : "example-vatNumber",
+    "residential" : 0,
+    "contactDateOfBirth" : "1999-01-01",
+    "contactIdType" : "type",
+    "contactIdNumber" : "1234",
+    "eoriNumber" : "NL4321"
+  } ],
+  "packages" : [ ],
+  "monetaryDetails" : [ ]
+}'
+----

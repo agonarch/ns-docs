@@ -1,0 +1,365 @@
+==== 5.1 Status retrieval
+For the status retrieval we have 2 types of retrievals: 
+
+ - Per shipment with a query per reference 
+
+ - A list of shipments based on query parameters. 
+ 
+===== 5.1.1 For a single shipment
+
+====== Retrieve status for a shipment per reference without detailed information
+
+====== Path parameters
+include::snippets/RetrieveShipmentStatusByReferenceNotDetailed/path-parameters.adoc[]
+
+====== Request parameters
+include::snippets/RetrieveShipmentStatusByReferenceNotDetailed/query-parameters.adoc[]
+
+====== Response structure
+include::snippets/RetrieveShipmentStatusByReferenceNotDetailed/response-fields.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/RetrieveShipmentStatusByReferenceNotDetailed/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example:
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/RetrieveShipmentStatusByReferenceNotDetailed/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/RetrieveShipmentStatusByReferenceNotDetailed/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Retrieve status for a shipment per reference with detailed information
+
+====== Path parameters
+include::snippets/RetrieveShipmentStatusByReferenceDetailedAllStatuses/path-parameters.adoc[]
+
+====== Request parameters
+include::snippets/RetrieveShipmentStatusByReferenceDetailedAllStatuses/query-parameters.adoc[]
+
+====== Response structure
+include::snippets/RetrieveShipmentStatusByReferenceDetailedAllStatuses/response-fields.adoc[]
+
+===== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/RetrieveShipmentStatusByReferenceDetailedAllStatuses/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example:
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/RetrieveShipmentStatusByReferenceDetailedAllStatuses/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/RetrieveShipmentStatusByReferenceDetailedAllStatuses/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Retrieve status for a shipment per reference with detailed information about the last status only
+
+====== Path parameters
+include::snippets/RetrieveShipmentStatusByReferenceDetailedLastStatus/path-parameters.adoc[]
+
+====== Request parameters
+include::snippets/RetrieveShipmentStatusByReferenceDetailedLastStatus/query-parameters.adoc[]
+
+====== Response structure
+include::snippets/RetrieveShipmentStatusByReferenceDetailedLastStatus/response-fields.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/RetrieveShipmentStatusByReferenceDetailedLastStatus/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example:
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/RetrieveShipmentStatusByReferenceDetailedLastStatus/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/RetrieveShipmentStatusByReferenceDetailedLastStatus/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+===== 5.1.2 For multiple shipments
+
+====== Retrieve status for shipments based on query parameters without detailed information
+
+====== Path parameters
+include::snippets/RetrieveShipmentStatusByQueryNotDetailed/path-parameters.adoc[]
+
+====== Request parameters
+include::snippets/RetrieveShipmentStatusByQueryNotDetailed/query-parameters.adoc[]
+
+====== Response structure
+include::snippets/RetrieveShipmentStatusByQueryNotDetailed/response-fields.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/RetrieveShipmentStatusByQueryNotDetailed/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example:
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/RetrieveShipmentStatusByQueryNotDetailed/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/RetrieveShipmentStatusByQueryNotDetailed/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Retrieve status for shipments based on query parameters with detailed information
+
+====== Path parameters
+include::snippets/RetrieveShipmentStatusByQueryDetailedAllStatuses/path-parameters.adoc[]
+
+====== Request parameters
+include::snippets/RetrieveShipmentStatusByQueryDetailedAllStatuses/query-parameters.adoc[]
+
+====== Response structure
+include::snippets/RetrieveShipmentStatusByQueryDetailedAllStatuses/response-fields.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/RetrieveShipmentStatusByQueryDetailedAllStatuses/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example:
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/RetrieveShipmentStatusByQueryDetailedAllStatuses/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/RetrieveShipmentStatusByQueryDetailedAllStatuses/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Retrieve status for shipments based on query parameters with detailed information about the last status only
+
+====== Path parameters
+include::snippets/RetrieveShipmentStatusByQueryDetailedLastStatus/path-parameters.adoc[]
+
+====== Request parameters
+include::snippets/RetrieveShipmentStatusByQueryDetailedLastStatus/query-parameters.adoc[]
+
+====== Response structure
+include::snippets/RetrieveShipmentStatusByQueryDetailedLastStatus/response-fields.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/RetrieveShipmentStatusByQueryDetailedLastStatus/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example:
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/RetrieveShipmentStatusByQueryDetailedLastStatus/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/RetrieveShipmentStatusByQueryDetailedLastStatus/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+==== 5.2 Status stream
+
+The push status functionality utilises webhooks for pushing per shipment status events to provided end-points.
+
+*Required Configurations*
+
+ - A URL to which status events should be streamed; if it is a protected URL, correct credentials must also be provided.
+
+*Frequency of notifications*
+
+ - A notication is sent for each shipment line/package/collo status event.
+
+*Payload*
+
+The payload sent in status notification is the same as the response to status retrieval requests, chapter 5.1.
+
+==== 5.3 Status update
+For the status update we have 2 types: 
+
+ - Per shipment with a query per reference 
+
+ - A list of shipments. 
+ 
+===== 5.3.1 For a single shipment
+
+====== Status update for a shipment per reference
+
+====== Path parameters
+include::snippets/SetShipmentStatusByReference/path-parameters.adoc[]
+
+====== Request structure
+include::snippets/SetShipmentStatusByReference/request-fields.adoc[]
+
+====== Response structure
+include::snippets/SetShipmentStatusByReference/response-fields.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/SetShipmentStatusByReference/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example:
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/SetShipmentStatusByReference/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/SetShipmentStatusByReference/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+===== 5.3.2 For a list of shipments
+
+====== Status update for a list of shipment
+
+====== Path parameters
+include::snippets/testSetShipmentsStatuses/path-parameters.adoc[]
+
+====== Request parameters
+include::snippets/testSetShipmentsStatuses/request-fields.adoc[]
+
+====== Response structure
+include::snippets/testSetShipmentsStatuses/response-fields.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/testSetShipmentsStatuses/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example:
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/testSetShipmentsStatuses/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/testSetShipmentsStatuses/http-response.adoc[]
+++++
+</div >
+</div >
+++++

@@ -1,0 +1,4 @@
+[source,bash]
+----
+$ curl 'https://test-api.transsmart.com/v2/rates/DEVDOCS/insurance?currency=EUR&countryFrom=NL&countryTo=NL&value=10' -i -X GET
+----

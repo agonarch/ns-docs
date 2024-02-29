@@ -1,0 +1,133 @@
+==== 8.0 Locations retrieval
+Locations can be retrieved in 3 ways:+
+* For a single carrier+
+* For a selection of carriers+
+* For all carriers available to you+
+
+If locations are retrieved for more than one carrier, the request will be forwarded in parallel to each carrier. Our platform then waits for all responses to be in before composing the response to the calling system.+
+Please note that almost all carriers offer online location selectors, latency can occur. As the requests are multithreaded and are returned on success or timeout (10 seconds) of the requested carriers, it can occur that a noticeable delay at a single carrier will influence the overall response times.+
+If possible, we encourage clients to implement the location selector on a per carrier basis. That way the client can asynchronously build up the checkout screen while waiting for the responses of slower carriers to be received, whereby the customer doesn't need to wait too long for the screen to load.
+
+===== Retrieve for a single carrier
+
+
+====== Path parameters
+include::snippets/retrieveLocationsForOneProvider/path-parameters.adoc[]
+
+====== Request parameters
+include::snippets/retrieveLocationsForOneProvider/query-parameters.adoc[]
+
+====== Response structure locations
+include::snippets/retrieveLocationsForOneProvider/response-fields.adoc[]
+
+====== Curl example
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/retrieveLocationsForOneProvider/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/retrieveLocationsForOneProvider/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/retrieveLocationsForOneProvider/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+===== Retrieve for multiple carriers
+
+====== Path parameters
+include::snippets/retrieveLocationsForMultipleProviders/path-parameters.adoc[]
+
+====== Request parameters
+include::snippets/retrieveLocationsForMultipleProviders/query-parameters.adoc[]
+
+====== Response structure
+See to <<_response_structure_locations,Response structure locations>>.
+
+====== Curl example
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/retrieveLocationsForMultipleProviders/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/retrieveLocationsForMultipleProviders/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/retrieveLocationsForMultipleProviders/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+===== Retrieve for all configured carriers
+
+====== Path parameters
+include::snippets/retrieveLocationsFromAllConfiguredProviders/path-parameters.adoc[]
+
+====== Request parameters
+include::snippets/retrieveLocationsFromAllConfiguredProviders/query-parameters.adoc[]
+
+====== Response structure
+See to <<_response_structure_locations,Response structure locations>>.
+
+====== Curl example
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/retrieveLocationsFromAllConfiguredProviders/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/retrieveLocationsFromAllConfiguredProviders/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/retrieveLocationsFromAllConfiguredProviders/http-response.adoc[]
+++++
+</div >
+</div >
+++++

@@ -1,0 +1,738 @@
+[cols="2,1,2,2"]
+|===
+|Path|Type|Description|Constraints
+
+|[] +
+.shipmentDetails
+|Shipment
+|The shipment for which the rating is calculated.
+a|
+
+|[] +
+.shipmentDetails +
+.reference
+|String
+|Shipment reference.
+a|Maximum size of 32. +
+
+
+|[] +
+.shipmentDetails +
+.carrier
+|String
+|The carrier.
+a|Maximum size of 3. +
+
+
+|[] +
+.shipmentDetails +
+.costCenter
+|String
+|The cost center.
+a|Maximum size of 32. +
+
+
+|[] +
+.shipmentDetails +
+.mailType
+|Integer wrapped in String
+|The mail type.
+a|
+
+|[] +
+.shipmentDetails +
+.value
+|Decimal
+|The shipment monetary value. (Precision of 2).
+a|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+
+|[] +
+.shipmentDetails +
+.currency
+|String
+|General currency for shipment monetary fields.
+a|Maximum size of 3. +
+
+
+|[] +
+.shipmentDetails +
+.pickupDate
+|String
+|The pickup date.
+a|Format yyyy-MM-dd. +
+
+
+|[] +
+.shipmentDetails +
+.pickupTime
+|String
+|The earliest pickup time.
+a|Format HH:mm. +
+
+
+|[] +
+.shipmentDetails +
+.pickupTimeTo
+|String
+|The latest shipment pickup time.
+a|Format HH:mm. +
+
+
+|[] +
+.shipmentDetails +
+.requestedDeliveryDate
+|String
+|The requested delivery date.
+a|Format yyyy-MM-dd. +
+
+
+|[] +
+.shipmentDetails +
+.requestedDeliveryTime
+|String
+|The requested earliest delivery time
+a|Format HH:mm. +
+
+
+|[] +
+.shipmentDetails +
+.requestedDeliveryTimeTo
+|String
+|The requested lates delivery time.
+a|Format HH:mm. +
+
+
+|[] +
+.shipmentDetails +
+.service
+|String
+|The service: example NON-DOCS/DOCS >> may indicate if a shipment goes out of the EU
+a|Maximum size of 16. +
+
+
+|[] +
+.shipmentDetails +
+.serviceLevelTime
+|String
+|The requested service level time.
+a|Maximum size of 32. +
+
+
+|[] +
+.shipmentDetails +
+.serviceLevelOther
+|String
+|The service level other.
+a|Maximum size of 32. +
+
+
+|[] +
+.shipmentDetails +
+.incoterms
+|String
+|The inco terms.
+a|Maximum size of 16. +
+
+
+|[] +
+.shipmentDetails +
+.inbound
+|Boolean wrapped in Integer
+|Is this an outbound or inbound shipment (outbound= 0, inbound= 1).
+a|Maximum value is 1. +
+ Minimum value is 0. +
+
+
+|[] +
+.shipmentDetails +
+.loadmeters
+|Decimal
+|The load meters of the shipment. (Precision of 2).
+a|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+
+|[] +
+.shipmentDetails +
+.numberOfPackages
+|Integer
+|
+a|Maximum value is 32767. +
+
+
+|[] +
+.shipmentDetails +
+.measurements +
+.length
+|Decimal
+|The length. (Precision of 2) Note that the length on shipment level is deprecated and will always return 0.
+a|Mandatory. +
+ Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+
+|[] +
+.shipmentDetails +
+.measurements +
+.width
+|Decimal
+|The width. (Precision of 2) Note that the width on shipment level is deprecated and will always return 0.
+a|Mandatory. +
+ Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+
+|[] +
+.shipmentDetails +
+.measurements +
+.height
+|Decimal
+|The height. (Precision of 2) Note that the height on shipment level is deprecated and will always return 0.
+a|Mandatory. +
+ Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+
+|[] +
+.shipmentDetails +
+.measurements +
+.weight
+|Decimal
+|The weight. (Precision of 2).
+a|Mandatory. +
+ Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+
+|[] +
+.shipmentDetails +
+.measurements +
+.linearUom
+|String
+|The linear unit of measure (e.g. CM, FT, IN, YD).
+a|Has to match pattern: (CM\| +
+FT\| +
+IN\| +
+YD\| +
+) +
+ Maximum size of 3. +
+
+
+|[] +
+.shipmentDetails +
+.measurements +
+.massUom
+|String
+|The mass unit of measure (e.g. KG, LB, OZ).
+a|Has to match pattern: (KG\| +
+LB\| +
+OZ\| +
+) +
+ Maximum size of 3. +
+
+
+|[] +
+.shipmentDetails +
+.addresses
+|List
+|The addresses, the address indicates the type.
+a|
+
+|[] +
+.shipmentDetails +
+.addresses.[] +
+.type
+|String
+|The type of the address.
+a|
+
+|[] +
+.shipmentDetails +
+.addresses.[] +
+.name
+|String
+|The name.
+a|Maximum size of 64. +
+
+
+|[] +
+.shipmentDetails +
+.addresses.[] +
+.addressLine1
+|String
+|The first address line.
+a|Maximum size of 64. +
+
+
+|[] +
+.shipmentDetails +
+.addresses.[] +
+.addressLine2
+|String
+|The second address line.
+a|Maximum size of 64. +
+
+
+|[] +
+.shipmentDetails +
+.addresses.[] +
+.addressLine3
+|String
+|The third address line.
+a|Maximum size of 64. +
+
+
+|[] +
+.shipmentDetails +
+.addresses.[] +
+.houseNo
+|String
+|The house number.
+a|Maximum size of 16. +
+
+
+|[] +
+.shipmentDetails +
+.addresses.[] +
+.city
+|String
+|The city.
+a|Maximum size of 64. +
+
+
+|[] +
+.shipmentDetails +
+.addresses.[] +
+.zipCode
+|String
+|The zip code.
+a|Maximum size of 16. +
+
+
+|[] +
+.shipmentDetails +
+.addresses.[] +
+.state
+|String
+|The state.
+a|Maximum size of 16. +
+
+
+|[] +
+.shipmentDetails +
+.addresses.[] +
+.country
+|String
+|The country code.
+a|Maximum size of 2. +
+
+
+|[] +
+.shipmentDetails +
+.addresses.[] +
+.contact
+|String
+|The contact information.
+a|Maximum size of 64. +
+
+
+|[] +
+.shipmentDetails +
+.addresses.[] +
+.telNo
+|String
+|The phone number.
+a|Maximum size of 32. +
+
+
+|[] +
+.shipmentDetails +
+.addresses.[] +
+.faxNo
+|String
+|The fax number.
+a|Maximum size of 32. +
+
+
+|[] +
+.shipmentDetails +
+.addresses.[] +
+.email
+|String
+|The email address.
+a|Maximum size of 256. +
+
+
+|[] +
+.shipmentDetails +
+.addresses.[] +
+.accountNumber
+|String
+|The account number. 
+a|Maximum size of 32. +
+
+
+|[] +
+.shipmentDetails +
+.addresses.[] +
+.customerNumber
+|String
+|The customer number.
+a|Maximum size of 32. +
+
+
+|[] +
+.shipmentDetails +
+.addresses.[] +
+.vatNumber
+|String
+|The vat number.
+a|Maximum size of 32. +
+
+
+|[] +
+.shipmentDetails +
+.addresses.[] +
+.residential
+|Boolean wrapped in Integer
+|Indicator for residential addresses.
+a|Maximum value is 1. +
+ Minimum value is 0. +
+
+
+|[] +
+.shipmentDetails +
+.packages
+|List
+|The packages/collo.
+a|
+
+|[] +
+.shipmentDetails +
+.packages.[] +
+.lineNo
+|Integer
+|The line number for this package.
+a|Maximum value is 200000. +
+
+
+|[] +
+.shipmentDetails +
+.packages.[] +
+.description
+|String
+|The description of the goods.
+a|Maximum size of 128. +
+
+
+|[] +
+.shipmentDetails +
+.packages.[] +
+.packageType
+|String
+|The package type.
+a|Maximum size of 16. +
+
+
+|[] +
+.shipmentDetails +
+.packages.[] +
+.quantity
+|Integer
+|The quantity.
+a|
+
+|[] +
+.shipmentDetails +
+.packages.[] +
+.stackable
+|Boolean
+|Is the package stackable?
+a|
+
+|[] +
+.shipmentDetails +
+.packages.[] +
+.stackHeight
+|Integer
+|The stack height.
+a|Maximum value is 32767. +
+
+
+|[] +
+.shipmentDetails +
+.packages.[] +
+.measurements +
+.length
+|Decimal
+|The length. (Precision of 2) Note that the length on shipment level is deprecated and will always return 0.
+a|Mandatory. +
+ Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+
+|[] +
+.shipmentDetails +
+.packages.[] +
+.measurements +
+.width
+|Decimal
+|The width. (Precision of 2) Note that the width on shipment level is deprecated and will always return 0.
+a|Mandatory. +
+ Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+
+|[] +
+.shipmentDetails +
+.packages.[] +
+.measurements +
+.height
+|Decimal
+|The height. (Precision of 2) Note that the height on shipment level is deprecated and will always return 0.
+a|Mandatory. +
+ Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+
+|[] +
+.shipmentDetails +
+.packages.[] +
+.measurements +
+.weight
+|Decimal
+|The weight. (Precision of 2).
+a|Mandatory. +
+ Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+
+|[] +
+.shipmentDetails +
+.packages.[] +
+.measurements +
+.linearUom
+|String
+|The linear unit of measure (e.g. CM, FT, IN, YD).
+a|Has to match pattern: (CM\| +
+FT\| +
+IN\| +
+YD\| +
+) +
+ Maximum size of 3. +
+
+
+|[] +
+.shipmentDetails +
+.packages.[] +
+.measurements +
+.massUom
+|String
+|The mass unit of measure (e.g. KG, LB, OZ).
+a|Has to match pattern: (KG\| +
+LB\| +
+OZ\| +
+) +
+ Maximum size of 3. +
+
+
+|[] +
+.rates
+|List
+|List of calculated rates.
+a|
+
+|[] +
+.rates.[] +
+.description
+|String
+|The description for this rate.
+a|Maximum size of 128. +
+
+
+|[] +
+.rates.[] +
+.currency
+|String
+|The currency.
+a|Maximum size of 3. +
+
+
+|[] +
+.rates.[] +
+.salesPrice
+|Decimal
+|The sales price. (Precision of 2).
+a|Maximum value is 999,999,999.99 +
+ Minimum value is -999,999,999.99 +
+
+
+|[] +
+.rates.[] +
+.salesCurrency
+|String
+|The sales currency.
+a|Maximum size of 3. +
+
+
+|[] +
+.rates.[] +
+.weight
+|Decimal
+|The weight. (Precision of 2).
+a|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+
+|[] +
+.rates.[] +
+.weightUom
+|String
+|The weight unit of measure.(e.g. KG, LB, OZ)
+a|Has to match pattern: (KG\| +
+LB\| +
+OZ\| +
+) +
+ Maximum size of 3. +
+
+
+|[] +
+.rates.[] +
+.calculatedWeight
+|Decimal
+|The calculated weight. (Precision of 2).
+a|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+
+|[] +
+.rates.[] +
+.calculatedWeightType
+|String
+|The calculated weight type.
+a|Maximum size of 45. +
+
+
+|[] +
+.rates.[] +
+.calculatedWeightUom
+|String
+|The calculated weight unit of measure. (e.g. KG, LB, OZ).
+a|Has to match pattern: (KG\| +
+LB\| +
+OZ\| +
+) +
+ Maximum size of 3. +
+
+
+|[] +
+.rates.[] +
+.executingCarrier
+|String
+|The executing carrier.
+a|Fixed length of 3. +
+
+
+|[] +
+.rates.[] +
+.transitTimeDescription
+|String
+|The description of the transit times (in Dutch).
+a|Maximum size of 128. +
+
+
+|[] +
+.rates.[] +
+.transitTimeHours
+|Integer wrapped in Decimal
+|The hours of transit based on requested pickup and delivery date times.
+a|Maximum value is 32767. +
+ Minimum value is 0. +
+
+
+|[] +
+.rates.[] +
+.carrier
+|String
+|The carrier.
+a|Fixed length of 3. +
+
+
+|[] +
+.rates.[] +
+.carrierDescription
+|String
+|The carrier name.
+a|Maximum size of 128. +
+
+
+|[] +
+.rates.[] +
+.serviceLevelTime
+|String
+|The service level time.
+a|Maximum size of 32. +
+
+
+|[] +
+.rates.[] +
+.serviceLevelOther
+|String
+|The service level other.
+a|Maximum size of 32. +
+
+
+|[] +
+.rates.[] +
+.serviceLevelTimeDescription
+|String
+|The service level time description.
+a|Maximum size of 128. +
+
+
+|[] +
+.rates.[] +
+.serviceLevelOtherDescription
+|String
+|The service level other description.
+a|Maximum size of 128. +
+
+
+|[] +
+.rates.[] +
+.pickupDate
+|Date wrapped in String
+|Pickup date, note that this can differ from the originally desired pickup date due to the carrier's logistics.
+a|Format yyyy-MM-dd. +
+ Maximum size of 10. +
+
+
+|[] +
+.rates.[] +
+.deliveryDate
+|Date wrapped in String
+|Delivery date, note that this can differ from the originally desired delivery date due to carrier's logistics.
+a|Format yyyy-MM-dd. +
+ Maximum size of 10. +
+
+
+|[] +
+.rates.[] +
+.deliveryTime
+|Date wrapped in String
+|Delivery time, note that this can differ from the originally desired delivery time due to carrier's logistics.
+a|Format HH:mm. +
+
+
+|[] +
+.rates.[] +
+.price
+|Decimal
+|Calculated price.
+a|Maximum value is 999,999,999.99 +
+ Minimum value is -999,999,999.99 +
+
+
+|===

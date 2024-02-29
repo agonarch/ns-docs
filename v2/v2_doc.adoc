@@ -1,0 +1,93 @@
+== Endpoints
+This section describes the API; information regarding authenticating to API is provided first, +
+followed by the description of the respective API resources, in relation to their related functionality.
+
+==== Explanation
+The descriptions provide the following API properties;
+
+* Supported data formats
+* Supported verbs
+* Request/response status codes and error messages.
+* Data type.
+* Data Constrains (if applicable).
+* Data default (if applicable).
+
+=== 1.0 Authenticating
+For version two, the API employs token based authentication. An issued token has a 24-hour validity period.
+
+==== 1.1 Requesting for a token
+To request for a token, make a GET request to <<main.adoc#_environments,environment_base_url>>/login using basic authentication with valid user credentials.
+As response a JWT token is returned and is valid for 24 hours.
+
+Having received the token, subsequent calls to the API have to be made with token placed in the `Authorization` header of the request with prefix `Bearer`.
+
+When the token is expired you will receive a response Token expired and you’ll have to make sure to request for a new token. Or, just make sure to request for a token every 24 hours. Do NOT request for a token before every other API call you do; this is causing a lot of unneccesary API traffic on both our as your servers.
+
+Example header key `Authorization` with value `Bearer eyJhbGciOiJIUzUxMiIsInppcCI6IkdaSVAifQ...`
+
+You can also request for a key by specifying the parameter response=key. This key can be used in the direct links. This key is 24 hours valid.
+
+To get the account where the user belongs to, specify the parameter response=account.
+
+To get the token, the key and the account, specify the parameter response=token,key,account.
+
+NOTE: In case of a failed request, an appropriate response with be given, indicating a likely cause.
+
+
+
+=== 2.0 Shipment management
+This involves booking/creation, manifesting, deletion and retrieval of shipments.
+
+`Main resource:` v2/shipments
+
+include::services/shipments/service_doc.adoc[]
+
+=== 3.0 Rates calculation
+This involves a pre-booking calculation of the shipment charges before the shipment is actually booked.
+
+`Main resource:` v2/rates
+
+include::services/rates/service_doc.adoc[]
+
+=== 4.0 Document printing
+This involves the printing of documents that have been generated for a shipment.
+
+`Main resource:` v2/prints
+
+include::services/prints/service_doc.adoc[]
+
+=== 5.0 Shipment status tracking
+This involves status tracking after a shipment is successfully booked.
+
+`Main resource:` v2/statuses
+
+include::services/statuses/service_doc.adoc[]
+
+=== 6.0 Address book management
+This involves managing addresses which can be reference as shipment receiver addresses or as dispatching points.
+
+`Main resource:` v2/addresses
+
+include::services/addresses/service_doc.adoc[]
+
+=== 7.0 Account management
+This involves managing accounts and there settings.
+Some settings are inherited from the parent account(s), these settings can not be changed/deleted. These settings have a index value of -1. 
+The settings are returned as a String but contain a json object, so beware that you first need to unwrap the String and then the appropriate setting object.
+
+`Main resource:` v2/accounts
+
+include::services/account/service_doc.adoc[]
+
+=== 8.0 Pick-up locations determination
+
+`Main resource:` v2/locations
+
+include::services/locations/service_doc.adoc[]
+
+
+=== 9.0 Reporting
+
+`Main resource:` v2/reports
+
+include::services/reporting/service_doc.adoc[]

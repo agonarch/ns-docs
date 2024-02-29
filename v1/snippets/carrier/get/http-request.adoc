@@ -1,0 +1,7 @@
+[source,http,options="nowrap"]
+----
+GET /v1/Carrier/1?id=1 HTTP/1.1
+CustomerId: 3
+Host: localhost:8080
+
+----

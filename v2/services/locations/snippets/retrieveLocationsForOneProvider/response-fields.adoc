@@ -1,0 +1,289 @@
+|===
+|Path|Type|Description
+
+|referenceLocation
+|Location
+|The location of the original request.
+
+
+|referenceLocation.distance
+|double
+|The distance between this particular location and the requested address.
+
+
+|referenceLocation.street
+|String
+|The street.
+
+
+|referenceLocation.streetNo
+|String
+|The house number.
+
+
+|referenceLocation.streetNoExt
+|String
+|The house number extention.
+
+
+|referenceLocation.zipcode
+|String
+|The zip code.
+
+
+|referenceLocation.city
+|String
+|The city.
+
+
+|referenceLocation.province
+|String
+|The province.
+
+
+|referenceLocation.country
+|String
+|The country code.
+
+
+|referenceLocation.contact
+|Contact
+|The contact information for this location.
+
+
+|referenceLocation.contact.email
+|Field email not found
+|Field email not found
+
+
+|referenceLocation.hasOpeningHours
+|Boolean
+|Indication wether this location has opening hours.
+
+
+|referenceLocation.openHours
+|List
+|The opening hours of this location. Note, if the location doesn't close in the morning it also doesn't open in the afternoon, therefore the 'closing' in the morning and the 'opening' in the afternoon can be empty
+
+
+|referenceLocation.coordinates
+|double[]
+|The coordinates of the location.
+
+
+|referenceLocation.googleMapsUrl
+|String
+|The google maps url to display the location of the location.
+
+
+|referenceLocation.countryOfOrigin
+|String
+|The country of origin code of the ReferenceLocation
+
+
+|sources
+|List
+|List of found locations per provider.
+
+
+|sources.[].code
+|String
+|The code of the carrier or client.
+
+
+|sources.[].name
+|String
+|The name of the carrier or client.
+
+
+|sources.[].logo
+|String
+|A base64 encoded picture of the carrier logo.
+
+
+|sources.[].errors
+|Object
+|Description of a possible error.
+
+
+|sources.[].errors.status
+|String
+|The status of the error, e.g. BAD_REQUEST or INTERNAL_SERVER_ERROR.
+
+
+|sources.[].errors.timestamp
+|String
+|The actual timestamp when the error was raised.
+
+
+|sources.[].errors.code
+|String
+|The Transsmart internal error code, e.g. TS50001
+
+
+|sources.[].errors.message
+|String
+|The message given either by the carrier or by Transsmart
+
+
+|sources.[].errors.details
+|String
+|The details given either by the carrier or by Transsmart
+
+
+|sources.[].errors.description
+|String
+|The description given either by the carrier or by Transsmart
+
+
+|sources.[].marker
+|String
+|A base64 encoded picture of a marker which can be used to put on a visual geographical map
+
+
+|sources.[].locations
+|Array
+|List of locations provided by this carrier.
+
+
+|sources.[].locations.[].distance
+|Double
+|The distance between this particular location and the requested address.
+
+
+|sources.[].locations.[].name
+|String
+|Name of the location
+
+
+|sources.[].locations.[].street
+|String
+|The street.
+
+
+|sources.[].locations.[].streetNo
+|String
+|The house number.
+
+
+|sources.[].locations.[].streetNoExt
+|String
+|The house number extention.
+
+
+|sources.[].locations.[].zipcode
+|String
+|The zip code.
+
+
+|sources.[].locations.[].city
+|String
+|The city.
+
+
+|sources.[].locations.[].province
+|String
+|The province.
+
+
+|sources.[].locations.[].country
+|String
+|The country code.
+
+
+|sources.[].locations.[].contact
+|Object
+|The contact information for this location.
+
+
+|sources.[].locations.[].contact.name
+|String
+|Name of the location
+
+
+|sources.[].locations.[].contact.phone
+|String
+|Field phone not found
+
+
+|sources.[].locations.[].contact.fax
+|String
+|Field fax not found
+
+
+|sources.[].locations.[].contact.email
+|String
+|Field email not found
+
+
+|sources.[].locations.[].servicePointId
+|String
+|Unique id that identifies the location for the carrier. This field should be sent as an additional reference SERVICEPOINT in a shipment booking.
+
+
+|sources.[].locations.[].hasOpeningHours
+|Boolean
+|Indication wether this location has opening hours.
+
+
+|sources.[].locations.[].openHours
+|Array
+|The opening hours of this location. Note, if the location doesn't close in the morning it also doesn't open in the afternoon, therefore the 'closing' in the morning and the 'opening' in the afternoon can be empty
+
+
+|sources.[].locations.[].openHours.[].afternoon
+|Object
+|The times for the afternoon.
+
+
+|sources.[].locations.[].openHours.[].afternoon.openning
+|String
+|The time when the location opens.
+
+
+|sources.[].locations.[].openHours.[].afternoon.closing
+|String
+|The time when the location closes.
+
+
+|sources.[].locations.[].openHours.[].dayShortName
+|String
+|Short description of the actual day.
+
+
+|sources.[].locations.[].openHours.[].day
+|String
+|Numerical representation of the day.
+
+
+|sources.[].locations.[].openHours.[].morning
+|Object
+|The times for the morning.
+
+
+|sources.[].locations.[].openHours.[].morning.openning
+|String
+|The time when the location opens.
+
+
+|sources.[].locations.[].openHours.[].morning.closing
+|String
+|The time when the location closes.
+
+
+|sources.[].locations.[].extraInfo
+|String
+|Additional information provided by the provider of this location.
+
+
+|sources.[].locations.[].coordinates
+|Array
+|The coordinates of the location.
+
+
+|sources.[].locations.[].googleMapsUrl
+|String
+|The google maps url to display the location of the location.
+
+
+|===

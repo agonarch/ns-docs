@@ -1,0 +1,1023 @@
+[cols="1,1,2,2"]
+|===
+|Path|Type|Description|Constraints
+
+|content
+|Object
+|List of multiple shipments
+a|
+
+|content.[] +
+.reference
+|String
+|Shipment reference
+a|Not Null and not empty. +
+ The size must be between 1 and 32. +
+
+
+|content.[] +
+.carrier
+|String
+|Carrier
+a|Fixed length of 3. +
+ Not Null and not empty. +
+
+
+|content.[] +
+.origin
+|String
+|The country of origin code.
+a|Maximum size of 3. +
+ Not Null and not empty. +
+
+
+|content.[] +
+.costcenter
+|String
+|Costcenter. Only returned when the backend parameter extended is set to true, contact your consultant for more details
+a|Maximum size of 32. +
+
+
+|content.[] +
+.shipmentStatus
+|String
+|Latest shipment status code
+a|Has to match pattern: (NONE\| +
+NEW\| +
+LABL\| +
+MANI\| +
+ERR\| +
+DEL\| +
+REFU\| +
+BOOK\| +
+ONHOLD\| +
+DONE\| +
+TRNS) +
+ Maximum size of 8. +
+
+
+|content.[] +
+.trackAndTraceUrl
+|String
+|Track and trace url
+a|Maximum size of 2048. +
+
+
+|content.[] +
+.airwaybill
+|String
+|Airwaybill
+a|Maximum size of 32. +
+
+
+|content.[] +
+.accountId
+|String
+|Account of the shipment
+a|Maximum size of 32. +
+
+
+|content.[] +
+.incoterms
+|String
+|Incoterms of the shipment
+a|Maximum size of 16. +
+
+
+|content.[] +
+.acceptedBy
+|String
+|Name of who signed of on receipt of the goods
+a|Maximum size of 64. +
+
+
+|content.[] +
+.actualDeliveryDate
+|Date wrapped in String
+|Actual deliverydate
+a|Format dd-MM-yyyy HH:mm:ss. +
+
+
+|content.[] +
+.requestedDeliveryDateFrom
+|Date wrapped in String
+|Requested delivery date from, as sent during booking
+a|Format dd-MM-yyyy HH:mm:ss. +
+
+
+|content.[] +
+.requestedDeliveryDateTo
+|Date wrapped in String
+|Requested delivery date to, as sent during booking
+a|Format dd-MM-yyyy HH:mm:ss. +
+
+
+|content.[] +
+.originalPlannedDeliveryDateFrom
+|Date wrapped in String
+|Original planned delivery date set at shipment booking
+a|Format dd-MM-yyyy HH:mm:ss. +
+
+
+|content.[] +
+.originalPlannedDeliveryDateTo
+|Date wrapped in String
+|Original planned delivery date set at shipment booking
+a|Format dd-MM-yyyy HH:mm:ss. +
+
+
+|content.[] +
+.plannedDeliveryDateFrom
+|Date wrapped in String
+|Planned delivery date as sent back from the carrier during status processing
+a|Format dd-MM-yyyy HH:mm:ss. +
+
+
+|content.[] +
+.plannedDeliveryDateTo
+|Date wrapped in String
+|Planned delivery date as sent back from the carrier during status processing
+a|Format dd-MM-yyyy HH:mm:ss. +
+
+
+|content.[] +
+.price
+|Decimal
+|Price of the shipment, rounden down to a accuracy of two fractions
+a|Maximum value is 999,999,999.99 +
+ Minimum value is -999,999,999.99 +
+
+
+|content.[] +
+.priceCurrency
+|String
+|Currency of the price of the shipment
+a|Maximum size of 3. +
+
+
+|content.[] +
+.pickupDateFrom
+|Date wrapped in String
+|Pickup date from, of the shipment
+a|Format dd-MM-yyyy HH:mm:ss. +
+
+
+|content.[] +
+.pickupDateTo
+|Date wrapped in String
+|Pickup date to, of the shipment
+a|Format dd-MM-yyyy HH:mm:ss. +
+
+
+|content.[] +
+.description
+|String
+|Shipments description
+a|Maximum size of 128. +
+
+
+|content.[] +
+.instruction
+|String
+|Shipments instruction
+a|Maximum size of 128. +
+
+
+|content.[] +
+.weight
+|String
+|The weight of the shipment. May be different from the shipments original weight in case the carrier has acknowledged another value as part of the delivery status feedback.
+a|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+
+|content.[] +
+.weightUom
+|String
+|The weight unit of measure (e.g. KG, LB, OZ).
+a|Has to match pattern: (KG\| +
+LB\| +
+OZ\| +
+) +
+ Maximum size of 3. +
+
+
+|content.[] +
+.currency
+|String
+|Currency of the price of the shipment
+a|Maximum size of 3. +
+
+
+|content.[] +
+.executingCarrier
+|String
+|The actual executing carrier in the 3 letter char code
+a|Fixed length of 3. +
+
+
+|content.[] +
+.inbound
+|Integer
+|Indicates if it is an inbound shipment (inbound =1 else 0) 
+a|Maximum value is 1. +
+ Minimum value is 0. +
+
+
+|content.[] +
+.pieces
+|Integer
+|Number of packages/colli in the shipment
+a|Maximum value is 32767. +
+ Minimum value is 0. +
+
+
+|content.[] +
+.service
+|String
+|Service indicating DOCS or NON-DOCS
+a|Maximum size of 16. +
+
+
+|content.[] +
+.serviceLevelTime
+|String
+|Service level time like STANDARD, SAVER
+a|Maximum size of 32. +
+ Not Null and not empty. +
+
+
+|content.[] +
+.serviceLevelOther
+|String
+|Service level other like COD, EVENING etc.
+a|Maximum size of 32. +
+
+
+|content.[] +
+.value
+|Decimal
+|Value of the goods, rounden down to a accuracy of two fractions.
+a|Maximum value is 999,999,999.99 +
+ Minimum value is -999,999,999.99 +
+
+
+|content.[] +
+.valueCurrency
+|String
+|Currency of the value of the goods
+a|Maximum size of 3. +
+
+
+|content.[] +
+.addresses
+|List
+|List of addresses of the shipment
+a|
+
+|content.[] +
+.addresses.[] +
+.type
+|String
+|Address type
+a|Maximum size of 4. +
+ Not Null and not empty. +
+
+
+|content.[] +
+.addresses.[] +
+.name
+|String
+|Name
+a|Maximum size of 64. +
+ Not Null and not empty. +
+
+
+|content.[] +
+.addresses.[] +
+.addressLine1
+|String
+|Street 1
+a|Maximum size of 64. +
+ Not Null and not empty. +
+
+
+|content.[] +
+.addresses.[] +
+.addressLine2
+|String
+|Street 2
+a|Maximum size of 64. +
+
+
+|content.[] +
+.addresses.[] +
+.city
+|String
+|City
+a|Maximum size of 64. +
+ Not Null and not empty. +
+
+
+|content.[] +
+.addresses.[] +
+.houseNumber
+|String
+|Housenumber
+a|Maximum size of 16. +
+
+
+|content.[] +
+.addresses.[] +
+.zipCode
+|String
+|Zip code
+a|Maximum size of 16. +
+ Not Null and not empty. +
+
+
+|content.[] +
+.addresses.[] +
+.province
+|String
+|Province / State
+a|Maximum size of 16. +
+
+
+|content.[] +
+.addresses.[] +
+.country
+|String
+|The country code.
+a|Maximum size of 2. +
+ Not Null and not empty. +
+
+
+|content.[] +
+.addresses.[] +
+.contactPerson
+|String
+|Name of the contact person
+a|Maximum size of 64. +
+
+
+|content.[] +
+.addresses.[] +
+.contactPhone
+|String
+|Phone number of the contact person
+a|Maximum size of 32. +
+
+
+|content.[] +
+.addresses.[] +
+.contactFax
+|String
+|Fax number of the contact person
+a|Maximum size of 32. +
+
+
+|content.[] +
+.addresses.[] +
+.contactEmail
+|String
+|E-mail address of the contact person
+a|Maximum size of 256. +
+
+
+|content.[] +
+.addresses.[] +
+.accountNumber
+|String
+|Account number at the carrier for this address, possibly the shipment is booked with this account number but the implementation can differ per carrier, contact your consultant / project manager for more information
+a|Maximum size of 32. +
+
+
+|content.[] +
+.additionalReferences
+|List wrapped in List
+|List of additional references
+a|
+
+|content.[] +
+.additionalReferences.[] +
+.type
+|String
+|Type of the additional reference
+a|Maximum size of 64. +
+
+
+|content.[] +
+.additionalReferences.[] +
+.value
+|String
+|The reference value
+a|Maximum size of 1024. +
+
+
+|content.[] +
+.statuses
+|List
+|List of shipment statuses
+a|
+
+|content.[] +
+.statuses.[] +
+.airwayBill
+|String
+|Airwaybill / barocde of the shipment or first collo if it is a multicollo shipment
+a|Maximum size of 256. +
+
+
+|content.[] +
+.statuses.[] +
+.code
+|String
+|The Transsmart generic status code
+a|Has to match pattern: (NONE\| +
+NEW\| +
+LABL\| +
+MANI\| +
+ERR\| +
+DEL\| +
+REFU\| +
+BOOK\| +
+ONHOLD\| +
+DONE\| +
+TRNS) +
+ Maximum size of 8. +
+
+
+|content.[] +
+.statuses.[] +
+.weight
+|String
+|The weight of the shipment. May be different from the shipments original weight in case the carrier has acknowledged another value as part of the delivery status feedback.
+a|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+
+|content.[] +
+.statuses.[] +
+.weightUom
+|String
+|The weight unit of measure (e.g. KG, LB, OZ).
+a|Has to match pattern: (KG\| +
+LB\| +
+OZ\| +
+) +
+ Maximum size of 3. +
+
+
+|content.[] +
+.statuses.[] +
+.pieces
+|Integer
+|Number of packages/colli in the shipment
+a|Maximum value is 32767. +
+
+
+|content.[] +
+.statuses.[] +
+.incoterms
+|String
+|Incoterms of the shipment
+a|Maximum size of 16. +
+
+
+|content.[] +
+.statuses.[] +
+.statusPrice
+|Double
+|Buy price of the shipment, rounden down to a accuracy of two fractions.
+a|Maximum value is 999,999,999.99 +
+ Minimum value is -999,999,999.99 +
+
+
+|content.[] +
+.statuses.[] +
+.statusPriceCurrency
+|String
+|Currency of the buy price of the shipment, rounden down to a accuracy of two fractions.
+a|Maximum value is 999,999,999.99 +
+ Minimum value is -999,999,999.99 +
+
+
+|content.[] +
+.statuses.[] +
+.statusSalesPrice
+|Double
+|Sell price of the shipment, rounden down to a accuracy of two fractions.
+a|Maximum value is 999,999,999.99 +
+ Minimum value is -999,999,999.99 +
+
+
+|content.[] +
+.statuses.[] +
+.statusSalesPriceCurrency
+|String
+|Currency of the sell price of the shipment, rounden down to a accuracy of two fractions.
+a|Maximum value is 999,999,999.99 +
+ Minimum value is -999,999,999.99 +
+
+
+|content.[] +
+.statuses.[] +
+.minimumTransitTime
+|Integer
+|Minimum transit time in hours
+a|Maximum value is 32767. +
+
+
+|content.[] +
+.statuses.[] +
+.maximumTransitTime
+|Integer
+|Maximum transit time in hours
+a|Maximum value is 32767. +
+
+
+|content.[] +
+.statuses.[] +
+.printDateTime
+|Date wrapped in String
+|Date and time the shipment was printed
+a|Format dd-MM-yyyy HH:mm:ss. +
+
+
+|content.[] +
+.statuses.[] +
+.printUser
+|String
+|User of who executed the print operation
+a|Maximum size of 64. +
+
+
+|content.[] +
+.statuses.[] +
+.statusDate
+|Date wrapped in String
+|Date of the actual status chang
+a|Format dd-MM-yyyy HH:mm:ss. +
+
+
+|content.[] +
+.statuses.[] +
+.subStatus +
+.type
+|String
+|SubStatus type.
+a|Maximum size of 256. +
+
+
+|content.[] +
+.statuses.[] +
+.subStatus +
+.detail
+|String
+|SubStatus detail.
+a|Maximum size of 256. +
+
+
+|content.[] +
+.statuses.[] +
+.subStatus +
+.description
+|String
+|SubStatus description.
+a|Maximum size of 256. +
+
+
+|content.[] +
+.statuses.[] +
+.documents
+|List
+|A list of documents regarding this status, currently it holds only POD's
+a|
+
+|content.[] +
+.statuses.[] +
+.documents.[] +
+.documentType
+|String
+|Type of the document like POD
+a|Maximum size of 12. +
+
+
+|content.[] +
+.statuses.[] +
+.documents.[] +
+.fileType
+|String
+|File type, like PNG, JPG, PDF, XPS
+a|Maximum size of 8. +
+
+
+|content.[] +
+.statuses.[] +
+.documents.[] +
+.documentData
+|String
+|Base64 encrypted document
+a|Maximum size of 16777215. +
+
+
+|content.[] +
+.shipmentLines
+|List
+|List of shipment lines and its statuses
+a|
+
+|content.[] +
+.shipmentLines.[] +
+.lineNumber
+|Integer
+|Sequential line number of this shipment line
+a|Maximum value is 200000. +
+
+
+|content.[] +
+.shipmentLines.[] +
+.shipmentLineId
+|String
+|Shipment line id
+a|Maximum size of 32. +
+
+
+|content.[] +
+.shipmentLines.[] +
+.description
+|String
+|Shipments description
+a|Maximum size of 128. +
+
+
+|content.[] +
+.shipmentLines.[] +
+.barcodeId
+|String
+|Airwaybill / barcode of the shipment or first collo if it is a multicollo shipment
+a|Maximum size of 256. +
+
+
+|content.[] +
+.shipmentLines.[] +
+.airwaybill
+|String
+|Airwaybill
+a|Maximum size of 32. +
+
+
+|content.[] +
+.shipmentLines.[] +
+.acceptedBy
+|String
+|Name of who signed of on receipt of the goods
+a|Maximum size of 64. +
+
+
+|content.[] +
+.shipmentLines.[] +
+.actualDeliveryDate
+|Date wrapped in String
+|Actual deliverydate
+a|Format dd-MM-yyyy HH:mm:ss. +
+
+
+|content.[] +
+.shipmentLines.[] +
+.originalPlannedDeliveryDateFrom
+|Date wrapped in String
+|Original planned delivery date set at shipment booking
+a|Format dd-MM-yyyy HH:mm:ss. +
+
+
+|content.[] +
+.shipmentLines.[] +
+.originalPlannedDeliveryDateTo
+|Date wrapped in String
+|Original planned delivery date set at shipment booking
+a|Format dd-MM-yyyy HH:mm:ss. +
+
+
+|content.[] +
+.shipmentLines.[] +
+.plannedDeliveryDateFrom
+|Date wrapped in String
+|Planned delivery date as sent back from the carrier during status processing
+a|Format dd-MM-yyyy HH:mm:ss. +
+
+
+|content.[] +
+.shipmentLines.[] +
+.plannedDeliveryDateTo
+|Date wrapped in String
+|Planned delivery date as sent back from the carrier during status processing
+a|Format dd-MM-yyyy HH:mm:ss. +
+
+
+|content.[] +
+.shipmentLines.[] +
+.price
+|Decimal
+|Price of the shipment, rounden down to a accuracy of two fractions
+a|Maximum value is 999,999,999.99 +
+ Minimum value is -999,999,999.99 +
+
+
+|content.[] +
+.shipmentLines.[] +
+.genericStatusCode
+|String
+|The generic status of the collo.
+a|Has to match pattern: (NONE\| +
+ERR\| +
+REFU\| +
+NEW\| +
+BOOK\| +
+ONHOLD\| +
+LABL\| +
+MANI\| +
+ACCEP\| +
+TRNS\| +
+DELAY\| +
+DONE\| +
+APOD\| +
+DEL) +
+ Maximum size of 8. +
+
+
+|content.[] +
+.shipmentLines.[] +
+.carrierStatusCode
+|String
+|The carrier status of the collo.
+a|Maximum size of 16. +
+
+
+|content.[] +
+.shipmentLines.[] +
+.carrierStatusDescription
+|String
+|Description of the status code of the carrier
+a|Maximum size of 128. +
+
+
+|content.[] +
+.shipmentLines.[] +
+.length
+|Decimal
+|The Length of the package of this shipment line, note length on shipment level is deprecated and will always return 0, rounden down to a accuracy of two fractions.
+a|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+
+|content.[] +
+.shipmentLines.[] +
+.width
+|Decimal
+|The width of the package of this shipment line, note length on shipment level is deprecated and will always return 0, rounden down to a accuracy of two fractions
+a|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+
+|content.[] +
+.shipmentLines.[] +
+.height
+|Decimal
+|The height of the package of this shipment line, note length on shipment level is deprecated and will always return 0, rounden down to a accuracy of two fractions
+a|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+
+|content.[] +
+.shipmentLines.[] +
+.additionalReferences
+|List wrapped in List
+|List of additional references
+a|
+
+|content.[] +
+.shipmentLines.[] +
+.additionalReferences.[] +
+.type
+|String
+|Type of the additional reference
+a|Maximum size of 64. +
+
+
+|content.[] +
+.shipmentLines.[] +
+.additionalReferences.[] +
+.value
+|String
+|The reference value
+a|Maximum size of 1024. +
+
+
+|content.[] +
+.shipmentLines.[] +
+.statuses
+|List
+|List of shipment statuses
+a|
+
+|content.[] +
+.shipmentLines.[] +
+.statuses.[] +
+.lineNumber
+|Integer
+|Sequential line number of this shipment line
+a|Maximum value is 2147483647. +
+
+
+|content.[] +
+.shipmentLines.[] +
+.statuses.[] +
+.airwayBill
+|String
+|Airwaybill / barocde of the shipment or first collo if it is a multicollo shipment
+a|Maximum size of 256. +
+
+
+|content.[] +
+.shipmentLines.[] +
+.statuses.[] +
+.code
+|String
+|The Transsmart generic status code
+a|Has to match pattern: (NONE\| +
+NEW\| +
+LABL\| +
+MANI\| +
+ERR\| +
+DEL\| +
+REFU\| +
+BOOK\| +
+ONHOLD\| +
+DONE\| +
+TRNS) +
+ Maximum size of 8. +
+
+
+|content.[] +
+.shipmentLines.[] +
+.statuses.[] +
+.carrierStatus
+|String
+|The carrier status.
+a|Maximum size of 16. +
+
+
+|content.[] +
+.shipmentLines.[] +
+.statuses.[] +
+.carrierStatusDescription
+|String
+|Description of the status code of the carrier
+a|Maximum size of 128. +
+
+
+|content.[] +
+.shipmentLines.[] +
+.statuses.[] +
+.statusPrice
+|Double
+|Buy price of the shipment, rounden down to a accuracy of two fractions.
+a|Maximum value is 999,999,999.99 +
+ Minimum value is -999,999,999.99 +
+
+
+|content.[] +
+.shipmentLines.[] +
+.statuses.[] +
+.statusDate
+|Date wrapped in String
+|Date of the actual status chang
+a|Format dd-MM-yyyy HH:mm:ss. +
+
+
+|content.[] +
+.shipmentLines.[] +
+.statuses.[] +
+.subStatus +
+.type
+|String
+|SubStatus type.
+a|Maximum size of 256. +
+
+
+|content.[] +
+.shipmentLines.[] +
+.statuses.[] +
+.subStatus +
+.detail
+|String
+|SubStatus detail.
+a|Maximum size of 256. +
+
+
+|content.[] +
+.shipmentLines.[] +
+.statuses.[] +
+.subStatus +
+.description
+|String
+|SubStatus description.
+a|Maximum size of 256. +
+
+
+|content.[] +
+.shipmentLines.[] +
+.statuses.[] +
+.documents
+|List
+|A list of documents regarding this status, currently it holds only POD's
+a|
+
+|content.[] +
+.shipmentLines.[] +
+.statuses.[] +
+.documents.[] +
+.documentType
+|String
+|Type of the document like POD
+a|Maximum size of 12. +
+
+
+|content.[] +
+.shipmentLines.[] +
+.statuses.[] +
+.documents.[] +
+.fileType
+|String
+|File type, like PNG, JPG, PDF, XPS
+a|Maximum size of 8. +
+
+
+|content.[] +
+.shipmentLines.[] +
+.statuses.[] +
+.documents.[] +
+.documentData
+|String
+|Base64 encrypted document
+a|Maximum size of 16777215. +
+
+
+|contentType
+|String
+|Definition of the content statically always Statuses
+a|Has to match pattern: (Statuses) +
+ Maximum size of 32. +
+
+
+|numberOfItems
+|Integer
+|Number of items in this response
+a|Maximum value is 32767. +
+ Minimum value is 0. +
+
+
+|tariffLogs
+|List
+|List of tariff information of the shipment
+a|
+
+|tariffLogs.[] +
+.tariffType
+|String
+|Tariff type.
+a|
+
+|tariffLogs.[] +
+.tariffValue
+|String
+|Tariff value.
+a|
+
+|tariffLogs.[] +
+.currency
+|String
+|Currency of the value.
+a|
+
+|tariffLogs.[] +
+.chargeGroup
+|String
+|The charge group.
+a|
+
+|tariffLogs.[] +
+.chargeType
+|String
+|The charge type.
+a|
+
+|tariffLogs.[] +
+.calcType
+|String
+|The calculation type.
+a|
+
+|===

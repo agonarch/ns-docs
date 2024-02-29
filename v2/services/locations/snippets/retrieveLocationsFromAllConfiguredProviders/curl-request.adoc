@@ -1,0 +1,4 @@
+[source,bash]
+----
+$ curl 'https://test-api.transsmart.com/v2/locations/DEVDOCS?zipCode=5032MD&countryTo=NL' -i -X GET
+----

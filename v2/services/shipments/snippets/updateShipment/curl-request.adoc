@@ -1,0 +1,24 @@
+[source,bash]
+----
+$ curl 'https://test-api.transsmart.com/v2/shipments/DEVDOCS' -i -X PUT \
+    -H 'Content-Type: application/json;charset=UTF-8' \
+    -d '[ {
+  "reference" : "Transsmart_1706872431487",
+  "description" : "update example-description",
+  "instruction" : "update example-instruction1",
+  "value" : 20,
+  "valueCurrency" : "EUR",
+  "price" : 15,
+  "pickupDate" : "2017-11-21",
+  "pickupTime" : "09:00",
+  "pickupTimeTo" : "11:00",
+  "requestedDeliveryDate" : "2017-11-25",
+  "requestedDeliveryTime" : "16:00",
+  "requestedDeliveryTimeTo" : "18:00",
+  "loadmeters" : 0.8,
+  "additionalReferences" : [ {
+    "type" : "ENGINEER",
+    "value" : "updated-additional-value-shipment-level"
+  } ]
+} ]'
+----

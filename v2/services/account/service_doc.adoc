@@ -1,0 +1,629 @@
+==== 7.1 Carriers retrieval
+
+===== Get list of carriers
+
+====== Path parameters
+include::snippets/getAllcarriers/path-parameters.adoc[]
+
+====== Response structure
+include::snippets/getAllcarriers/response-fields.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getAllcarriers/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getAllcarriers/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getAllcarriers/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+===== Get one carrier
+
+====== Path parameters
+include::snippets/getOneCarrier/path-parameters.adoc[]
+
+====== Response structure
+include::snippets/getOneCarrier/response-fields.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getOneCarrier/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getOneCarrier/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getOneCarrier/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+
+==== 7.2 Costcenter retrieval
+
+===== Get list of costcenters
+
+====== Path parameters
+include::snippets/getAllCostCenters/path-parameters.adoc[]
+
+====== Response structure
+include::snippets/getAllCostCenters/response-fields.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getAllCostCenters/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getAllCostCenters/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getAllCostCenters/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+===== Get one costcenter
+
+====== Path parameters
+include::snippets/getOneCostCenter/path-parameters.adoc[]
+
+====== Response structure
+include::snippets/getOneCostCenter/response-fields.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getOneCostCenter/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getOneCostCenter/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getOneCostCenter/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+==== 7.3 Incoterms retrieval
+
+===== Get list of incoterms
+
+====== Path parameters
+include::snippets/getAllIncotems/path-parameters.adoc[]
+
+====== Response structure
+include::snippets/getAllIncotems/response-fields.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getAllIncotems/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getAllIncotems/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getAllIncotems/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+==== 7.4 Mail types retrieval
+
+===== Get list of mail types
+
+====== Path parameters
+include::snippets/getAllMailTypes/path-parameters.adoc[]
+
+====== Response structure
+include::snippets/getAllMailTypes/response-fields.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getAllMailTypes/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getAllMailTypes/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getAllMailTypes/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+===== Get one mail type
+
+====== Path parameters
+include::snippets/getOneMailType/path-parameters.adoc[]
+
+====== Response structure
+include::snippets/getOneMailType/response-fields.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getOneMailType/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getOneMailType/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getOneMailType/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+==== 7.5 Packages retrieval
+
+===== Get list of packages
+
+====== Path parameters
+include::snippets/getAllPackages/path-parameters.adoc[]
+
+====== Response structure
+include::snippets/getAllPackages/response-fields.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getAllPackages/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getAllPackages/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getAllPackages/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+===== Get one package
+
+====== Path parameters
+include::snippets/getOnePackages/path-parameters.adoc[]
+
+====== Response structure
+include::snippets/getOnePackages/response-fields.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getOnePackages/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getOnePackages/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getOnePackages/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+==== 7.6 Service level time retrieval
+
+===== Get list of service level times
+
+====== Path parameters
+include::snippets/getAllServiceLevelTime/path-parameters.adoc[]
+
+====== Response structure
+include::snippets/getAllServiceLevelTime/response-fields.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getAllServiceLevelTime/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getAllServiceLevelTime/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getAllServiceLevelTime/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+===== Get one service level time
+
+====== Path parameters
+include::snippets/getOneServiceLevelTime/path-parameters.adoc[]
+
+====== Response structure
+include::snippets/getOneServiceLevelTime/response-fields.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getOneServiceLevelTime/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getOneServiceLevelTime/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getOneServiceLevelTime/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+==== 7.7 Service level other retrieval
+
+===== Get list of service level others
+
+====== Path parameters
+include::snippets/getAllServiceLevelOthers/path-parameters.adoc[]
+
+====== Response structure
+include::snippets/getAllServiceLevelOthers/response-fields.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getAllServiceLevelOthers/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getAllServiceLevelOthers/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getAllServiceLevelOthers/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+===== Get one usable service level other
+
+====== Path parameters
+include::snippets/getOneServiceLevelOther/path-parameters.adoc[]
+
+====== Response structure
+include::snippets/getOneServiceLevelOther/response-fields.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getOneServiceLevelOther/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getOneServiceLevelOther/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getOneServiceLevelOther/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+==== 7.8 Booking profile retrieval
+
+===== Get list of booking profiles
+
+====== Path parameters
+include::snippets/getAllBookingProfiles/path-parameters.adoc[]
+
+====== Response structure
+include::snippets/getAllBookingProfiles/response-fields.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getAllBookingProfiles/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getAllBookingProfiles/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getAllBookingProfiles/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+===== Get one booking profile
+
+====== Path parameters
+include::snippets/getOneBookingProfile/path-parameters.adoc[]
+
+====== Response structure
+include::snippets/getOneBookingProfile/response-fields.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getOneBookingProfile/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getOneBookingProfile/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getOneBookingProfile/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+
+
+==== 7.9 Get account information
+
+===== Get the information of the account including subaccounts
+
+====== Path parameters
+include::snippets/getStructure/path-parameters.adoc[]
+
+====== Response structure
+include::snippets/getStructure/response-fields.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getStructure/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getStructure/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/getStructure/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+

@@ -1,0 +1,147 @@
+[source,json,options="nowrap"]
+----
+{
+  "content" : [ {
+    "reference" : "Transsmart_1687866674312",
+    "accountId" : "DEVDOCS",
+    "carrier" : "DPD",
+    "costcenter" : "",
+    "shipmentStatus" : "MANI",
+    "incoterms" : "01",
+    "trackAndTraceUrl" : "https://tracking.dpd.de/parcelstatus?query=MPS0522802136553620230627&locale=nl_NL&Tracking=Track",
+    "airwaybill" : "05228021365536",
+    "requestedDeliveryDateFrom" : "30-06-2023 17:00:00",
+    "requestedDeliveryDateTo" : "30-06-2023 17:00:00",
+    "plannedDeliveryDateFrom" : "28-06-2023 17:00:00",
+    "plannedDeliveryDateTo" : "28-06-2023 00:00:00",
+    "price" : 15.0,
+    "priceCurrency" : "EUR",
+    "origin" : "API2",
+    "pickupDateFrom" : "27-06-2023 08:00:00",
+    "pickupDateTo" : "27-06-2023 10:00:00",
+    "description" : "example-description",
+    "instruction" : "example-instruction1",
+    "weight" : "40.00",
+    "weightUom" : "KG",
+    "currency" : "EUR",
+    "executingCarrier" : "DPD",
+    "inbound" : 0,
+    "pieces" : 2,
+    "service" : "NON-DOCS",
+    "serviceLevelTime" : "CLASSIC",
+    "value" : 10.0,
+    "valueCurrency" : "EUR",
+    "addresses" : [ {
+      "type" : "INVC",
+      "name" : "Transsmart",
+      "addressLine1" : "Ellen Pankhurststraat",
+      "houseNumber" : "1c",
+      "addressLine2" : "2nd floor",
+      "city" : "Tilburg",
+      "zipCode" : "5032MD",
+      "country" : "NL",
+      "contactPerson" : "Support",
+      "contactPhone" : "0031881260300",
+      "contactFax" : "0031881260301",
+      "contactEmail" : "example@domain.com",
+      "accountNumber" : "example-accountNumber"
+    }, {
+      "type" : "RECV",
+      "name" : "Transsmart",
+      "addressLine1" : "Ellen Pankhurststraat",
+      "houseNumber" : "1c",
+      "addressLine2" : "2nd floor",
+      "city" : "Tilburg",
+      "zipCode" : "5032MD",
+      "country" : "NL",
+      "contactPerson" : "Support",
+      "contactPhone" : "0031881260300",
+      "contactFax" : "0031881260301",
+      "contactEmail" : "example@domain.com",
+      "accountNumber" : "example-accountNumber"
+    }, {
+      "type" : "SEND",
+      "name" : "Transsmart",
+      "addressLine1" : "Ellen Pankhurststraat",
+      "houseNumber" : "1c",
+      "addressLine2" : "2nd floor",
+      "city" : "Tilburg",
+      "zipCode" : "5032MD",
+      "country" : "NL",
+      "contactPerson" : "Support",
+      "contactPhone" : "0031881260300",
+      "contactFax" : "0031881260301",
+      "contactEmail" : "example@domain.com",
+      "accountNumber" : "example-accountNumber"
+    } ],
+    "additionalReferences" : [ {
+      "type" : "ENGINEER",
+      "value" : "example-engineer-additional-value-shipment-level"
+    }, {
+      "type" : "ROUTE_ID",
+      "value" : "1234"
+    }, {
+      "type" : "ROUTE_ID",
+      "value" : "1234"
+    } ],
+    "statuses" : [ {
+      "airwayBill" : "05228021365536",
+      "code" : "MANI",
+      "weight" : "40.00",
+      "weightUom" : "KG",
+      "pieces" : 2,
+      "incoterms" : "DAP",
+      "statusPrice" : 15.0,
+      "statusPriceCurrency" : "EUR",
+      "minimumTransitTime" : 17,
+      "maximumTransitTime" : 17,
+      "printDateTime" : "2024-02-15 16:15:52",
+      "printUser" : "developer@documentation.nl",
+      "statusDate" : "27-06-2023 13:51:16"
+    } ],
+    "shipmentLines" : [ {
+      "lineNumber" : 1,
+      "shipmentLineId" : "example-shippmentLineId",
+      "airwaybill" : "05228021365536",
+      "description" : "example-description",
+      "barcodeId" : "%05032MD05228021365536101528",
+      "genericStatusCode" : "MANI",
+      "length" : 20.0,
+      "width" : 20.0,
+      "height" : 20.0,
+      "additionalReferences" : [ {
+        "type" : "ORDER",
+        "value" : "example-order-additional-value-package-level"
+      } ],
+      "statuses" : [ {
+        "lineNumber" : 1,
+        "airwayBill" : "05228021365536",
+        "code" : "MANI",
+        "statusDate" : "27-06-2023 13:51:16"
+      } ]
+    }, {
+      "lineNumber" : 2,
+      "shipmentLineId" : "example-shippmentLineId",
+      "airwaybill" : "05228021365537",
+      "description" : "example-description",
+      "barcodeId" : "%05032MD05228021365537101528",
+      "genericStatusCode" : "MANI",
+      "length" : 20.0,
+      "width" : 20.0,
+      "height" : 20.0,
+      "additionalReferences" : [ {
+        "type" : "ORDER",
+        "value" : "example-order-additional-value-package-level"
+      } ],
+      "statuses" : [ {
+        "lineNumber" : 2,
+        "airwayBill" : "05228021365537",
+        "code" : "MANI",
+        "statusDate" : "27-06-2023 13:51:16"
+      } ]
+    } ]
+  } ],
+  "contentType" : "Statuses",
+  "numberOfItems" : 1
+}
+----

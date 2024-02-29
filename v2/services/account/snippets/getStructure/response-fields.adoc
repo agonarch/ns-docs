@@ -1,0 +1,25 @@
+[cols="1,1,2,2"]
+|===
+|Path|Type|Description|Constraints
+
+|accountCode
+|String
+|the account code.
+a|
+
+|accountName
+|String
+|the account name.
+a|
+
+|organizationCode
+|String
+|the account organisation.
+a|
+
+|subAccounts
+|Array
+|List of sub account of this account, same structure will repeat.
+a|
+
+|===

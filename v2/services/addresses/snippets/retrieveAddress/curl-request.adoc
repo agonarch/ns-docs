@@ -1,0 +1,5 @@
+[source,bash]
+----
+$ curl 'https://accept-api.transsmart.com/v2/addresses/DEVDOCS/DEVDOCS31744076' -i -X GET \
+    -H 'Content-Type: application/hal+json'
+----

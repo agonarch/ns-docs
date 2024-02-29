@@ -1,0 +1,30 @@
+[cols="1,1,2,2"]
+|===
+|Path|Type|Description|Constraints
+
+|status
+|HttpStatus
+|The status of the error, e.g. BAD_REQUEST or INTERNAL_SERVER_ERROR.
+a|
+
+|timestamp
+|String
+|The actual timestamp when the error was raised.
+a|
+
+|description
+|String
+|The description given either by the carrier or by Transsmart
+a|
+
+|code
+|String
+|The Transsmart internal error code, e.g. TS50001
+a|
+
+|message
+|String
+|The message given either by the carrier or by Transsmart
+a|
+
+|===

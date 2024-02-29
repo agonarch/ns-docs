@@ -1,0 +1,8 @@
+.+/v2/accounts/{account}/listsettings/packages+
+|===
+|Parameter|Description
+
+|`+account+`
+|The account to retrieve the settings from.
+
+|===

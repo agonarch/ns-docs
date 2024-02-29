@@ -1,0 +1,224 @@
+|===
+|Path|Type|Description|Constraints
+
+|[].name
+|String
+|The name.
+|The size must be between 1 and 128. +
+
+
+|[].addressLine1
+|String
+|The first address line; mostly the primary street name.
+|Maximum size of 64. +
+
+
+|[].addressLine2
+|String
+|The second address line.
+|Maximum size of 64. +
+
+
+|[].addressLine3
+|String
+|The third address line.
+|Maximum size of 64. +
+
+
+|[].houseNumber
+|String
+|The house number.
+|Maximum size of 16. +
+
+
+|[].zipCode
+|String
+|The zip/postal code.
+|Maximum size of 16. +
+
+
+|[].city
+|String
+|The city.
+|Maximum size of 64. +
+
+
+|[].province
+|String
+|The province or state.
+|Maximum size of 16. +
+
+
+|[].country
+|String
+|The country code.
+|Maximum size of 2. +
+
+
+|[].language
+|String
+|The language code.
+|Maximum size of 2. +
+
+
+|[].contact.name
+|String
+|The name.
+|Maximum size of 64. +
+
+
+|[].contact.email
+|String
+|The email address.
+|Maximum size of 256. +
+
+
+|[].contact.phone
+|String
+|The phone number.
+|Maximum size of 32. +
+
+
+|[].contact.fax
+|String
+|The fax number.
+|Maximum size of 32. +
+
+
+|[].accountNumber
+|String
+|The carrier account number for this address.
+|Maximum size of 32. +
+
+
+|[].customerNumber
+|String
+|The customer number for this address.
+|Maximum size of 32. +
+
+
+|[].vatNumber
+|String
+|The VAT Number.
+|Maximum size of 32. +
+
+
+|[].costCenter
+|String
+|The cost center.
+|Maximum size of 127. +
+
+
+|[].type
+|String
+|Address type; can be SEND (sender) or RECV (receiver) address.
+|Has to match pattern: (SEND\| +
+RECV\| +
+INVC\| +
+3PTY) +
+ The size must be between 1 and 4. +
+
+
+|[].instructions
+|String
+|The instructions for the address.
+|Maximum size of 256. +
+
+
+|[].billingAddress.name
+|String
+|The name.
+|The size must be between 1 and 128. +
+
+
+|[].billingAddress.addressLine1
+|String
+|The first address line; mostly the primary street name.
+|Maximum size of 64. +
+
+
+|[].billingAddress.addressLine2
+|String
+|The second address line.
+|Maximum size of 64. +
+
+
+|[].billingAddress.addressLine3
+|String
+|The third address line.
+|Maximum size of 64. +
+
+
+|[].billingAddress.houseNumber
+|String
+|The house number.
+|Maximum size of 16. +
+
+
+|[].billingAddress.zipCode
+|String
+|The zip/postal code.
+|Maximum size of 16. +
+
+
+|[].billingAddress.city
+|String
+|The city.
+|Maximum size of 64. +
+
+
+|[].billingAddress.province
+|String
+|The province or state.
+|Maximum size of 16. +
+
+
+|[].billingAddress.country
+|String
+|The country code.
+|Maximum size of 2. +
+
+
+|[].billingAddress.contact.name
+|String
+|The name.
+|Maximum size of 64. +
+
+
+|[].billingAddress.contact.email
+|String
+|The email address.
+|Maximum size of 256. +
+
+
+|[].billingAddress.contact.phone
+|String
+|The phone number.
+|Maximum size of 32. +
+
+
+|[].billingAddress.contact.fax
+|String
+|The fax number.
+|Maximum size of 32. +
+
+
+|[].billingAddress.accountNumber
+|String
+|The carrier account number for this address.
+|Maximum size of 32. +
+
+
+|[].billingAddress.customerNumber
+|String
+|The customer number for this address.
+|Maximum size of 32. +
+
+
+|[].billingAddress.vatNumber
+|String
+|The VAT Number.
+|Maximum size of 32. +
+
+
+|===

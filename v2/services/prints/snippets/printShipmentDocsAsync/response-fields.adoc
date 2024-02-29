@@ -1,0 +1,29 @@
+|===
+|Path|Type|Description|Constraints
+
+|procressDescriptino
+|String
+|Status of the job.
+|
+
+|identifier
+|String
+|Job id
+|
+
+|result
+|Object
+|No decription found
+|
+
+|_links.self
+|Self
+|link to self
+|
+
+|_links..self.href
+|Field href not found
+|Field href not found
+|
+
+|===

@@ -1,0 +1,8 @@
+.+/v2/shipments/{account}+
+|===
+|Parameter|Description
+
+|`+account+`
+|The account to which the shipment belongs.
+
+|===

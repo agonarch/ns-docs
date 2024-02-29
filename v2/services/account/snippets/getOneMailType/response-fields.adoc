@@ -1,0 +1,26 @@
+[cols="1,1,2,2"]
+|===
+|Path|Type|Description|Constraints
+
+|code
+|Integer wrapped in String
+|The mail type identifier.
+a|Maximum value is 127. +
+
+
+|description
+|String
+|Description of the mail type.
+a|
+
+|isDefault
+|Boolean
+|Is this the default mail type.
+a|
+
+|isDisabled
+|Boolean
+|Is this mail type disabled.
+a|
+
+|===

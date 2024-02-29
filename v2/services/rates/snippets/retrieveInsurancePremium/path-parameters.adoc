@@ -1,0 +1,11 @@
+.+/v2/rates/{account}/insurance/{reference}+
+|===
+|Parameter|Description
+
+|`+account+`
+|The account.
+
+|`+reference+`
+|The booking reference.
+
+|===

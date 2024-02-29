@@ -1,0 +1,579 @@
+==== 2.1 Shipment Booking
+===== Action parameter
+The action parameter can be either CREATE , BOOK or PRINT. +
+With CREATE the shipment is only saved; no validation is performed. This can be used as a draft booking. +
+With BOOK the shipment is booked. +
+With PRINT the shipment is also booked and the parameter rawJob determines if the printing should be handled by the system or the to be printed documents should be returned in the response. +
+So in case of a rawJob, the actual base64 encoded shipment level and package level documents (PDF and/or ZPL) are included in the response. +
+
+The origin/source system of the booking can be specified in the http header 'TranssmartOrigin'. If this header is not specified then the value 'API2' is used. This is not the same as the REST origin header; that one is used to track the IP address of the sender. +
+For all actions the same input is used but all responses are different and described below. +
+Consult your project manager / consultant for more information on implementation. +
+The example shows a shipment with all possible values.
+
+===== Using units
+There are only a limited number of units allowed for both the weight and the size unit of measure. +
+In every case it so that the units must be consistently used within the complete shipment. It is not allowed to use one unit on the shipment level and another unit on the package level. If this is the case, the system will return an error. +
+Additionally, the system reads the unit of measure of the shipment first. If empty, it will look for the first occurrence on the package level.
+
+===== Delivery Note Lines
+Currently, it is possible to send in Delivery Note Lines on shipment level but we strongly advice you to send them in on package level only. +
+We notice more and more carriers, especially when it concerns dangerous goods or customs shipments outside EU, expect the item information of each parcel to be registered on package level. For that reason in the future we plan the Delivery Note Lines on shipment level to go EOL (End of life). In case you already have an integration with us based on shipment level, we strongly advice you to change it to package level.
+
+
+
+===== Book only 
+
+====== Path parameters
+include::snippets/bookShipment/path-parameters.adoc[]
+
+====== Request structure book
+include::snippets/bookShipment/request-fields.adoc[]
+
+====== Response structure `BOOK`
+include::snippets/bookShipment/response-fields.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/bookShipment/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example:
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/bookShipment/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response `BOOK`
+++++
+<div  style="cursor:pointer;text-decoration:underline" onclick="showChild(this)">Click here to show/hide example <div style="cursor:text;display:none" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/bookShipment/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+===== Book and print
+The same request input as <<#_shipment_booking_only,book only>> is applicable
+
+====== Path parameters `PRINT`
+include::snippets/bookAndPrintShipment/path-parameters.adoc[]
+
+====== Request parameters `PRINT`
+include::snippets/bookAndPrintShipment/query-parameters.adoc[]
+
+====== Response structure `PRINT`
+See to <<_response_structure_print,Print Response structure>>.
+
+====== Example response `PRINT`
+See to <<_example_response_print,Print example response>>.
+
+===== Book and print rawjob
+The same request input as <<_shipment_booking_only,book only>> is applicable
+
+====== Path parameters `PRINT` as rawJob
+include::snippets/bookAndPrintShipmentRawJob/path-parameters.adoc[]
+
+====== Request parameters `PRINT` as rawJob
+include::snippets/bookAndPrintShipmentRawJob/query-parameters.adoc[]
+
+====== Response structure `PRINT` as rawJob
+See to <<_response_structure_rawjob,Print Response structure rawjob>>.
+
+====== Example response `PRINT` as rawJob
+See to <<_example_response_rawjob,Print Example rawjob>>.
+
+
+===== Book validation error 
+The same parameters and request input as <<_shipment_booking_only,book only>> is applicable
+
+
+====== Response structure Booking validation error
+include::snippets/bookShipmentValidationError/response-fields.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/bookShipmentValidationError/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example:
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/bookShipmentValidationError/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response `BOOK`
+++++
+<div  style="cursor:pointer;text-decoration:underline" onclick="showChild(this)">Click here to show/hide example <div style="cursor:text;display:none" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/bookShipmentValidationError/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+===== Book by booking profile 
+
+====== Path parameters
+include::snippets/bookShipmentBookingProfile/path-parameters.adoc[]
+
+====== Request structure book
+include::snippets/bookShipmentBookingProfile/request-fields.adoc[]
+
+====== Response structure `BOOK`
+include::snippets/bookShipmentBookingProfile/response-fields.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/bookShipmentBookingProfile/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example:
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/bookShipmentBookingProfile/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response `BOOK`
+++++
+<div  style="cursor:pointer;text-decoration:underline" onclick="showChild(this)">Click here to show/hide example <div style="cursor:text;display:none" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/bookShipment/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+
+===== Update Shipment  
+Shipments can only be updated when there not in a final status.
+
+====== Path parameters
+include::snippets/updateShipment/path-parameters.adoc[]
+
+====== Request structure book
+include::snippets/updateShipment/request-fields.adoc[]
+
+====== Response structure `BOOK`
+include::snippets/updateShipment/response-fields.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/updateShipment/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example:
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/updateShipment/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+
+
+==== 2.2 Shipment Retrieval
+Shipments may be retrieved one-by-one (using the reference) or in paged batches.
+
+===== Single shipment retrieval
+A shipment is retrieved by its' reference which uniquely identifies it.
+By specified the client also the shipments of a child account can be retrieved.  
+
+====== Path parameters
+include::snippets/retrieveShipment/path-parameters.adoc[]
+
+====== Response structure
+include::snippets/retrieveShipment/response-fields.adoc[]
+
+====== Response structure not existing shipment
+include::snippets/retrieveShipmentNotFound/response-fields.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/retrieveShipment/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example:
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/retrieveShipment/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/retrieveShipment/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response not existing shipment
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/retrieveShipmentNotFound/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+===== Multiple shipments retrieval
+If no reference is specified all shipments for the specified client are retrieved. 
+If a referenceType is specifed a list of shipments is returned that have a additional reference with the value as specified in reference.
+Pagination is used to restrict the amount of data per page.  
+In the example below a page size of 2 is used.
+
+====== Path parameters
+include::snippets/retrieveShipmentsWithPagination/path-parameters.adoc[]
+
+====== Request parameters
+include::snippets/retrieveShipmentsWithPagination/query-parameters.adoc[]
+
+====== Response structure
+include::snippets/retrieveShipmentsWithPagination/response-fields.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/retrieveShipmentsWithPagination/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example:
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/retrieveShipmentsWithPagination/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;text-decoration:underline" onclick="showChild(this)">Click here to show/hide example <div style="cursor:text;display:none" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/retrieveShipmentsWithPagination/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+==== 2.3 Shipment Deletion
+There are two interface to delete shipments. The first is to delete one shipment the other is to delete a list of shipments. In both cases the client and the shipment reference needs to be provided. 
+The response in both cases is true of the shipment could be deleted or false in case this was not possible.
+
+===== Single shipment deletion
+
+====== Path variables
+include::snippets/deleteShipment/path-parameters.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/deleteShipment/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example:
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/deleteShipment/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+If the response is true the shipment has been deleted else not.
+
+include::snippets/deleteShipment/http-response.adoc[]
+
+===== Multiple shipments deletion
+
+====== Path variables
+include::snippets/deleteShipments/path-parameters.adoc[]
+
+====== Request parameters
+include::snippets/deleteShipments/query-parameters.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/deleteShipments/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example:
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/deleteShipments/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+If the response is true atleast one of the shipments has been deleted else none of the shipments are deleted.
+
+include::snippets/deleteShipments/http-response.adoc[]
+
+==== 2.4 Shipment Manifesting
+Manifesting of shipments. In the past, there was also a chapter 10.1 'LoadingList' but that chapter has become redundant and has been merged into this chapter 2.4 by, among others, the addition of the parameter documentType in which a carrier specific loading list code can be set.
+
+===== Retrieve list 
+Retrieve a list of shipments ready to be manifested.
+
+====== Path parameters
+include::snippets/manifestlist/path-parameters.adoc[]
+
+====== Request parameters
+include::snippets/manifestlist/query-parameters.adoc[]
+
+====== Response structure
+include::snippets/manifestlist/response-fields.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/manifestlist/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example:
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/manifestlist/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;text-decoration:underline" onclick="showChild(this)">Click here to show/hide example <div style="cursor:text;display:none" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/manifestlist/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+===== Download PDF list 
+Download a PDF list of shipments ready to be manifested.
+
+====== Path parameters
+include::snippets/manifestdownload/path-parameters.adoc[]
+
+====== Request parameters
+include::snippets/manifestdownload/query-parameters.adoc[]
+
+====== Response structure
+HTTP/1.1 200 OK
+Content-Disposition: form-data; name="attachment"; filename="ManifestList.pdf"
+Cache-Control: must-revalidate, post-check=0, pre-check=0
+Content-Type: application/pdf
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/manifestdownload/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example:
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/manifestdownload/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;text-decoration:underline" onclick="showChild(this)">Click here to show/hide example <div style="cursor:text;display:none" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/manifestdownload/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+
+===== Retrieve list filter on addref
+Retrieve a list of shipments ready to be manifested and are filtered on additional reference.
+
+====== Path parameters
+include::snippets/manifestlistOnReference/path-parameters.adoc[]
+
+====== Request parameters
+include::snippets/manifestlistOnReference/query-parameters.adoc[]
+
+====== Response structure
+same as manifestlist
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/manifestlistOnReference/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example:
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/manifestlistOnReference/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+same as manifestlist
+
+
+
+===== Manifest shipments 
+Manifest shipments that are ready to be manifested.
+
+====== Path parameters
+include::snippets/manifestShipments/path-parameters.adoc[]
+
+====== Request parameters
+include::snippets/manifestShipments/query-parameters.adoc[]
+
+====== Response structure
+Returns true if shipments where manifested, else false.
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/manifestShipments/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example:
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/manifestShipments/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;text-decoration:underline" onclick="showChild(this)">Click here to show/hide example <div style="cursor:text;display:none" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/manifestShipments/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+===== Manifest shipments filtered on addref
+Manifest shipments that are ready to be manifested and are filtered on additional reference.
+
+====== Path parameters
+include::snippets/manifestOnReferenceShipments/path-parameters.adoc[]
+
+====== Request parameters
+include::snippets/manifestOnReferenceShipments/query-parameters.adoc[]
+
+====== Response structure
+same as Manifest shipments
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/manifestOnReferenceShipments/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example:
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/manifestOnReferenceShipments/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+

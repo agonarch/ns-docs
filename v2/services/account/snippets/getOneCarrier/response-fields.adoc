@@ -1,0 +1,25 @@
+[cols="1,1,2,2"]
+|===
+|Path|Type|Description|Constraints
+
+|code
+|String
+|The carrier identifier.
+a|
+
+|name
+|String
+|The carrier name.
+a|
+
+|locationSelect
+|Boolean
+|Is location select supported by this carrier.
+a|
+
+|needsManifesting
+|Boolean
+|Is manifesting needed for this carrier.
+a|
+
+|===

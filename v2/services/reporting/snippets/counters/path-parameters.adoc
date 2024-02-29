@@ -1,0 +1,8 @@
+.+/v2/reports/{account}/shipmentcounter+
+|===
+|Parameter|Description
+
+|`+account+`
+|The account to retrieve the counters from.
+
+|===

@@ -1,0 +1,4 @@
+[source,bash]
+----
+$ curl 'https://test-api.transsmart.com/v2/accounts/DEVDOCS/listsettings/mailTypes' -i -X GET
+----

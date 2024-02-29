@@ -1,0 +1,319 @@
+= Transsmart Developer Documentation
+(C) {docyear}, development team Tilburg, last update {docdate}
+:doctype: book
+:docinfo: shared,shared-head
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+
+[introduction]
+= Introduction
+[%hardbreaks]
+Being a developer documentation, the content of this document should primarily serve as the main guidance for those integrating Transsmart into their systems. This document is not meant to describe how Transsmart operates in the logistics process-chain, but rather assumes the reader to be familiar with the business operations of Transsmart, as an organization.
+
+The purpose of this document is to be a sufficient guideline for integrating the Transsmart platform in the operations of another system.
+[%hardbreaks]
+Target Audience
+Though the title of this document may imply that its target audience is developers, it actually is meant to be used by all system integrators that for one reason or the other may have an interest in the Transsmart integration capabilities.
+
+So system integrators, platform/solution architects and system developers, are all perceived as being the target audience of this document.
+[%hardbreaks]
+What is on offer?
+For any reader of this document, it should be possible to easily identify what the Transsmart integration platform has to offer, in terms of versioning and their respective supported resources.
+
+The document references all publicly available environments, i.e. user acceptance and production.
+
+[integration_endpoints]
+= Integration endpoints
+Transsmart offers two integration endpoints:
+
+* SOAP webservice
+* RESTful API
+
+The SOAP webservice is the longest-living integration endpoint of Transsmart.
+link:docs/documentation_websvc_20210913.zip[*Download SOAP webservice documentation*]
+
+The RESTful API has recently received a major upgrade in terms of features and capabilities.
+
+*We advice you to integrate with our RESTful API because of the advantages of having more functionalities available*
+
+[[restful_api]]
+== Validation rules and directives
+The API is offered as a RESTful web service
+
+=== Prerequisites
+* A valid and active Transsmart account.
+* A valid user attached to the Transsmart client account to be used.
+* Basic knowledge of web-services (in particular RESTful services) and the HTTP protocol.
+* Working knowledge of JSON or XML
+* Familiarity with the logistics domain.
+
+IMPORTANT: It is import to note that this document assumes certain technical knowledge on the part of the respective user, so it should not be mistaken for a user manual.
+
+=== Environments
+
+[width="100%",cols="3,3,4",options="header"]
+|===
+| Environment | Base URL | Description
+
+| `Beta developments`
+| https://beta-api.transsmart.com
+| Available for (pilot) customers. Changes are deployed at least 1 week before being deployed to Accept.
+
+| `User acceptance`
+| https://accept-api.transsmart.com
+| Technically equal to Production except on deployment day (1 day difference); mainly used for implementations and training.
+
+| `Production`
+| https://api.transsmart.com
+| Production environment
+|===
+
+=== Field changes
+Developments are sometimes accompanied by the addition of new fields or changes to existing fields. When changing existing fields, we will make sure that they are backwards compatible and we will announce them well in advance through release notes. The addition of new fields has a shorter lead time; these changes will also be communicated via the release notes, but you should make the connection to us in such a way that no problems arise on your side when new, and therefore unknown to you, fields are added. These fields should be ignored or of course if desired, mapped to a corresponding field on your side.
+
+[[overview-http-verbs]]
+=== HTTP verbs
+The API tries to adhere as closely as possible to standard HTTP and REST conventions in its
+use of HTTP verbs.
+
+[width="100%",cols="3,10",options="header"]
+|===
+| Verb | Usage
+
+| `GET`
+| Mainly used to retrieve a resource though in some cases also trigger an action, for instance, in the case of document print.
+
+| `POST`
+| Used to create a new resource
+
+| `PATCH`
+| Used to update an existing resource, including partial updates
+
+| `PUT`
+| Used to update an existing resource, full updates only
+
+| `DELETE`
+| Used to delete an existing resource
+|===
+
+[[overview-http-status-codes]]
+=== HTTP status codes
+The API tries to adhere as closely as possible to standard HTTP and REST conventions in its
+use of HTTP status codes.
+
+
+[width="100%",cols="3,10",options="header"]
+|===
+| Status code | Usage
+
+| `200 OK`
+| Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request, the response will contain an entity describing or containing the result of the action.
+
+| `201 Created`
+| The request has been fulfilled and resulted in a new resource being created.
+
+| `204 No Content`
+| The server successfully processed the request, but is not returning any content.
+
+| `400 Bad Request`
+| The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing).
+
+| `401 Unauthorized`
+| The server cannot or will not process the request due a missing token or due to an invalid token.
+
+| `404 Not Found`
+| The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible.
+
+| `409 Conflict`
+| Indicates that the request could not be processed because of conflict in the request, such as an 'add conflict' where a duplicated record is posted, the service returns then this code with a more detailed message.
+
+| `415 Unsupported Media Type`
+| The request entity has a media type which the server or resource does not support. For example, the client posts a request as text/plain, but the server requires that the post use a different format as to be aapplication/xml or application/json.
+
+| `429 Too Many Requests`
+| The user has sent too many requests in a given amount of time. Intended for use with rate-limiting schemes.
+
+| `500 Internal Server Error`
+| A generic error message, given when an unexpected condition was encountered and no more specific message is suitable.
+|===
+
+=== Rate Limiter
+To prevent our API from being overwhelmed, per API service type (shipment service, status service, report service etc…) we have configured rate limits per account per time frame. 
+
+When high loads of calls are being done in a very short time frame, you will receive an 429 error. 
+
+If that is the case, to avoid reaching our rate limiter, your configuration/integration needs to be verified by you or your (ERP/WMS) partner. 
+
+Most probably the amount of calls can be reduced by lowering the configuration of sending API calls for (all) shipments.
+
+The best way to implement a correct process for handling 429 errors, is to act on the information we send back in Response Header:
+
+* X-RateLimit-Remaining: the number of remaining calls (if still allowed)
+* X-RateLimit-Reset: the number of milliseconds before next call may be done (in case of a blocked call)
+
+Two other ways are either simply wait longer before sending a retry or implement an exponential backoff which means you don’t retry sending a request for instance every 0.1 second but retry 1 second later, then 10 seconds later, then 1 minute later… etc. until you get the correct response call information.
+
+NOTE: We comply with a Fair Use Policy and will adjust the values -and in exceptional cases even block requesters- if we notice there is abuse in submitting or requesting too much data.
+
+=== Localization
+For these three fields we comply with below applicable ISO codes: 
+
+
+[width="100%",cols="3,10",options="header"]
+|===
+| Parameter | Description
+
+| `language`
+| ISO 639-1 two letter code; lower case.
+
+| `country`
+| ISO 3166-1 two letter code; upper case.
+
+| `currency`
+| ISO 4217 three letter code; upper case.
+|===
+
+=== Supported Data formats
+Both JSON and XML are supported as input and output data formats.
+
+NOTE: In the examples given in the resources' description only the json format is demonstrated.
+
+=== Direct links
+MyTranssmart supports direct links. These can be used to direct link from an ERP system to a specific page in the MyTranssmart dashboard: Path /v2/direct/details?key=cQBauM7gcQBauM7gcQBauM7gcQBauM7g gcQBauM7gcQBauM7gcQBauM7g&reference=7111117854 (key and reference are not valid, you need a valid customer key and reference. Don’t forget to URL encode it as required for all query parameters). See chapter 1.1 ‘Requesting for a token’ on how to obtain the required key. 
+
+Options:
+
+* /v2/direct/details?key=….&reference=..&account=...
+* /v2/direct/overview?key=….
+* /v2/direct/manifest?key=….
+
+Key = the login key +
+Reference = the reference of a shipment +
+account= Account = Optional the account where the shipment is booked on. If not specified the account belonging to the key is used. This can be used if the shipment is booked on a child account and if you want to access this shipment via Act on Behalf function with the key of the parent account.
+
+=== Accounts hierarchy
+Accounts are hierarchical, meaning; when logged in on an account there is also access possible to the child accounts. This is reflected on the interface by specifying the account on which the action should take place. Trying to access another accounts will be denied with a http status 'FORBIDDEN'.
+This accounts hierarchy  also applies to the accounts settings, so any setting specified on an account is also applicable for the child accounts.
+
+The API assumes a plural-based resources naming convention.
+
+=== Act on Behalf
+
+The 'Act on Behalf' feature of the API makes it possible to use a child/grandchild account in the same way as the account where you are logged into. You can perform the same actions on the child account as which you can do on the logged in account. This can be done by replacing the account code in the URL by the account code that you want the action to be performed on. 
+
+Example:
+You login as user of the ERPDEMO account. A booking is then performed with this URL:
+
+/v2/shipments/ERPDEMO/BOOK
+
+This will book the shipment on account ERPDEMO. 
+
+If you want to book on the child account ERDEMOCHILD (the ERDEMOCHILD has to be configured as a child/grandchild of ERPDEMO) the flow is:
+You login as user of the ERPDEMO account (so the same user as above). A booking is then performed with this URL:
+
+/v2/shipments/ERDEMOCHILD/BOOK
+
+This wil book the shipment on account ERDEMOCHILD.
+
+The <<_7_9_get_account_information,Account information>> endpoint provides information to which account the Act on Behalf can be performed. 
+
+
+Permissions 
+
+You keep the same permissions as you have on the parent account, even if the child account has less permissions.
+
+Example:
+
+Your main account has Reporting permissions and you log in with an user with Reporting permissions. 
+The child account does not have Reporting permissions which means that users that directly connect to that account will not be able to download a report. If the user that logs into the main account uses Act on Behalf to log into the child account, that user will be able to download a report for that child account.
+
+=== Reported errors
+Depending on the error there are three type of error structures that can be returned. For instance, in the error response of a booking call, all three structures are possible so you need to be sure you can handle all three types. 
+
+Normal error:
+[source,json]
+----
+{
+    "status": "BAD_REQUEST",
+    "timestamp": "2023-07-24T12:42:49.450320273",
+    "code": "TS222122",
+    "message": "Failed to print",
+    "description": "No printer found for type: LASER",
+}
+----
+Validation errors:
+[source,json]
+----
+{
+    "status": "BAD_REQUEST",
+    "timestamp": "2023-07-24T12:42:49.450320273",
+    "code": "TS10002",
+    "message": "Invalid input shipment data",
+    "details": [{
+            "reference": "this_reference_is_tolong_so_a_error_will_be_reported",
+            "validationErrors": [{
+                    "object": "Shipment",
+                    "field": "reference",
+                    "rejectedValue": "this_reference_is_tolong_so_a_error_will_be_reported",
+                    "message": "size must be between 1 and 32"
+                }, {
+                    "object": "Shipment",
+                    "field": "carrier",
+                    "rejectedValue": "to_long_carrier",
+                    "message": "Carrier must be 3 characters"
+                }
+            ]
+        }
+    ]
+}
+----
+
+Errors with detail information:
+[source,json]
+----
+{
+    "status": "BAD_REQUEST",
+    "timestamp": "2023-07-24T12:42:49.450320273",
+    "code": "TS10002",
+    "message": "Batch booking error",
+    "description": "Booking failed for all shipments",
+    "details": [{
+            "errorCode": "TS222122",
+            "errorDescription": " Shipment with reference 1213445 already exists with status LABL and can not be changed.",
+            "errorTitle": "Batch booking failed"
+        }
+    ]
+
+}
+----
+
+=== API QuickGuides
+These QuickGuides help you integrate with Transsmart. 
+
+
+link:docs/QuickGuide_for_API_integration_-_Using_Postman_for_API_Integration.pdf[*QuickGuide for API integration - Using Postman for API Integration*]
+
+link:docs/QuickGuide_for_API_integration_-_Basic_Actions.pdf[*QuickGuide for API integration - Basic Actions*]
+
+link:docs/QuickGuide_for_API_integration_-_Location_select.pdf[*QuickGuide for API integration - Location Select*]
+
+link:docs/QuickGuide_for_API_integration_-_Shipment_Status_Tracking.pdf[*QuickGuide for API integration - Shipment Status Tracking*]
+
+link:docs/QuickGuide_for_API_integration_-_Using_Account_Settings.pdf[*QuickGuide for API integration - Using Account Settings*]
+
+link:docs/QuickGuide_for_API_integration_-_Using_Addresses.pdf[*QuickGuide for API integration - Using Addresses*]
+
+link:docs/QuickGuide_for_API_integration_-_Using_Tariffs.pdf[*QuickGuide for API integration - Using Tariffs*]
+
+---
+This section (introduction) has mainly introduced the Transsmart API, described how this documentation may be used and established some conventions adopted by the Transsmart API.
+
+The next section describes the API, by defining the resources it offers, how they may be used and their respective behaviour (normal and in error).
+
+NOTE: From this point on-words, where used in this documentation, the "API" refers to and implies the Transsmart API. Also where used within this documentation, the "platform" is in reference to the Transsmart platform.
+
+include::v2/v2_doc.adoc[]
+

@@ -1,0 +1,8 @@
+.+/v2/accounts/{account}/listsettings/mailTypes+
+|===
+|Parameter|Description
+
+|`+account+`
+|The account to retrieve the settings from.
+
+|===

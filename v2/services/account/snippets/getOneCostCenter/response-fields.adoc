@@ -1,0 +1,20 @@
+[cols="1,1,2,2"]
+|===
+|Path|Type|Description|Constraints
+
+|code
+|String
+|The costcenter identifier.
+a|
+
+|description
+|String
+|Description of the costcenter.
+a|
+
+|isDefault
+|Boolean
+|Is this the default costcenter.
+a|
+
+|===

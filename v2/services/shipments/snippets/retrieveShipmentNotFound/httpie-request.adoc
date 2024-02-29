@@ -1,0 +1,4 @@
+[source,bash]
+----
+$ http GET 'https://test-api.transsmart.com/v2/shipments/DEVDOCS/too.much.characters.there.cannot.be.a.reference.this.long'
+----

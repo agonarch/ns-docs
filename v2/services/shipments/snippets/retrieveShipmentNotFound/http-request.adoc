@@ -1,0 +1,6 @@
+[source,http,options="nowrap"]
+----
+GET /v2/shipments/DEVDOCS/too.much.characters.there.cannot.be.a.reference.this.long HTTP/1.1
+Host: test-api.transsmart.com
+
+----

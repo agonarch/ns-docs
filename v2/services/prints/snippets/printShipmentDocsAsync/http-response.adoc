@@ -1,0 +1,17 @@
+[source,http,options="nowrap"]
+----
+HTTP/1.1 202 Accepted
+Content-Type: application/hal+json
+Content-Length: 321
+
+{
+  "identifier" : "fdb77f79-a831-41d5-83fc-a23284b1516e",
+  "procressDescriptino" : "Job is started, please consult the referenced link for progress",
+  "result" : null,
+  "_links" : {
+    "self" : {
+      "href" : "https://test-api.transsmart.com/v2/prints/DEVDOCS/jobs/fdb77f79-a831-41d5-83fc-a23284b1516e"
+    }
+  }
+}
+----

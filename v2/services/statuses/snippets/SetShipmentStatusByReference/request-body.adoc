@@ -1,0 +1,14 @@
+[source,json,options="nowrap"]
+----
+{
+  "referenceType" : null,
+  "reference" : null,
+  "awb" : null,
+  "shipmentStatusCode" : "LABL",
+  "colloStatusCode" : null,
+  "deliveryDate" : null,
+  "deliveryTime" : null,
+  "acceptedBy" : null,
+  "addReferences" : null
+}
+----

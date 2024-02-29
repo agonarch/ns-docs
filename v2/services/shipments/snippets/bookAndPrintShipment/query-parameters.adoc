@@ -1,0 +1,19 @@
+|===
+|Parameter|Description
+
+|`+user+`
+|The user name (not the email that is used to loggin) from whom the print setting should be used.
+
+|`+spc+`
+|The SmartPrint connection that needs to handle the print job. The value is a concatenation of user and device in the format "user@device" or "device$@device" if SmartPrint is running as service.
+
+|`+printer_zpl+`
+|ZPL printer name
+
+|`+printer_pdf+`
+|PDF printer name
+
+|`+printer_doc+`
+|Document printer name
+
+|===

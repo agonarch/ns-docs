@@ -1,0 +1,4 @@
+[source,bash]
+----
+$ http GET 'https://test-api.transsmart.com/v2/accounts/DEVDOCS/listsettings/bookingProfiles'
+----

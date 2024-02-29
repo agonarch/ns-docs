@@ -1,0 +1,5 @@
+[source,bash]
+----
+$ http GET 'https://test-api.transsmart.com/v2/shipments/DEVDOCS?referenceType=ENGINEER&reference=example-engineer-additional-value-shipment-level' \
+    'Accept:application/json;charset=UTF-8'
+----

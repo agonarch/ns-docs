@@ -1,0 +1,11 @@
+.+/v2/shipments/{account}/{reference}+
+|===
+|Parameter|Description
+
+|`+account+`
+|Is the account to which the shipment belongs.
+
+|`+reference+`
+|Reference of shipment to be retrieved.
+
+|===

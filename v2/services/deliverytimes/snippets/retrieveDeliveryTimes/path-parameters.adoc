@@ -1,0 +1,11 @@
+./v2/deliverytimes/{account}/{provider}
+|===
+|Parameter|Description
+
+|`account`
+|The account.
+
+|`provider`
+|The provider (carrier) of the delivery times.
+
+|===

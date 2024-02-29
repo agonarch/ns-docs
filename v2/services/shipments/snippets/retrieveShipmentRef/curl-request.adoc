@@ -1,0 +1,5 @@
+[source,bash]
+----
+$ curl 'https://test-api.transsmart.com/v2/shipments/DEVDOCS?reference=Transsmart_1706872425782' -i -X GET \
+    -H 'Accept: application/json;charset=UTF-8'
+----

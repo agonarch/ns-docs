@@ -1,0 +1,10 @@
+[source,json,options="nowrap"]
+----
+[ {
+  "description" : "2023-11-16T13:48:49.733",
+  "currency" : "EUR",
+  "company" : "COVER_GENIUS",
+  "premium" : 1,
+  "charges" : [ ]
+} ]
+----

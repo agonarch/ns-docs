@@ -1,0 +1,43 @@
+==== 9.1 Reporting
+
+===== Get shipment counters
+
+
+====== Path parameters
+include::snippets/counters/path-parameters.adoc[]
+
+====== Request parameters
+include::snippets/counters/query-parameters.adoc[]
+
+====== Response structure
+include::snippets/counters/response-fields.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/counters/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/counters/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/counters/http-response.adoc[]
+++++
+</div >
+</div >
+++++

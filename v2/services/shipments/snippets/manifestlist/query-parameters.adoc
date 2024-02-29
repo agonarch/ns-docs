@@ -1,0 +1,28 @@
+|===
+|Parameter|Description
+
+|`+date+`
+|The pickup date.
+
+|`+dateTo+`
+|The pickup date until.
+
+|`+pagedResult+`
+|Return the results in transsmart pages.
+
+|`+carrier+`
+|The carrier.
+
+|`+costCenter+`
+|The costCenter (optional).
+
+|`+slt+`
+|The service level time (optional).
+
+|`+slo+`
+|The service level other (optional).
+
+|`+receiverCountry+`
+|The country of the receiver (optional).
+
+|===

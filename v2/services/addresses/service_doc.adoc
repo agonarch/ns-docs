@@ -1,0 +1,241 @@
+==== 6.1 Creating addresses
+
+====== Path parameters
+include::snippets/saveAddresses/path-parameters.adoc[]
+
+====== Request fields
+include::snippets/saveAddresses/request-fields.adoc[]
+
+====== Example request body
+include::snippets/saveAddresses/request-body.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/saveAddresses/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/saveAddresses/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/saveAddresses/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+==== 6.2 Addresses retrieval
+
+===== 6.2a Retrieve single address
+
+====== Path parameters
+include::snippets/retrieveAddress/path-parameters.adoc[]
+
+====== Response structure
+include::snippets/retrieveAddress/response-fields.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/retrieveAddress/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/retrieveAddress/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/retrieveAddress/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+===== 6.2b Retrieve multiple addresses
+
+====== Path parameters
+include::snippets/retrieveAddresses/path-parameters.adoc[]
+
+====== Request parameters
+include::snippets/retrieveAddresses/query-parameters.adoc[]
+
+====== Response structure
+include::snippets/retrieveAddresses/response-fields.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/retrieveAddresses/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/retrieveAddresses/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/retrieveAddresses/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+
+==== 6.3 Updating addresses
+
+====== Path parameters
+include::snippets/updateAddress/path-parameters.adoc[]
+
+====== Example request body
+include::snippets/updateAddress/request-body.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/updateAddress/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/updateAddress/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/updateAddress/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+==== 6.4 Deleting addresses
+
+====== Path parameters
+include::snippets/removeAddress/path-parameters.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/removeAddress/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example:
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/removeAddress/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/removeAddress/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+
+////
+==== 6.5 Address Validation
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/validateAddress/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+
+====== Http example
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/validateAddress/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+
+====== Path parameters
+include::snippets/validateAddress/path-parameters.adoc[]
+
+====== Request parameters
+include::snippets/validateAddress/query-parameters.adoc[]
+
+====== Response structure
+include::snippets/validateAddress/response-fields.adoc[]
+
+====== Example response
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/validateAddress/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+////

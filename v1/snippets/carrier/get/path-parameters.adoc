@@ -1,0 +1,8 @@
+./v1/Carrier/{id}
+|===
+|Parameter|Description
+
+|`id`
+|Identifier of the carrier to be retireved
+
+|===

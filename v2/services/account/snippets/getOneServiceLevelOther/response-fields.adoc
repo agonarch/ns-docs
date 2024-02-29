@@ -1,0 +1,20 @@
+[cols="1,1,2,2"]
+|===
+|Path|Type|Description|Constraints
+
+|code
+|String
+|The service level other identifier.
+a|
+
+|description
+|String
+|Description of the service level other.
+a|
+
+|isDefault
+|Boolean
+|Is this the default service level other.
+a|
+
+|===

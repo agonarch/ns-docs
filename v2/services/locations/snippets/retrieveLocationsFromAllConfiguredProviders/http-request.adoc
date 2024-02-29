@@ -1,0 +1,6 @@
+[source,http,options="nowrap"]
+----
+GET /v2/locations/DEVDOCS?zipCode=5032MD&countryTo=NL HTTP/1.1
+Host: test-api.transsmart.com
+
+----

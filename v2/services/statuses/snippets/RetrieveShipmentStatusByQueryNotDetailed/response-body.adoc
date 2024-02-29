@@ -1,0 +1,15 @@
+[source,json,options="nowrap"]
+----
+{
+  "content" : [ {
+    "reference" : "Transsmart_1687866674312",
+    "carrier" : "DPD",
+    "costcenter" : "",
+    "shipmentStatus" : "MANI",
+    "trackAndTraceUrl" : "https://tracking.dpd.de/parcelstatus?query=MPS0522802136553620230627&locale=nl_NL&Tracking=Track",
+    "airwaybill" : "05228021365536"
+  } ],
+  "contentType" : "Statuses",
+  "numberOfItems" : 1
+}
+----

@@ -1,0 +1,16 @@
+|===
+|Parameter|Description
+
+|`+currency+`
+|The currency to calculate with.
+
+|`+countryFrom+`
+|The country where the shipment is originated.
+
+|`+countryTo+`
+|The country where the shipment is shipped to.
+
+|`+value+`
+|The value of the goods to be shipped.
+
+|===

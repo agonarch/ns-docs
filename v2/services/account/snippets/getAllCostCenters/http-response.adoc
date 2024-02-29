@@ -1,0 +1,8 @@
+[source,http,options="nowrap"]
+----
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 180
+
+[{"value":"{\"code\":\"SPARE\",\"description\":\"Spare Parts department\",\"isDefault\":false}","nr":1},{"value":"{\"code\":\"\",\"description\":\"\",\"isDefault\":false}","nr":2}]
+----

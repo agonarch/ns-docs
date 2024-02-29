@@ -1,0 +1,4 @@
+[source,json,options="nowrap"]
+----
+{"code":"BOK","description":"Standard box 10 x 10 x 10","isDefault":false,"type":"BOX","linearUom":"CM","massUom":"KG","length":"10","width":"10","height":"10","weight":"1"}
+----

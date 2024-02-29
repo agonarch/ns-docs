@@ -1,0 +1,6 @@
+[source,http,options="nowrap"]
+----
+GET /v2/shipments/DEVDOCS/manifest?from=2024-02-02&to=2024-02-09&carrier=DPD&costCenter=&receiverCountry=NL&reference=1234&referenceType=ROUTE_ID HTTP/1.1
+Host: test-api.transsmart.com
+
+----

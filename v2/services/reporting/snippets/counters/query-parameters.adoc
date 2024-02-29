@@ -1,0 +1,19 @@
+|===
+|Parameter|Description
+
+|`+startDate+`
+|The start date of the period to report.
+
+|`+endDate+`
+|The included end date of the period to report. Defaults to today.
+
+|`+consolidateAccounts+`
+|When true, results are consolidated on account level. Otherwise, results are split per (sub)account.
+
+|`+consolidateCarriers+`
+|When true, results are consolidate on carrier level. Otherwise, results are split per carrier.
+
+|`+accounts+`
+|Comma-separated list of (sub)accounts to use as a filter for the results. Defaults to account doing the API call.
+
+|===

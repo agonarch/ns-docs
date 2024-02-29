@@ -1,0 +1,7 @@
+|===
+|Parameter|Description
+
+|`+rawJob+`
+|Retun either pdf and/or zpl, in base64 encoded format. When set to false Transsmart will automatically print the documents via SmartPrint. Speak with your Transsmart contact for more information on the implementation considerations
+
+|===

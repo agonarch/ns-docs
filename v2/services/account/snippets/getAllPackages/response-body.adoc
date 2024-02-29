@@ -1,0 +1,4 @@
+[source,json,options="nowrap"]
+----
+[{"value":"{\"code\":\"BOK\",\"description\":\"Standard box 10 x 10 x 10\",\"isDefault\":false,\"type\":\"BOX\",\"linearUom\":\"CM\",\"massUom\":\"KG\",\"length\":\"10\",\"width\":\"10\",\"height\":\"10\",\"weight\":\"1\"}","nr":1},{"value":"{\"code\":\"PALLET\",\"description\":\"Standard 100 x 80 pallet\",\"isDefault\":false,\"type\":\"PALLET\",\"linearUom\":\"CM\",\"massUom\":\"KG\",\"length\":\"100\",\"width\":\"80\",\"height\":\"80\",\"weight\":\"150\"}","nr":2}]
+----

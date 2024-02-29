@@ -1,0 +1,8 @@
+.+/v2/locations/{account}+
+|===
+|Parameter|Description
+
+|`+account+`
+|The account.
+
+|===

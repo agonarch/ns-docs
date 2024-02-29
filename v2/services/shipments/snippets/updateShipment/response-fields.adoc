@@ -1,0 +1,191 @@
+[cols="1,1,2,2"]
+|===
+|Path|Type|Description|Constraints
+
+|[] +
+.reference
+|String
+|Shipment reference.
+a|
+
+|[] +
+.awb
+|String
+|The airway bill number.
+a|
+
+|[] +
+.carrier
+|String
+|The carrier.
+a|
+
+|[] +
+.executingCarrier
+|String
+|The executing carrier.
+a|
+
+|[] +
+.pieces
+|Decimal
+|Number of packages
+a|
+
+|[] +
+.weight
+|Decimal
+|Shipment weight
+a|
+
+|[] +
+.service
+|String
+|The service: example NON-DOCS/DOCS >> may indicate if a shipment goes out of the EU
+a|
+
+|[] +
+.serviceLevelTime
+|String
+|The used service level time.
+a|
+
+|[] +
+.serviceLevelOther
+|String
+|The used service level other.
+a|
+
+|[] +
+.incoterms
+|String
+|The incoterms
+a|
+
+|[] +
+.price
+|Decimal
+|The price.
+a|
+
+|[] +
+.currency
+|String
+|The price currency.
+a|
+
+|[] +
+.salesPrice
+|Decimal
+|The sales price.
+a|
+
+|[] +
+.salesPriceCurrency
+|String
+|The sales price currency.
+a|
+
+|[] +
+.pickupDate
+|String
+|The booked pickup date
+a|
+
+|[] +
+.trackingUrl
+|String
+|The tracking URL.
+a|
+
+|[] +
+.shipmentStatus
+|BookingStatus
+|The shipment status
+a|
+
+|[] +
+.insurance
+|Boolean
+|Is this shipment insured.
+a|
+
+|[] +
+.shipmentStatus +
+.statusCode
+|String
+|The status code.
+a|
+
+|[] +
+.shipmentStatus +
+.plannedDeliveryDate
+|String
+|The planned delivery date.
+a|Format yyyy-MM-dd. +
+
+
+|[] +
+.shipmentStatus +
+.plannedDeliveryTime
+|String
+|The planned delivery time.
+a|Format HH:mm. +
+
+
+|[] +
+.packages
+|List
+|The list of packages
+a|
+
+|[] +
+.packages[] +
+.sequence
+|String
+|Shipment line sequence
+a|
+
+|[] +
+.packages[] +
+.lineNo
+|Integer
+|The lineno of the package.
+a|
+
+|[] +
+.packages[] +
+.shipmentLineId
+|String
+|The shipment line number for this package.
+a|
+
+|[] +
+.packages[] +
+.awb
+|String
+|Shipment line airwaybill
+a|
+
+|[] +
+.packages[] +
+.genericStatusCode
+|String
+|Shipment line status code
+a|
+
+|[] +
+.packages[] +
+.carrierStatusCode
+|String
+|Carrier shipment line status
+a|
+
+|[] +
+.packages[] +
+.carrierStatusDescription
+|String
+|Carrier shipment line status description
+a|
+
+|===

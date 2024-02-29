@@ -1,0 +1,6 @@
+[source,http,options="nowrap"]
+----
+GET /v2/prints/DEVDOCS/Transsmart_1687866674312/05228021365536 HTTP/1.1
+Host: test-api.transsmart.com
+
+----

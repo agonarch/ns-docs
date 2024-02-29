@@ -1,0 +1,4 @@
+[source,json,options="nowrap"]
+----
+{"code":"0","description":"no mail","isDefault":false,"isDisabled":false}
+----

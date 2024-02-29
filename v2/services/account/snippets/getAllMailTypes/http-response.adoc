@@ -1,0 +1,8 @@
+[source,http,options="nowrap"]
+----
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 106
+
+[{"value":"{\"code\":\"0\",\"description\":\"no mail\",\"isDefault\":false,\"isDisabled\":false}","nr":0}]
+----

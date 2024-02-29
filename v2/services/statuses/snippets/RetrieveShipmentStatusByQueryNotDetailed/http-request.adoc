@@ -1,0 +1,6 @@
+[source,http,options="nowrap"]
+----
+GET /v2/statuses/DEVDOCS/shipments?dateFrom=2024-01-15+16%3A20%3A00&dateTo=2024-02-15+16%3A20%3A00&isIncremental=false&carrier=DPD&carrier=UPS&costCenter=&subAccount=&maxResults=10&currentStatusOnly=false&isDetailed=false&withPod=true HTTP/1.1
+Host: test-api.transsmart.com
+
+----

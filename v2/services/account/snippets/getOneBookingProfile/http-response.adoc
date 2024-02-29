@@ -1,0 +1,8 @@
+[source,http,options="nowrap"]
+----
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 161
+
+{"code":"DPD1","description":"DPD, CLASSIC","carrier":"DPD","serviceLevelTime":"CLASSIC","serviceLevelOther":"","incoterms":"DAP","costCenter":"","mailType":"1"}
+----

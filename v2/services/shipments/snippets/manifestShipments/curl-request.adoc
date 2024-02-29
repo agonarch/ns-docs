@@ -1,0 +1,4 @@
+[source,bash]
+----
+$ curl 'https://test-api.transsmart.com/v2/shipments/DEVDOCS/manifest?from=2024-02-02&to=2024-02-09&carrier=DPD&costCenter=&receiverCountry=NL' -i -X GET
+----

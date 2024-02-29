@@ -1,0 +1,34 @@
+|===
+|Parameter|Description
+
+|`+dateFrom+`
+|Start of the time windows.
+
+|`+dateTo+`
+|End of the time window.
+
+|`+carrier+`
+|Filter shipments based on the carriers. Use the carrier code in the transsmart back-end ask your consultant for use.
+
+|`+costCenter+`
+|Filter shipments based on the cost centers.
+
+|`+subAccount+`
+|Filter shipments based on (sub) accounts.
+
+|`+maxResults+`
+|Maximum number of status updates to collect. One shipment can have mutiple status updates so the amount of shipment can be lower. Example: when maxResults = 1000, you might get back 100 shipments with 10 updates per shipment.
+
+|`+withPod+`
+|Include the POD in the last shipment or collo status (if available). This parameter only works when the parameter 'isDetailed' is set.
+
+|`+isIncremental+`
+|Only retrieve the information which was not returned before.
+
+|`+isDetailed+`
+|Include the status history in chronological order.
+
+|`+currentStatusOnly+`
+|Only include the last status per shipment and collo, not the complete history; this parameter only works when the parameter 'isDetailed' set to true. It will first collect all status events matching the maxResults and then only send the last status event. So the set of data will be smaller than the maxResults value.
+
+|===

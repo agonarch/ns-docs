@@ -1,0 +1,134 @@
+==== 3.1 Calculating rates
+Call this resource to get a list of calculated buying and selling rates for your configured carriers and their servicelevels based on shipment details.
+
+The following calculation are supported:
+
+* calculate, this calculates rates for all carriers and service levels.
+* preBooking, this completes the booking based on routing rules and then calculates the rate for that booking.
+* filtered, this calculates rates for the (optional) specified carrier, service levels time and service level other.
+
+====== Path parameters
+include::snippets/retrieveRates/path-parameters.adoc[]
+
+====== Request parameters
+include::snippets/retrieveRates/query-parameters.adoc[]
+
+====== Request fields
+include::snippets/retrieveRates/request-fields.adoc[]
+
+====== Response structure
+include::snippets/retrieveRates/response-fields.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/retrieveRates/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/retrieveRates/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/retrieveRates/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+==== 3.2 Calculating insurance
+Get a list of ensurance premiums for your configured insurance company.
+
+
+====== Path parameters
+include::snippets/calculateInsurancePremium/path-parameters.adoc[]
+
+====== Request parameters
+include::snippets/calculateInsurancePremium/query-parameters.adoc[]
+
+
+====== Response structure
+include::snippets/calculateInsurancePremium/response-fields.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/calculateInsurancePremium/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/calculateInsurancePremium/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/calculateInsurancePremium/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+==== 3.3 Get insurance information
+Get the ensurance information for the shipment.
+
+
+====== Path parameters
+include::snippets/retrieveInsurancePremium/path-parameters.adoc[]
+
+====== Response structure
+include::snippets/retrieveInsurancePremium/response-fields.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/retrieveInsurancePremium/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/retrieveInsurancePremium/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/retrieveInsurancePremium/http-response.adoc[]
+++++
+</div >
+</div >
+++++

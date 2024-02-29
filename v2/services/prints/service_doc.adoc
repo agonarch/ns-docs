@@ -1,0 +1,91 @@
+==== 4.1 Print document
+
+===== Print shipment label by ref
+
+
+The parameter rawJob determines if the printing should be handled by the system or the to be printed documents should be returned in the response. So in case of a rawJob the actual base64 encoded shipment level and package level documents (PDF and / or ZPL) are included in the response.+  
+In the example below the same input is used and only the parameter rawJob is false or true.
+
+====== Path variables
+include::snippets/printShipmentDocs/path-parameters.adoc[]
+
+====== Request variables
+include::snippets/printShipmentDocs/query-parameters.adoc[]
+
+====== Response structure print
+include::snippets/printShipmentDocs/http-response.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/printShipmentDocs/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example:
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/printShipmentDocs/http-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Response structure rawJob
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/printShipmentDocsRawJob/response-fields.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Example response rawJob
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/printShipmentDocsRawJob/http-response.adoc[]
+++++
+</div >
+</div >
+++++
+
+
+===== Print package label by ref/awb
+
+
+This only prints the label for the indicated package per reference or airwaybillNumber. The parameter rawJob is also supported.
+
+====== Path variables
+include::snippets/printShipmentAwbDocs/path-parameters.adoc[]
+
+====== Request variables
+include::snippets/printShipmentAwbDocs/query-parameters.adoc[]
+
+====== Response structure print
+include::snippets/printShipmentAwbDocs/http-response.adoc[]
+
+====== Curl Example requests
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/printShipmentAwbDocs/curl-request.adoc[]
+++++
+</div >
+</div >
+++++
+
+====== Http example:
+++++
+<div  style="cursor:pointer;color:blue" onclick="showChild(this)">Click here to show/hide example<div style="cursor:text;display:none;color:initial" onclick="event.cancelBubble=true;"  class="collaps">
+++++
+include::snippets/printShipmentDocs/http-request.adoc[]
+++++
+</div >
+</div >
+++++

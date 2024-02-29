@@ -1,0 +1,6 @@
+[source,http,options="nowrap"]
+----
+DELETE /v2/addresses/DEVDOCS/DEVDOCS31744076 HTTP/1.1
+Host: accept-api.transsmart.com
+
+----

@@ -1,0 +1,8 @@
+.+/v2/accounts/{account}/structure+
+|===
+|Parameter|Description
+
+|`+account+`
+|The account to retrieve the structure from.
+
+|===

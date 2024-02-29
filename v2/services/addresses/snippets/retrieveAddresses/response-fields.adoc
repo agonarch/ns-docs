@@ -1,0 +1,216 @@
+|===
+|Path|Type|Description
+
+|`+contentType+`
+|`+String+`
+|
+
+|`+isLastPage+`
+|`+Boolean+`
+|Indicates if this is the last page.
+
+|`+totalItems+`
+|`+Integer+`
+|Total amount of items.
+
+|`+totalPages+`
+|`+Integer+`
+|Total amount of pages.
+
+|`+pageSize+`
+|`+Integer+`
+|The amount of items per page.
+
+|`+currentPage+`
+|`+Integer+`
+|The current page.
+
+|`+isFirstPage+`
+|`+Boolean+`
+|Indicates if this is the first page.
+
+|`+numberOfItems+`
+|`+Integer+`
+|Number of items in this page.
+
+|`+content+`
+|`+Object+`
+|The content of this page.
+
+|`+content.[].links+`
+|`+Array+`
+|links
+
+|`+content.[].links.[].rel+`
+|`+String+`
+|Relationship
+
+|`+content.[].links.[].href+`
+|`+String+`
+|The URL to the resource
+
+|`+content.[].id+`
+|`+String+`
+|The id of the address.
+
+|`+content.[].name+`
+|`+String+`
+|The name.
+
+|`+content.[].addressLine1+`
+|`+String+`
+|The first address line; mostly the primary street name.
+
+|`+content.[].addressLine2+`
+|`+String+`
+|The second address line.
+
+|`+content.[].addressLine3+`
+|`+String+`
+|The third address line.
+
+|`+content.[].houseNumber+`
+|`+String+`
+|The house number.
+
+|`+content.[].zipCode+`
+|`+String+`
+|The zip/postal code.
+
+|`+content.[].city+`
+|`+String+`
+|The city.
+
+|`+content.[].province+`
+|`+String+`
+|The province or state.
+
+|`+content.[].country+`
+|`+String+`
+|The country code.
+
+|`+content.[].language+`
+|`+String+`
+|The language code.
+
+|`+content.[].contact.name+`
+|`+String+`
+|The name.
+
+|`+content.[].contact.email+`
+|`+String+`
+|The email address.
+
+|`+content.[].contact.phone+`
+|`+String+`
+|The phone number.
+
+|`+content.[].contact.fax+`
+|`+String+`
+|The fax number.
+
+|`+content.[].accountNumber+`
+|`+String+`
+|The carrier account number for this address.
+
+|`+content.[].customerNumber+`
+|`+String+`
+|The customer number for this address.
+
+|`+content.[].vatNumber+`
+|`+String+`
+|The VAT Number.
+
+|`+content.[].costCenter+`
+|`+String+`
+|The cost center.
+
+|`+content.[].type+`
+|`+String+`
+|Address type; can be SEND (sender) or RECV (receiver) address.
+
+|`+content.[].instructions+`
+|`+String+`
+|The instructions for the address.
+
+|`+content.[].billingAddress.links+`
+|`+Object+`
+|links
+
+|`+content.billingAddress.links.[].rel+`
+|`+String+`
+|Relationship
+
+|`+content.billingAddress.links.[].href+`
+|`+String+`
+|The URL to the resource
+
+|`+content.[].billingAddress.name+`
+|`+String+`
+|The name.
+
+|`+content.[].billingAddress.addressLine1+`
+|`+String+`
+|The first address line; mostly the primary street name.
+
+|`+content.[].billingAddress.addressLine2+`
+|`+String+`
+|The second address line.
+
+|`+content.[].billingAddress.addressLine3+`
+|`+String+`
+|The third address line.
+
+|`+content.[].billingAddress.houseNumber+`
+|`+String+`
+|The house number.
+
+|`+content.[].billingAddress.zipCode+`
+|`+String+`
+|The zip/postal code.
+
+|`+content.[].billingAddress.city+`
+|`+String+`
+|The city.
+
+|`+content.[].billingAddress.province+`
+|`+String+`
+|The province or state.
+
+|`+content.[].billingAddress.country+`
+|`+String+`
+|The country code.
+
+|`+content.[].billingAddress.contact+`
+|`+String+`
+|The contact information for this address.
+
+|`+content.[].billingAddress.contact.name+`
+|`+String+`
+|The name.
+
+|`+content.[].billingAddress.contact.email+`
+|`+String+`
+|The email address.
+
+|`+content.[].billingAddress.contact.phone+`
+|`+String+`
+|The phone number.
+
+|`+content.[].billingAddress.contact.fax+`
+|`+String+`
+|The fax number.
+
+|`+content.[].billingAddress.accountNumber+`
+|`+String+`
+|The carrier account number for this address.
+
+|`+content.[].billingAddress.customerNumber+`
+|`+String+`
+|The customer number for this address.
+
+|`+content.[].billingAddress.vatNumber+`
+|`+String+`
+|The VAT Number.
+
+|===

@@ -1,0 +1,8 @@
+.+/v2/addresses/{account}+
+|===
+|Parameter|Description
+
+|`+account+`
+|The account that owns the address.
+
+|===

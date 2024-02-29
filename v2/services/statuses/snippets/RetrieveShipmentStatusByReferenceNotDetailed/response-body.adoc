@@ -1,0 +1,11 @@
+[source,json,options="nowrap"]
+----
+{
+  "reference" : "Transsmart_1681382068193",
+  "carrier" : "DPD",
+  "costcenter" : "",
+  "shipmentStatus" : "DEL",
+  "trackAndTraceUrl" : "https://tracking.dpd.de/parcelstatus?query=MPS0522802136383820230413&locale=nl_NL&Tracking=Track",
+  "airwaybill" : "05228021363838"
+}
+----

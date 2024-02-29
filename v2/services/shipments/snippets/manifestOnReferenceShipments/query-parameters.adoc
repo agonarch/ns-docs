@@ -1,0 +1,25 @@
+|===
+|Parameter|Description
+
+|`+from+`
+|The from pickup date.
+
+|`+to+`
+|The to pickup date.
+
+|`+carrier+`
+|The carrier.
+
+|`+costCenter+`
+|The costCenter (optional).
+
+|`+receiverCountry+`
+|The country of the receiver (optional).
+
+|`+reference+`
+|The value of the additional reference (optional).
+
+|`+referenceType+`
+|The additional reference type (optional).
+
+|===

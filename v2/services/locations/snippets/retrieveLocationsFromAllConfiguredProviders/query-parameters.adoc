@@ -1,0 +1,10 @@
+|===
+|Parameter|Description
+
+|`+zipCode+`
+|The zip code of the reference address
+
+|`+countryTo+`
+|The country code where the shipment will be delivered
+
+|===

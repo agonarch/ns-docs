@@ -1,0 +1,184 @@
+|===
+|Path|Type|Description
+
+|`+_links+`
+|`+Object+`
+|links
+
+|`+_links.self+`
+|`+String+`
+|Self reference
+
+|`+_links.self.href+`
+|`+String+`
+|The URL to the resource
+
+|`+id+`
+|`+String+`
+|The id of the address.
+
+|`+name+`
+|`+String+`
+|The name.
+
+|`+addressLine1+`
+|`+String+`
+|The first address line; mostly the primary street name.
+
+|`+addressLine2+`
+|`+String+`
+|The second address line.
+
+|`+addressLine3+`
+|`+String+`
+|The third address line.
+
+|`+houseNumber+`
+|`+String+`
+|The house number.
+
+|`+zipCode+`
+|`+String+`
+|The zip/postal code.
+
+|`+city+`
+|`+String+`
+|The city.
+
+|`+province+`
+|`+String+`
+|The province or state.
+
+|`+country+`
+|`+String+`
+|The country code.
+
+|`+language+`
+|`+String+`
+|The language code.
+
+|`+contact.name+`
+|`+String+`
+|The name.
+
+|`+contact.email+`
+|`+String+`
+|The email address.
+
+|`+contact.phone+`
+|`+String+`
+|The phone number.
+
+|`+contact.fax+`
+|`+String+`
+|The fax number.
+
+|`+accountNumber+`
+|`+String+`
+|The carrier account number for this address.
+
+|`+customerNumber+`
+|`+String+`
+|The customer number for this address.
+
+|`+vatNumber+`
+|`+String+`
+|The VAT Number.
+
+|`+costCenter+`
+|`+String+`
+|The cost center.
+
+|`+type+`
+|`+String+`
+|Address type; can be SEND (sender) or RECV (receiver) address.
+
+|`+instructions+`
+|`+String+`
+|The instructions for the address.
+
+|`+billingAddress+`
+|`+Object+`
+|The billing/invoice address.
+
+|`+billingAddress.links+`
+|`+Object+`
+|links
+
+|`+billingAddress.links.[].rel+`
+|`+String+`
+|Relationship
+
+|`+billingAddress.links.[].href+`
+|`+String+`
+|The URL to the resource
+
+|`+billingAddress.name+`
+|`+String+`
+|The name.
+
+|`+billingAddress.addressLine1+`
+|`+String+`
+|The first address line; mostly the primary street name.
+
+|`+billingAddress.addressLine2+`
+|`+String+`
+|The second address line.
+
+|`+billingAddress.addressLine3+`
+|`+String+`
+|The third address line.
+
+|`+billingAddress.houseNumber+`
+|`+String+`
+|The house number.
+
+|`+billingAddress.zipCode+`
+|`+String+`
+|The zip/postal code.
+
+|`+billingAddress.city+`
+|`+String+`
+|The city.
+
+|`+billingAddress.province+`
+|`+String+`
+|The province or state.
+
+|`+billingAddress.country+`
+|`+String+`
+|The country code.
+
+|`+billingAddress.contact+`
+|`+String+`
+|The contact information for this address.
+
+|`+billingAddress.contact.name+`
+|`+String+`
+|The name.
+
+|`+billingAddress.contact.email+`
+|`+String+`
+|The email address.
+
+|`+billingAddress.contact.phone+`
+|`+String+`
+|The phone number.
+
+|`+billingAddress.contact.fax+`
+|`+String+`
+|The fax number.
+
+|`+billingAddress.accountNumber+`
+|`+String+`
+|The carrier account number for this address.
+
+|`+billingAddress.customerNumber+`
+|`+String+`
+|The customer number for this address.
+
+|`+billingAddress.vatNumber+`
+|`+String+`
+|The VAT Number.
+
+|===

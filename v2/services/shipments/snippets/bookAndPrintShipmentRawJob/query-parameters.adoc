@@ -1,0 +1,7 @@
+|===
+|Parameter|Description
+
+|`+rawJob+`
+|Include the shipment and package level pdf's and or zpl documents in the response, the documents are not printing by the service. Note this option works only with action PRINT.
+
+|===

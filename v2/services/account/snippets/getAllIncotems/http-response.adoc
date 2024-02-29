@@ -1,0 +1,8 @@
+[source,http,options="nowrap"]
+----
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 1083
+
+[{"value":"{\"code\":\"EXW\",\"description\":\"Ex Works\",\"isDefault\":false}","nr":-1},{"value":"{\"code\":\"FCA\",\"description\":\"Free Carrier\",\"isDefault\":false}","nr":-1},{"value":"{\"code\":\"CPT\",\"description\":\"Carriage Paid To\",\"isDefault\":false}","nr":-1},{"value":"{\"code\":\"CIP\",\"description\":\"Carriage and Insurance Paid To\",\"isDefault\":false}","nr":-1},{"value":"{\"code\":\"DPU\",\"description\":\"Delivery at Place Unloaded\",\"isDefault\":false}","nr":-1},{"value":"{\"code\":\"DAP\",\"description\":\"Delivery at Place\",\"isDefault\":true}","nr":-1},{"value":"{\"code\":\"DDP\",\"description\":\"Delivered Duty Paid\",\"isDefault\":false}","nr":-1},{"value":"{\"code\":\"FAS\",\"description\":\"Free Alongside Ship\",\"isDefault\":false}","nr":-1},{"value":"{\"code\":\"FOB\",\"description\":\"Free On Board\",\"isDefault\":false}","nr":-1},{"value":"{\"code\":\"CFR\",\"description\":\"Cost and Freight\",\"isDefault\":false}","nr":-1},{"value":"{\"code\":\"CIF\",\"description\":\"Cost, Insurance and Freight\",\"isDefault\":false}","nr":-1}]
+----

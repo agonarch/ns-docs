@@ -1,0 +1,4 @@
+[source,json,options="nowrap"]
+----
+{"code":"PARCELSHOP","description":"","isDefault":false}
+----

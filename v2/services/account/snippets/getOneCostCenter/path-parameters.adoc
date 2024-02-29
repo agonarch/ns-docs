@@ -1,0 +1,11 @@
+.+/v2/accounts/{account}/listsettings/costCenters/{nr}+
+|===
+|Parameter|Description
+
+|`+account+`
+|The account to retrieve the settings from.
+
+|`+nr+`
+|Identifier of the list element.
+
+|===

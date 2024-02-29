@@ -1,0 +1,7 @@
+|===
+|Parameter|Description
+
+|`id`
+|Identifier of the carrier to be retireved
+
+|===

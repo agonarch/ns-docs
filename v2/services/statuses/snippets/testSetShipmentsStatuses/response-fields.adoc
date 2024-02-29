@@ -1,0 +1,78 @@
+[cols="1,1,2,2"]
+|===
+|Path|Type|Description|Constraints
+
+|[] +
+.reference
+|String
+|Shipment reference
+a|Not Null and not empty. +
+ The size must be between 1 and 32. +
+
+
+|[] +
+.customerId
+|String
+|Customer id
+a|Maximum size of 10. +
+
+
+|[] +
+.shipmentStatusCode
+|String
+|The status of the shipment.
+a|Has to match pattern: (NONE\| +
+ERR\| +
+REFU\| +
+NEW\| +
+BOOK\| +
+ONHOLD\| +
+LABL\| +
+MANI\| +
+ACCEP\| +
+TRNS\| +
+DELAY\| +
+DONE\| +
+APOD\| +
+DEL) +
+ Maximum size of 8. +
+
+
+|[] +
+.statusUpdate
+|String
+|The execution result.
+a|Has to match pattern: (OK\| +
+NOK) +
+ Maximum size of 8. +
+
+
+|[] +
+.colloStatusCode
+|String
+|The status of the collo.
+a|Has to match pattern: (NONE\| +
+ERR\| +
+REFU\| +
+NEW\| +
+BOOK\| +
+ONHOLD\| +
+LABL\| +
+MANI\| +
+ACCEP\| +
+TRNS\| +
+DELAY\| +
+DONE\| +
+APOD\| +
+DEL) +
+ Maximum size of 8. +
+
+
+|[] +
+.description
+|String
+|Shipments description
+a|Maximum size of 128. +
+
+
+|===

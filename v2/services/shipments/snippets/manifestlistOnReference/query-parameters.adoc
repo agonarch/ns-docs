@@ -1,0 +1,31 @@
+|===
+|Parameter|Description
+
+|`+date+`
+|The pickup date.
+
+|`+dateTo+`
+|The pickup date until.
+
+|`+carrier+`
+|The carrier.
+
+|`+costCenter+`
+|The costCenter (optional).
+
+|`+slt+`
+|The service level time (optional).
+
+|`+slo+`
+|The service level other (optional).
+
+|`+receiverCountry+`
+|The country of the receiver (optional).
+
+|`+reference+`
+|The value of the aditional reference (optional).
+
+|`+referenceType+`
+|The aditional reference type (optional).
+
+|===

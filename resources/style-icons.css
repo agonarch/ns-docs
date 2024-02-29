@@ -1,0 +1,243 @@
+@font-face {
+  font-family: 'icons';
+  src:  url('fonts/icons.eot?wntzb9');
+  src:  url('fonts/icons.eot?wntzb9#iefix') format('embedded-opentype'),
+    url('fonts/icons.ttf?wntzb9') format('truetype'),
+    url('fonts/icons.woff?wntzb9') format('woff'),
+    url('fonts/icons.svg?wntzb9#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icons-"], [class*=" icons-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icons-upload:before {
+  content: "\e947";
+}
+.icons-drag-order:before {
+  content: "\e946";
+}
+.icons-user:before {
+  content: "\e900";
+}
+.icons-add:before {
+  content: "\e901";
+}
+.icons-clear:before {
+  content: "\e902";
+}
+.icons-close:before {
+  content: "\e903";
+}
+.icons-conditions:before {
+  content: "\e904";
+}
+.icons-confirmed:before {
+  content: "\e905";
+}
+.icons-divide:before {
+  content: "\e906";
+}
+.icons-down-alternative:before {
+  content: "\e907";
+}
+.icons-down:before {
+  content: "\e908";
+}
+.icons-equal:before {
+  content: "\e909";
+}
+.icons-extra:before {
+  content: "\e90a";
+}
+.icons-filter:before {
+  content: "\e90b";
+}
+.icons-glad:before {
+  content: "\e90c";
+}
+.icons-help:before {
+  content: "\e90d";
+}
+.icons-info-tip:before {
+  content: "\e90e";
+}
+.icons-left-circled:before {
+  content: "\e90f";
+}
+.icons-left:before {
+  content: "\e910";
+}
+.icons-meatball:before {
+  content: "\e911";
+}
+.icons-minus:before {
+  content: "\e912";
+}
+.icons-parameters:before {
+  content: "\e913";
+}
+.icons-pause:before {
+  content: "\e914";
+}
+.icons-percent:before {
+  content: "\e915";
+}
+.icons-play:before {
+  content: "\e916";
+}
+.icons-right-alternative:before {
+  content: "\e917";
+}
+.icons-right-circled:before {
+  content: "\e918";
+}
+.icons-right:before {
+  content: "\e919";
+}
+.icons-sad:before {
+  content: "\e91a";
+}
+.icons-stop:before {
+  content: "\e91b";
+}
+.icons-tag:before {
+  content: "\e91c";
+}
+.icons-text:before {
+  content: "\e91d";
+}
+.icons-up:before {
+  content: "\e91e";
+}
+.icons-warning:before {
+  content: "\e91f";
+}
+.icons-chat:before {
+  content: "\e920";
+}
+.icons-checkmark:before {
+  content: "\e921";
+}
+.icons-clear1:before {
+  content: "\e922";
+}
+.icons-click-and-collect:before {
+  content: "\e923";
+}
+.icons-conditions1:before {
+  content: "\e924";
+}
+.icons-grill:before {
+  content: "\e925";
+}
+.icons-delivery:before {
+  content: "\e926";
+}
+.icons-flag:before {
+  content: "\e927";
+}
+.icons-flash:before {
+  content: "\e928";
+}
+.icons-folder:before {
+  content: "\e929";
+}
+.icons-group:before {
+  content: "\e92a";
+}
+.icons-heart:before {
+  content: "\e92b";
+}
+.icons-home:before {
+  content: "\e92c";
+}
+.icons-location:before {
+  content: "\e92d";
+}
+.icons-location-canceled:before {
+  content: "\e92e";
+}
+.icons-location-completed:before {
+  content: "\e92f";
+}
+.icons-location-failed:before {
+  content: "\e930";
+}
+.icons-location-issue:before {
+  content: "\e931";
+}
+.icons-lock-open:before {
+  content: "\e932";
+}
+.icons-lock:before {
+  content: "\e933";
+}
+.icons-logout:before {
+  content: "\e934";
+}
+.icons-notifications:before {
+  content: "\e935";
+}
+.icons-parcel:before {
+  content: "\e936";
+}
+.icons-parcellocker:before {
+  content: "\e937";
+}
+.icons-pickup-point:before {
+  content: "\e938";
+}
+.icons-return:before {
+  content: "\e939";
+}
+.icons-scan:before {
+  content: "\e93a";
+}
+.icons-search:before {
+  content: "\e93b";
+}
+.icons-secure:before {
+  content: "\e93c";
+}
+.icons-settings:before {
+  content: "\e93d";
+}
+.icons-stats:before {
+  content: "\e93e";
+}
+.icons-time:before {
+  content: "\e93f";
+}
+.icons-touch:before {
+  content: "\e940";
+}
+.icons-truck:before {
+  content: "\e941";
+}
+.icons-truck-canceled:before {
+  content: "\e942";
+}
+.icons-truck-check:before {
+  content: "\e943";
+}
+.icons-truck-failed:before {
+  content: "\e944";
+}
+.icons-truck-issue:before {
+  content: "\e945";
+}

@@ -1,0 +1,258 @@
+@import "./asciidoctor.css";
+@import "./style-icons.css";
+
+@font-face {
+    font-family: 'Inter';
+    font-weight: 400; /* Regular */
+    src: url('fonts/Inter-Regular.woff2') format('woff2'),
+         url('fonts/Inter-Regular.woff') format('woff');
+  }
+  
+  @font-face {
+    font-family: 'Inter';
+    font-weight: 100; /* Thin */
+    src: url('fonts/Inter-Thin.woff2') format('woff2'),
+         url('fonts/Inter-Thin.woff') format('woff');
+  }
+  
+  @font-face {
+    font-family: 'Inter';
+    font-weight: 500; /* Medium */
+    src: url('fonts/Inter-Medium.woff2') format('woff2'),
+         url('fonts/Inter-Medium.woff') format('woff');
+  }
+  
+  @font-face {
+    font-family: 'Inter';
+    font-weight: 600; /* Semibold */
+    src: url('fonts/Inter-Semibold.woff2') format('woff2'),
+         url('fonts/Inter-Semibold.woff') format('woff');
+  }
+  
+  @font-face {
+    font-family: 'Inter';
+    font-weight: 700; /* Bold */
+    src: url('fonts/Inter-Bold.woff2') format('woff2'),
+         url('fonts/Inter-Bold.woff') format('woff');
+  }
+
+ body {
+    font-family: "Inter", sans-serif;
+    background-color: #fafafa;
+ }
+
+ /* font reset for navigation */
+ @media screen and (min-width: 768px) {#toc.toc2>ul {
+        font-size: 16px;
+        font-weight: 400;
+        font-size: 16px;
+    }
+}
+
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{
+    font-family:"Inter",sans-serif;
+    font-weight:600;
+    font-style:normal;
+    font-size: 18px;
+    color:#000A3C;
+}
+
+#header .details {
+    color: rgb(51, 59, 99);
+}
+
+/* Text for the normal content */
+p, blockquote, dt, td.content, td.hdlist1, span.alt, summary {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333B63;
+    line-height: 16px;
+}
+
+#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover {
+    color: rgb(51, 59, 99);
+}
+
+a {
+    color:rgb(0, 21, 163);
+    text-decoration:underline;
+    line-height:inherit;
+}
+#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#000A3C;text-decoration:none}
+
+/* for navigation styling */
+#toc.toc2{
+    margin-top:0!important;
+    background:#f8f8f7;
+    position:fixed;
+    background-image: linear-gradient(to bottom, #01548e, #0016a3);
+    width:22em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto
+}
+
+.toc2 > .sectlevel1 {margin-top:50px}
+.toc2 > #toctitle {display: none;}
+
+.toc2 > .sectlevel1 {
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.12);
+    margin-top: 200px;
+    position: relative;
+    padding-top: 16px;
+    padding-left: 4px;
+    padding-bottom: 16px;
+}
+
+#toc.toc2>ul:before {
+        content: "";
+        background-image: url(images/nShift-white-digital.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: block;
+        position: absolute;
+        top: -140px;
+        left: -10px;
+        height: 32px;
+        width: 100%;
+        margin-bottom: 140px;
+}
+
+#toc>ul {
+    margin-left: 0;
+}
+
+#toc ul {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #4C5376;
+}
+
+.toc2 > .sectlevel1 a {
+    line-height: 24px;
+    padding: 1px 10px 1px 10px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+#toc a:active {
+    text-decoration: none;
+}
+
+.toc2 > .sectlevel1 a:hover {
+    background-color:rgba(255, 255, 255, 0.25);
+    border-radius: 4px;
+    padding: 1px 10px 1px 10px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+
+.toc2 > .sectlevel1 a {color:#F9FAFD;text-decoration:none;line-height:inherit}
+
+table thead, table tfoot {
+     background: #ffffff;
+}
+
+table.tableblock, th.tableblock, td.tableblock {
+    border-bottom: 1px solid #edeef1;
+    border-collapse: separate;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+table.grid-all>*>tr>* {
+    border-bottom: 0px;
+    padding-left: 0px;
+    vertical-align: middle;
+}
+
+table.grid-all>*>tr>th {
+    border-top: 0;
+    padding-top: 24px;
+    padding-bottom: 12px;
+}
+
+table.frame-all {
+    border-radius: 8px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15), -1px 0px 20px rgba(0, 0, 0, 0.05);
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 1);
+    overflow: hidden;
+}
+
+code {
+    color: #535D74;
+    font-family:"Inter",sans-serif;
+    font-weight:400;
+    font-style:normal;
+    font-size: 12px;
+}
+
+/* for table contents */
+.sidebarblock p, .sidebarblock dt, .sidebarblock td.content, p.tableblock {
+    font-size: 12px;
+    font-weight:400;
+}
+
+table tr th, table tr td { 
+    color: #535D74;
+}
+
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{
+    color: #0A1839;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+table.grid-all>*>tr>* {
+    border-left: 0;
+    border-right: 0;
+}
+
+table.tableblock>.title {
+ color: rgb(51, 59, 99);
+}
+
+/* icons */
+.admonitionblock td.icon .icon-important::before {
+    color:#c2443b;
+}
+
+.admonitionblock td.icon .icon-note::before {
+    color: #4055d9
+}
+
+.admonitionblock td.icon [class^="fa icon-"] {
+    font-size: 1.5em;
+    text-shadow: none;
+}
+
+/* code sandbox style */
+.hljs-string, .hljs-doctag {
+    color: rgb(51, 59, 99);
+}
+
+:not(pre):not([class^=L])>code {
+    font-size: 12px;
+}
+
+/* icons override with custom font icons */
+.admonitionblock td.icon .icon-important::before {
+    content: "\e91b";
+    font-family: icons;
+}
+
+.admonitionblock td.icon .icon-note::before {
+    content: "\e90e";
+    font-family: icons;
+}
+
+#footer {
+    background-color:#0015a3;
+}
+
+#footer-text {
+    color: #ffffff;
+    padding-left: 60px;
+}

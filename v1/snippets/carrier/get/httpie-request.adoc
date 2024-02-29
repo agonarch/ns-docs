@@ -1,0 +1,4 @@
+[source,bash]
+----
+$ http GET 'http://localhost:8080/v1/Carrier/1?id=1' 'CustomerId:3'
+----

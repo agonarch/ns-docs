@@ -1,0 +1,146 @@
+[cols="2,1,2,2,1"]
+|===
+|Path|Type|Description|Constraints|Default
+
+|[] +
+.reference
+|String
+|Shipment reference.
+|Not Null and not empty. +
+ The size must be between 1 and 32. +
+
+|
+
+|[] +
+.description
+|String
+|The description.
+|Maximum size of 128. +
+
+|
+
+|[] +
+.instruction
+|String
+|The instruction.
+|Maximum size of 256. +
+
+|
+
+|[] +
+.loadmeters
+|Decimal
+|The load meters of the shipment. (Precision of 2)
+|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+|
+
+|[] +
+.pickupDate
+|String
+|The pickup date.
+|Format yyyy-MM-dd. +
+
+|Depends on routing rules.
+
+|[] +
+.pickupTime
+|String
+|The earliest pickup time.
+|Format HH:mm. +
+
+|Depends on routing rules.
+
+|[] +
+.pickupTimeTo
+|String
+|The latest shipment pickup time.
+|Format HH:mm. +
+
+|Depends on routing rules.
+
+|[] +
+.reference
+|String
+|Shipment reference.
+|Not Null and not empty. +
+ The size must be between 1 and 32. +
+
+|
+
+|[] +
+.requestedDeliveryDate
+|String
+|The requested delivery date.
+|Format yyyy-MM-dd. +
+
+|Depends on routing rules.
+
+|[] +
+.requestedDeliveryTime
+|String
+|The requested earliest delivery time
+|Format HH:mm. +
+
+|Depends on routing rules.
+
+|[] +
+.requestedDeliveryTimeTo
+|String
+|The requested lates delivery time.
+|Format HH:mm. +
+
+|Depends on routing rules.
+
+|[] +
+.value
+|Decimal
+|The shipment monetary value. (Precision of 2)
+|Maximum value is 999,999,999.99 +
+ Minimum value is -999,999,999.99 +
+
+|0.00
+
+|[] +
+.valueCurrency
+|String
+|The shipment monetary value currency.
+|Maximum size of 3. +
+
+|
+
+|[] +
+.insurance
+|Boolean
+|Should this shipment be insured or is it insured
+|
+|false
+
+|[] +
+.additionalReferences
+|List
+|The additional references.
+|
+|
+
+|[] +
+.additionalReferences.[] +
+.type
+|String
+|The type of the additional reference. Preferred value: ADRCONTENT_ID AGENTREFERENCE CONSOLIDATION_REF CUSTOMER CUSTOMERORDER DELIVERYID DELIVERYNOTE DRIVER_ID ENGINEER INVOICE LOCATION ORDER OTHER PROJECT ROUTE_ID SERVICEPOINT YOUR_REFERENCE
+|Mandatory. +
+ Maximum size of 64. +
+
+|
+
+|[] +
+.additionalReferences.[] +
+.value
+|String
+|The additional reference.
+|Maximum size of 1024. +
+
+|
+
+|===

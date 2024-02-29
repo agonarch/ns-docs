@@ -1,0 +1,45 @@
+[cols="2,2,2"]
+|===
+|Parameter|Description|Constraints
+
+|dateFrom
+|The from date.
+|Format dd-MM-yyyy.
+
+|dateTo
+|The to date.
+|Format dd-MM-yyyy.
+
+|street
+|The street.
+|
+
+|houseNumber
+|The houseNumber.
+|
+
+|houseNumberExtension
+|The house number extension.
+|
+
+|zipCode
+|The zipCode.
+|
+
+|city
+|The city.
+|
+
+|country
+|The country.
+|
+
+|options
+|The options of this request, multiple can be specified.
+|MyTime MyTime delivery (Delivery on demand)
+
+|isSundaySorted
+|When sunday sorted is true delivery can be done on monday.
+|
+
+|===

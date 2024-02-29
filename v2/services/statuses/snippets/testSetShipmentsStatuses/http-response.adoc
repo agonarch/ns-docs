@@ -1,0 +1,13 @@
+[source,http,options="nowrap"]
+----
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 136
+
+[ {
+  "customerId" : "DEVDOCS",
+  "reference" : "Transsmart_1681382055020",
+  "shipmentStatusCode" : "LABL",
+  "statusUpdate" : "OK"
+} ]
+----

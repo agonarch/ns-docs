@@ -1,0 +1,15 @@
+[cols="1,1,2,2"]
+|===
+|Path|Type|Description|Constraints
+
+|[].nr
+|Number
+|Identifier of the list element.
+a|
+
+|[].value
+|String
+|The carrier definition.
+a|
+
+|===

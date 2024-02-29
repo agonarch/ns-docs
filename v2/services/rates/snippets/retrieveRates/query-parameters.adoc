@@ -1,0 +1,7 @@
+|===
+|Parameter|Description
+
+|`+action+`
+|calculate (default), preBooking or filtered, see above for explanation.
+
+|===

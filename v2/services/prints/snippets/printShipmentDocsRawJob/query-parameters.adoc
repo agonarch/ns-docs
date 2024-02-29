@@ -1,0 +1,10 @@
+|===
+|Parameter|Description
+
+|`+rawJob+`
+|Include all shipment level and package level documents, either pdf and/or zpl, in base64 encoded format. When set to false Transsmart will automatically print the documents via SmartPrint. Speak with your Transsmart contact for more information on the implementation considerations
+
+|`+airwaybillNumber+`
+|Include only the package level documents for the package indicated by the airwaybillNumber.  
+
+|===

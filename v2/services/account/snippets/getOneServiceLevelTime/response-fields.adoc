@@ -1,0 +1,20 @@
+[cols="1,1,2,2"]
+|===
+|Path|Type|Description|Constraints
+
+|code
+|String
+|The service level time identifier.
+a|
+
+|description
+|String
+|Description of the service level time.
+a|
+
+|isDefault
+|Boolean
+|Is this the default service level time.
+a|
+
+|===

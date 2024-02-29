@@ -1,0 +1,13 @@
+|===
+|Parameter|Description
+
+|`+isDetailed+`
+|Include the status history in chronological order.
+
+|`+currentStatusOnly+`
+|Only include the last status per shipment and collo, not the complete history, this parameter only works when the parameter 'isDetailed' set to true.
+
+|`+withPod+`
+|Include the POD in the response if set to true. This parameter only works when the parameter 'isDetailed' is set to true.
+
+|===

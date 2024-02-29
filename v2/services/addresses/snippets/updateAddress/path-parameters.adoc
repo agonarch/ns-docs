@@ -1,0 +1,11 @@
+.+/v2/addresses/{account}/{id}+
+|===
+|Parameter|Description
+
+|`+account+`
+|The account that owns the address.
+
+|`+id+`
+|Identifier of the address to be deleted.
+
+|===

@@ -1,0 +1,418 @@
+|===
+|Path|Type|Description|Constraints
+
+|[] +
+.reference
+|String
+|Shipment reference.
+|Maximum size of 32. +
+
+
+|[] +
+.carrier
+|String
+|The carrier.
+|Maximum size of 3. +
+
+
+|[] +
+.costCenter
+|String
+|The cost center.
+|Maximum size of 32. +
+
+
+|[] +
+.mailType
+|Integer wrapped in String
+|The mail type.
+|
+
+|[] +
+.value
+|Decimal
+|The shipment monetary value. (Precision of 2).
+|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+
+|[] +
+.currency
+|String
+|General currency for shipment monetary fields.
+|Maximum size of 3. +
+
+
+|[] +
+.pickupDate
+|String
+|The pickup date.
+|Format yyyy-MM-dd. +
+
+
+|[] +
+.pickupTime
+|String
+|The earliest pickup time.
+|Format HH:mm. +
+
+
+|[] +
+.pickupTimeTo
+|String
+|The latest shipment pickup time.
+|Format HH:mm. +
+
+
+|[] +
+.requestedDeliveryDate
+|String
+|The requested delivery date.
+|Format yyyy-MM-dd. +
+
+
+|[] +
+.requestedDeliveryTime
+|String
+|The requested earliest delivery time
+|Format HH:mm. +
+
+
+|[] +
+.requestedDeliveryTimeTo
+|String
+|The requested lates delivery time.
+|Format HH:mm. +
+
+
+|[] +
+.service
+|String
+|The service: example NON-DOCS/DOCS >> may indicate if a shipment goes out of the EU
+|Maximum size of 16. +
+
+
+|[] +
+.serviceLevelTime
+|String
+|The requested service level time.
+|Maximum size of 32. +
+
+
+|[] +
+.serviceLevelOther
+|String
+|The service level other.
+|Maximum size of 32. +
+
+
+|[] +
+.incoterms
+|String
+|The inco terms.
+|Maximum size of 16. +
+
+
+|[] +
+.inbound
+|Boolean wrapped in Integer
+|Is this an outbound or inbound shipment (outbound= 0, inbound= 1).
+|Maximum value is 1. +
+ Minimum value is 0. +
+
+
+|[] +
+.loadmeters
+|Decimal
+|The load meters of the shipment. (Precision of 2).
+|Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+
+|[] +
+.numberOfPackages
+|Integer
+|
+|Maximum value is 32767. +
+
+
+|[] +
+.measurements
+|Measurements
+|The total measurements of the shipment, deprecated use measurements in packages.
+|
+
+|[] +
+.addresses
+|List
+|The addresses, the address indicates the type.
+|
+
+|[] +
+.addresses.[] +
+.type
+|String
+|The type of the address.
+|
+
+|[] +
+.addresses.[] +
+.name
+|String
+|The name.
+|Maximum size of 64. +
+
+
+|[] +
+.addresses.[] +
+.addressLine1
+|String
+|The first address line.
+|Maximum size of 64. +
+
+
+|[] +
+.addresses.[] +
+.addressLine2
+|String
+|The second address line.
+|Maximum size of 64. +
+
+
+|[] +
+.addresses.[] +
+.addressLine3
+|String
+|The third address line.
+|Maximum size of 64. +
+
+
+|[] +
+.addresses.[] +
+.houseNo
+|String
+|The house number.
+|Maximum size of 16. +
+
+
+|[] +
+.addresses.[] +
+.city
+|String
+|The city.
+|Maximum size of 64. +
+
+
+|[] +
+.addresses.[] +
+.zipCode
+|String
+|The zip code.
+|Maximum size of 16. +
+
+
+|[] +
+.addresses.[] +
+.state
+|String
+|The state.
+|Maximum size of 16. +
+
+
+|[] +
+.addresses.[] +
+.country
+|String
+|The country code.
+|Maximum size of 2. +
+
+
+|[] +
+.addresses.[] +
+.contact
+|String
+|The contact information.
+|Maximum size of 64. +
+
+
+|[] +
+.addresses.[] +
+.telNo
+|String
+|The phone number.
+|Maximum size of 32. +
+
+
+|[] +
+.addresses.[] +
+.faxNo
+|String
+|The fax number.
+|Maximum size of 32. +
+
+
+|[] +
+.addresses.[] +
+.email
+|String
+|The email address.
+|Maximum size of 256. +
+
+
+|[] +
+.addresses.[] +
+.accountNumber
+|String
+|The account number. 
+|Maximum size of 32. +
+
+
+|[] +
+.addresses.[] +
+.customerNumber
+|String
+|The customer number.
+|Maximum size of 32. +
+
+
+|[] +
+.addresses.[] +
+.vatNumber
+|String
+|The vat number.
+|Maximum size of 32. +
+
+
+|[] +
+.addresses.[] +
+.residential
+|Boolean wrapped in Integer
+|Indicator for residential addresses.
+|Maximum value is 1. +
+ Minimum value is 0. +
+
+
+|[] +
+.packages
+|List
+|The packages/collo.
+|
+
+|[] +
+.packages.[] +
+.description
+|String
+|The description of the goods.
+|Maximum size of 128. +
+
+
+|[] +
+.packages.[] +
+.lineNo
+|Integer
+|The line number for this package.
+|Maximum value is 200000. +
+
+
+|[] +
+.packages.[] +
+.packageType
+|String
+|The package type.
+|Maximum size of 16. +
+
+
+|[] +
+.packages.[] +
+.quantity
+|Integer
+|The quantity.
+|
+
+|[] +
+.packages.[] +
+.stackable
+|Boolean
+|Is the package stackable?
+|
+
+|[] +
+.packages.[] +
+.stackHeight
+|Integer
+|The stack height.
+|Maximum value is 32767. +
+
+
+|[] +
+.packages.[] +
+.measurements +
+.length
+|Decimal
+|The length. (Precision of 2) Note that the length on shipment level is deprecated and will always return 0.
+|Mandatory. +
+ Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+
+|[] +
+.packages.[] +
+.measurements +
+.width
+|Decimal
+|The width. (Precision of 2) Note that the width on shipment level is deprecated and will always return 0.
+|Mandatory. +
+ Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+
+|[] +
+.packages.[] +
+.measurements +
+.height
+|Decimal
+|The height. (Precision of 2) Note that the height on shipment level is deprecated and will always return 0.
+|Mandatory. +
+ Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+
+|[] +
+.packages.[] +
+.measurements +
+.weight
+|Decimal
+|The weight. (Precision of 2).
+|Mandatory. +
+ Maximum value is 999,999,999.99 +
+ Minimum value is 0 +
+
+
+|[] +
+.packages.[] +
+.measurements +
+.linearUom
+|String
+|The linear unit of measure (e.g. CM, FT, IN, YD).
+|Has to match pattern: (CM\| +
+FT\| +
+IN\| +
+YD\| +
+) +
+ Maximum size of 3. +
+
+
+|[] +
+.packages.[] +
+.measurements +
+.massUom
+|String
+|The mass unit of measure (e.g. KG, LB, OZ).
+|Has to match pattern: (KG\| +
+LB\| +
+OZ\| +
+) +
+ Maximum size of 3. +
+
+
+|===

@@ -1,0 +1,4 @@
+[source,json,options="nowrap"]
+----
+{"code":"DPD","name":"DPD Nederland","locationSelect":true,"needsManifesting":true}
+----
